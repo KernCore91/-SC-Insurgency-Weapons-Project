@@ -1,6 +1,7 @@
 # Insurgency Weapons Project
 > Custom weapons project for Sven Co-op
-This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it is being released today (2020/01/19), with more content to come in the future.
+
+This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it was released on the Sven Co-op Forums (2020/01/19), with more content to come in the future.
 
 ## The Weapons
 
@@ -81,3 +82,78 @@ This project is brought to you by the following super dedicated team members: No
 	```
 	* Load up the map you chose;
 	* Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
+
+## Additional Content
+
+This pack includes a heavily modified Buymenu made specifically for it.
+Here are the following commands that can be used in the Buymenu:
+
+```
+// Opening the Buy menu in the chat:
+buy
+/buy
+!buy
+.buy
+\buy
+#buy
+
+// Opening the Buy menu in the console:
+.buy
+
+// Buying a specific weapon/ammo (without the weapon_ins2 prefix) without the menu:
+<menu opening command here> <entity identifier here> <weapon name here> ie:
+!buy w l2a3 (will directly buy a Sterling for you) or 
+/buy a l2a3 (will directly buy ammo for the Sterling for you)
+
+// Buying ammo for the current equipped weapon:
+<menu opening command here> ammo ie:
+!buy ammo or
+/buy ammo
+```
+
+Server commands (in case you registered the weapons as a plugin):
+```
+as_command ins2.bm_maxmoney <value>
+as_command ins2.bm_moneyperscore <value>
+as_command ins2.bm_startmoney <value>
+```
+
+It also includes specific replacement map scripts, which when added to the maps supported, will allow you to replace the default weapons and ammo that are spawned by the map with the Insurgency Weapons included in this release.
+The maps that currently support this optional feature are: auspices, sc_toysoldiers, sc_egypt2, sc_persia and suspension.
+
+If you want to know how to add these scripts, take a look at their scripts in the folder: **scripts/maps/ins2/maps** and add their specific map_script command in there.
+
+## Notes
+
+This pack will not include a *.res* file or a *.fgd* file until we are fully finished with it.
+
+This pack also includes a test map called: *sc_insurgency*. Use it to try the new weapons out.
+
+Some weapons include a mode to change the firerate on them, you'll notice a sprite appear on your screen telling you the weapon's fire mode (Semi auto, Burst Fire, Full Auto), use ***E + R*** (or whatever key your *+use* and *+reload* is bound to) to change them;
+
+Some other weapons also include Tertiary Attack functions (Like deploying the bipod, or changing to the GL mode).
+To use these modes simply press the Mouse3 button (or whatever key you bound *+alt1*).
+
+Many models feature textures above 512x512 resolution, including the weapon sprites, so gl_max_size 1024 is required to see the weapon textures without loss of quality.
+
+Usage of this pack without more than 2 GB RAM, outside of servers, is likely to crash you.
+
+## Credits
+
+You are authorized to use any assets in this pack as you see fit, as long as you credit us and whoever contributed to the making of this pack.
+There's a very long list of people/teams in the file: *ins2_credits.txt*, this file specifies the authors of every single asset that is being used in the making of this project.
+
+Assets: You are authorized to use any assets in this pack as you see fit, as long as:
+
+* The content you're making doesn't break any of the EULAs listed below:
+	* [@Insurgency/Day of Infamy EULA](https://store.steampowered.com/eula/447820_eula_0) 
+	* [@Insurgency: Sandstorm's EULA](https://store.steampowered.com/eula/581320_eula_0)
+* You credit anyone who contributed assets for this pack;
+* You do not earn money from any of New World Interactive assets, Focus Home Interactive or this mod's assets.
+
+You are not permitted to:
+
+* Re-pack it without the project author's consent;
+* Use any assets included in this project without crediting who made them;
+* Earn money from this pack or any other assets used;
+* Upload it somewhere else without credits.
