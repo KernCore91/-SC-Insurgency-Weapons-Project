@@ -59,7 +59,7 @@ This project is brought to you by the following super dedicated team members: No
 
 Video:
 [![](https://i.ytimg.com/vi/-zNmB1rg458/maxresdefault.jpg)](https://www.youtube.com/watch?v=-zNmB1rg458)
-###### by SV BOY.
+*by SV BOY.*
 
 ## Screenshots
 [![](https://i.imgur.com/XRJbALTm.png)](https://i.imgur.com/XRJbALT.png)
