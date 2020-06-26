@@ -57,11 +57,11 @@ This project is brought to you by the following super dedicated team members: No
 
 ## Screenshots
 [![](https://i.imgur.com/XRJbALTm.png)](https://i.imgur.com/XRJbALT.png)
-![](https://i.imgur.com/fogrWZEm.png)
-![](https://i.imgur.com/Rwn01Vfm.png)
-![](https://i.imgur.com/84E0GqLm.png)
-![](https://i.imgur.com/yszXhUnm.png)
-![](https://i.imgur.com/gYkANMzm.png)
+[![](https://i.imgur.com/fogrWZEm.png)](https://i.imgur.com/fogrWZE.png)
+[![](https://i.imgur.com/Rwn01Vfm.png)](https://i.imgur.com/Rwn01Vf.png)
+[![](https://i.imgur.com/84E0GqLm.png)](https://i.imgur.com/84E0GqL.png)
+[![](https://i.imgur.com/yszXhUnm.png)](https://i.imgur.com/yszXhUn.png)
+[![](https://i.imgur.com/gYkANMzm.png)](https://i.imgur.com/gYkANMz.png)
 
 ## Installation Guide
 
