@@ -1,5 +1,6 @@
-# [Sven Co-op] Insurgency Weapons Project
-> This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it is being released today (2020/01/19), with more content to come in the future.
+# Insurgency Weapons Project
+> Custom weapons project for Sven Co-op
+This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it is being released today (2020/01/19), with more content to come in the future.
 
 ## The Weapons
 
@@ -69,4 +70,14 @@
 	}
 	```
 	* Load any map of your preference;
+	* Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
+
+* Registering the weapons as map_scripts (Good for map makers):
+	* Download the pack from one of the download links below
+	* Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
+	* Open up any map *.cfg* (i.e: **svencoop1.cfg**) and add this line to it:
+	```
+	map_script ins2/ins2_register
+	```
+	* Load up the map you chose;
 	* Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
