@@ -55,6 +55,14 @@ This project is brought to you by the following super dedicated team members: No
 * Thompson M1928 (weapon_ins2m1928)
 * Webley (weapon_ins2webley)
 
+## Screenshots
+![](https://i.imgur.com/XRJbALTm.png)
+![](https://i.imgur.com/fogrWZEm.png)
+![](https://i.imgur.com/Rwn01Vfm.png)
+![](https://i.imgur.com/84E0GqLm.png)
+![](https://i.imgur.com/yszXhUnm.png)
+![](https://i.imgur.com/gYkANMzm.png)
+
 ## Installation Guide
 
 * Registering the weapons as plugins (Good for server operators, and most people):
