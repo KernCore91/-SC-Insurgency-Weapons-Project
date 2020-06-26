@@ -55,6 +55,10 @@ This project is brought to you by the following super dedicated team members: No
 * Thompson M1928 (weapon_ins2m1928)
 * Webley (weapon_ins2webley)
 
+## Gameplay Video
+
+[![](https://i.ytimg.com/vi/-zNmB1rg458/maxresdefault.jpg)](https://www.youtube.com/watch?v=-zNmB1rg458)
+
 ## Screenshots
 [![](https://i.imgur.com/XRJbALTm.png)](https://i.imgur.com/XRJbALT.png)
 [![](https://i.imgur.com/fogrWZEm.png)](https://i.imgur.com/fogrWZE.png)
