@@ -143,17 +143,53 @@ Usage of this pack without more than 2 GB RAM, outside of servers, is likely to 
 You are authorized to use any assets in this pack as you see fit, as long as you credit us and whoever contributed to the making of this pack.
 There's a very long list of people/teams in the file: *ins2_credits.txt*, this file specifies the authors of every single asset that is being used in the making of this project.
 
-Assets: You are authorized to use any assets in this pack as you see fit, as long as:
-
+### You are authorized to use any assets in this pack as you see fit, as long as:
 * The content you're making doesn't break any of the EULAs listed below:
-	* [@Insurgency/Day of Infamy EULA](https://store.steampowered.com/eula/447820_eula_0) 
-	* [@Insurgency: Sandstorm's EULA](https://store.steampowered.com/eula/581320_eula_0)
+	* [Insurgency/Day of Infamy EULA](https://store.steampowered.com/eula/447820_eula_0) 
+	* [Insurgency: Sandstorm's EULA](https://store.steampowered.com/eula/581320_eula_0)
 * You credit anyone who contributed assets for this pack;
 * You do not earn money from any of New World Interactive assets, Focus Home Interactive or this mod's assets.
 
-You are not permitted to:
+### You are not permitted to:
 
 * Re-pack it without the project author's consent;
 * Use any assets included in this project without crediting who made them;
 * Earn money from this pack or any other assets used;
 * Upload it somewhere else without credits.
+
+## Updates
+
+### Update 1.2:
+* Added the AS VAL
+* Added the M14 EBR
+* Added the MP7
+* Added the Galil
+* Added the MG-42
+* Added the Thompson M1928
+* Added the AK-12
+* Added map scripts for the following maps: sc_persia, suspension
+* Added support for WEAPON_NOCLIP
+* Changed the 4.6x30mm bullet model
+* Changed the 7.92x57mm bullet model
+* Fixed minor reload issue with staged reload weapons
+* Increased damage output on several weapons
+* Updated G43 models
+* Updated FN FAL viewmodel
+* Updated all weapon scripts to offer better support for default ammo
+* Updated Credits file
+* Viewmodels recompiled to preserve arm bones
+* Very minor update for the test map: fixed position of some items
+
+### Update 1.1:
+* Fixed guide rod on the Beretta M9
+* Fixed a sound not being precached in the M79
+* Added the Sterling L2A3
+
+## Download Links
+
+Total Size Compressed: 67.66 MB
+
+(.7z) [Dropbox](https://www.dropbox.com/s/pffedw6m3yt7099/Insurgency%20First%20Release1_2.7z?dl=0)
+(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_2.7z)
+(.7z) [Mega](https://mega.nz/#!W81lQaoR!E_BtJoJWXm9sfwL4O1uQja6impghi7DP-n5JOy-vEsE)
+(.7z) [Boderman.net](http://www.boderman.net/svencoop/Insurgency_First_Release1_2.7z)
