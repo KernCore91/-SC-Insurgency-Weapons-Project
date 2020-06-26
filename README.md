@@ -71,7 +71,7 @@ Video:
 
 ## Installation Guide
 
-* Registering the weapons as plugins (Good for server operators, and most people):
+1. Registering the weapons as plugins (Good for server operators, and most people):
 	1. Download the pack from one of the download links below
 	2. Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
 	3. Open up *`default_plugins.txt`* located in **`Steam\steamapps\common\Sven Co-op\svencoop\`**
@@ -87,7 +87,7 @@ Video:
 	5. Load any map of your preference;
 	6. Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
 
-* Registering the weapons as map_scripts (Good for map makers):
+2. Registering the weapons as map_scripts (Good for map makers):
 	1. Download the pack from one of the download links below
 	2. Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
 	3. Open up any map *.cfg* (i.e: **svencoop1.cfg**) and add this line to it:
