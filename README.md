@@ -25,7 +25,7 @@
 * Lee-Enfield No.IV Mk.I (weapon_ins2enfield)
 * M1 Garand (weapon_ins2garand)
 * M136 AT4 (weapon_ins2at4)
-* M16A4 + M203(weapon_ins2m16a4)
+* M16A4 + M203 (weapon_ins2m16a4)
 * M24 Stielhandgranate (weapon_ins2stick)
 * M4A1 (weapon_ins2m4a1)
 * Mossberg 590 (weapon_ins2m590)
@@ -53,7 +53,7 @@
 * Thompson M1928 (weapon_ins2m1928)
 * AK-12 (weapon_ins2ak12)
 
-## Installation Guide
+### Installation Guide
 
 *Registering the weapons as plugins (Good for server operators, and most people):
 	* Download the pack from one of the download links below
