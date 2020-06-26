@@ -56,7 +56,7 @@ This project is brought to you by the following super dedicated team members: No
 * Webley (weapon_ins2webley)
 
 ## Screenshots
-![](https://i.imgur.com/XRJbALTm.png)
+[![](https://i.imgur.com/XRJbALTm.png)](https://i.imgur.com/XRJbALT.png)
 ![](https://i.imgur.com/fogrWZEm.png)
 ![](https://i.imgur.com/Rwn01Vfm.png)
 ![](https://i.imgur.com/84E0GqLm.png)
