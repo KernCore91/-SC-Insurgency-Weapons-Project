@@ -53,9 +53,9 @@
 * Thompson M1928 (weapon_ins2m1928)
 * AK-12 (weapon_ins2ak12)
 
-### Installation Guide
+## Installation Guide
 
-*Registering the weapons as plugins (Good for server operators, and most people):
+* Registering the weapons as plugins (Good for server operators, and most people):
 	* Download the pack from one of the download links below
 	* Extract it's contents inside Steam\steamapps\common\Sven Co-op\svencoop_addon\
 	* Open up default_plugins.txt located in Steam\steamapps\common\Sven Co-op\svencoop\
