@@ -1,0 +1,9 @@
+attachment 0 
+bone 4 
+spritename sprites/MP5Flash.spr 
+scale 34
+colorR 255
+colorB 255
+colorG 255
+rendermode 5
+transparency 255

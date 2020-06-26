@@ -1,0 +1,7 @@
+6
+weapon			640 ins2/wpn1024	680	585	170	45
+weapon_s		640 ins2/wpn1024	850	585	170	45
+ammo			640 640hud7		48	60	24	24
+ammo2			640	640hud7		72	60	24	24
+crosshair		640 ins2/gl_crosshair	0	0	24	32
+zoom			640 crosshairs	0	0	1	1

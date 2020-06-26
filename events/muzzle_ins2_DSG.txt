@@ -1,0 +1,11 @@
+// Double barrel shotgun event for first barrel (uses attachment 0)
+
+attachment 0
+bone 4 
+spritename sprites/SGFlash.spr 
+scale 30
+colorR 255
+colorB 255
+colorG 255
+rendermode 5
+transparency 255

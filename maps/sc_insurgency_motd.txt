@@ -1,0 +1,25 @@
+>Note: This map is only for testing all of the weapons in the pack, not meant to be played in public servers.
+
+Welcome to the Insurgency.
+
+Consider this some sort of sandbox/training map.
+
+Some things you should know about the weapons:
+·The player must manually input the reloads every time a weapon runs out of ammo;
+·Primary and secondary ammo can be shared with their respective commands (dropammo, dropsecammo);
+·It's possible to look down the sights in almost all weapons, with secondary attack (Right click by default)
+	-Reduces player movement speed, but increases accuracy;
+·Some weapons support firemodes that can be switched by pressing Use and Reload (E+R by default) at the same time;
+·Almost every weapon can be used underwater
+	-Firearms have reduced accuracy, rate of fire and damage; flamethrower will not work
+	-Projectiles have reduced speed and damage radius;
+·Tertiary attack (mouse3, mouse wheel button) has different behaviors on some weapons
+	-Deploy grenade launcher
+	-Deploy bipod
+	-Melee attack (only on weapons with bayonets);
+·The hand grenades have 3 attacks
+	-Primary attack cooks the grenade, it's timed and it can explode on the player's hand
+	-Secondary attack throws the grenade without cooking it
+	-Tertiary attack lobs the grenade, shortens the thrown distance, again without cooking it.
+
+Map author: D.N.I.O. 071

@@ -1,0 +1,3 @@
+2
+weapon				640		ins2/wpn1024	340	945	170	45
+weapon_s			640		ins2/wpn1024	510	945	170	45

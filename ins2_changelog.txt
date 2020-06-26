@@ -1,0 +1,25 @@
+Update 1.1:
+*Fixed guide rod on the Beretta M9
+*Fixed a sound not being precached in the M79
+*Added the Sterling L2A3
+
+Update 1.2:
+*Added the AS VAL
+*Added the M14 EBR
+*Added the MP7
+*Added the Galil
+*Added the MG-42
+*Added the Thompson M1928
+*Added the AK-12
+*Added map scripts for the following maps: sc_persia, suspension
+*Added support for WEAPON_NOCLIP
+*Changed the 4.6x30mm bullet model
+*Changed the 7.92x57mm bullet model
+*Fixed minor reload issue with staged reload weapons
+*Increased damage output on several weapons
+*Updated G43 models
+*Updated FN FAL viewmodel
+*Updated all weapon scripts to offer better support for default ammo
+*Updated Credits file
+*Viewmodels recompiled to preserve arm bones
+*Very minor update for the test map: fixed position of some items
