@@ -72,10 +72,10 @@ Video:
 ## Installation Guide
 
 * Registering the weapons as plugins (Good for server operators, and most people):
-	* Download the pack from one of the download links below
-	* Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
-	* Open up *`default_plugins.txt`* located in **`Steam\steamapps\common\Sven Co-op\svencoop\`**
-	* Add these lines to the file:
+	1. Download the pack from one of the download links below
+	2. Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
+	3. Open up *`default_plugins.txt`* located in **`Steam\steamapps\common\Sven Co-op\svencoop\`**
+	4. Add these lines to the file:
 	```
 	"plugin"
 	{
@@ -84,18 +84,18 @@ Video:
 		"concommandns"     "ins2"
 	}
 	```
-	* Load any map of your preference;
-	* Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
+	5. Load any map of your preference;
+	6. Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
 
 * Registering the weapons as map_scripts (Good for map makers):
-	* Download the pack from one of the download links below
-	* Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
-	* Open up any map *.cfg* (i.e: **svencoop1.cfg**) and add this line to it:
+	1. Download the pack from one of the download links below
+	2. Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
+	3. Open up any map *.cfg* (i.e: **svencoop1.cfg**) and add this line to it:
 	```
 	map_script ins2/ins2_register
 	```
-	* Load up the map you chose;
-	* Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
+	4. Load up the map you chose;
+	5. Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
 
 ## Additional Content
 
