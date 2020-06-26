@@ -1,1 +1,2 @@
-# -SC-Insurgency-Weapons-Project
+# [Sven Co-op] Insurgency Weapons Project
+> This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it is being released today (2020/01/19), with more content to come in the future.
