@@ -57,8 +57,8 @@
 
 * Registering the weapons as plugins (Good for server operators, and most people):
 	* Download the pack from one of the download links below
-	* Extract it's contents inside `Steam\steamapps\common\Sven Co-op\svencoop_addon\`
-	* Open up ``default_plugins.txt`` located in `Steam\steamapps\common\Sven Co-op\svencoop\`
+	* Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
+	* Open up *`default_plugins.txt`* located in **`Steam\steamapps\common\Sven Co-op\svencoop\`**
 	* Add these lines to the file:
 	```
 	"plugin"
@@ -69,4 +69,4 @@
 	}
 	```
 	* Load any map of your preference;
-	* Type in chat \buy or type in console give *name of the weapon* and enjoy.
+	* Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
