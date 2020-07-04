@@ -204,12 +204,8 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 
 Total Size Compressed: 67.66 MB
 
-(.7z) [Dropbox](https://www.dropbox.com/s/pffedw6m3yt7099/Insurgency%20First%20Release1_2.7z?dl=0)
-
-(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_2.7z)
-
-(.7z) [Mega](https://mega.nz/#!W81lQaoR!E_BtJoJWXm9sfwL4O1uQja6impghi7DP-n5JOy-vEsE)
-
-(.7z) [Boderman.net](http://www.boderman.net/svencoop/Insurgency_First_Release1_2.7z)
-
+(.7z) [Dropbox](https://www.dropbox.com/s/pffedw6m3yt7099/Insurgency%20First%20Release1_2.7z?dl=0)  
+(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_2.7z)  
+(.7z) [Mega](https://mega.nz/#!W81lQaoR!E_BtJoJWXm9sfwL4O1uQja6impghi7DP-n5JOy-vEsE)  
+(.7z) [Boderman.net](http://www.boderman.net/svencoop/Insurgency_First_Release1_2.7z)  
 (.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.2/Insurgency.First.Release1_2.7z)
