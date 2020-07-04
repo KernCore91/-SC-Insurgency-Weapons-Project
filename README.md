@@ -1,4 +1,5 @@
 # Insurgency Weapons Project
+![](https://i.imgur.com/u0h7FjO.png)
 > Custom weapons project for Sven Co-op
 
 This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it was released on the Sven Co-op Forums (2020/01/19), with more content to come in the future.
