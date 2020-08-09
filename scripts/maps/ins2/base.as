@@ -63,7 +63,6 @@ const int DF_MAX_CARRY_ARGR	= 10;
 const string DF_AMMO_SPOR	= "sporeclip";
 const int DF_MAX_CARRY_SPOR	= 30;
 
-
 const string EMPTY_SHOOT_S = "ins2/wpn/empty.ogg"; //Default Empty shoot sound, if your weapons doesn't have any empty sound, it will use this
 const string AMMO_PICKUP_S = "ins2/wpn/ammo.ogg"; //Default ammo pickup sound
 const string FIREMODE_SPRT = "ins2/firemodes.spr"; //Default firemodes sprite for weapons that support it
@@ -485,7 +484,7 @@ mixin class WeaponBase
 		m_pPlayer.ResetVModelPos();
 		SetPlayerSpeed();
 		m_pPlayer.pev.fuser4 = 0;
-		m_pPlayer.pev.maxspeed = 0;
+		m_pPlayer.SetMaxSpeedOverride( -1 );
 		FiremodesSpr( FiremodesPos, 0, 0, 0 );
 	}
 
@@ -1326,7 +1325,7 @@ mixin class BipodWeaponBase
 			self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 			self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer2;
 			m_pPlayer.pev.fuser4 = 0;
-			m_pPlayer.pev.maxspeed = 0;
+			m_pPlayer.SetMaxSpeedOverride( -1 );
 			return;
 		}
 
@@ -1372,7 +1371,7 @@ mixin class BipodWeaponBase
 					WeaponBipodMode = BIPOD_DEPLOYED;
 					self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 					self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer;
-					m_pPlayer.pev.maxspeed = -1;
+					m_pPlayer.SetMaxSpeedOverride( 0 );
 					m_pPlayer.pev.fuser4 = 1;
 					return;
 				}
