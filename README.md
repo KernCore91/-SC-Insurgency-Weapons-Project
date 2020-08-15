@@ -12,7 +12,7 @@ This project is brought to you by the following super dedicated team members: No
 * AKS-74u (weapon_ins2aks74u)
 * AS VAL (weapon_ins2asval)
 * Benelli M1014 (weapon_ins2m1014)
-* Beretta (weapon_ins2beretta)
+* Beretta M9 (weapon_ins2beretta)
 * Brass knuckles (weapon_ins2knuckles)
 * C96 Carbine (weapon_ins2c96carb)
 * C96 Pistol (weapon_ins2c96)
@@ -20,7 +20,7 @@ This project is brought to you by the following super dedicated team members: No
 * Desert Eagle (weapon_ins2deagle)
 * FN FAL (weapon_ins2fnfal)
 * FN M249 (weapon_ins2m249)
-* Galil (weapon_ins2galil)
+* Galil ARM (weapon_ins2galil)
 * Gewehr 43 (weapon_ins2g43)
 * Glock 17 (weapon_ins2glock17)
 * H&K G3A3 (weapon_ins2g3a3)
@@ -28,7 +28,7 @@ This project is brought to you by the following super dedicated team members: No
 * H&K MP7 (weapon_ins2mp7)
 * H&K UMP-45 (weapon_ins2ump45)
 * H&K USP (weapon_ins2usp)
-* Ithaca 37 (weapon_ins2ithaca)
+* Ithaca M37 (weapon_ins2ithaca)
 * KA-BAR (weapon_ins2kabar)
 * Kukri (weapon_ins2kukri)
 * L85A2 + L123A2 (weapon_ins2l85a2)
@@ -54,7 +54,7 @@ This project is brought to you by the following super dedicated team members: No
 * SKS-D (weapon_ins2sks)
 * Sterling L2A3 (weapon_ins2l2a3)
 * Thompson M1928 (weapon_ins2m1928)
-* Webley (weapon_ins2webley)
+* Webley Mk.VI (weapon_ins2webley)
 
 ## Gameplay Video
 
