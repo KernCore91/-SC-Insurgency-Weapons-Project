@@ -166,7 +166,7 @@ class weapon_ins2stick : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS
 	{
 		m_iAmmoSave = m_pPlayer.AmmoInventory( self.m_iPrimaryAmmoType ); //Save the player's ammo pool in case it has any in DropItem
 
-		if( m_fExplode > 0 )
+		if( m_fExplode > 0 ) //just in case
 			m_fExplode = 0;
 
 		return self;
@@ -178,6 +178,9 @@ class weapon_ins2stick : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS
 		m_bInAttack = false;
 		m_fAttackStart = 0;
 		m_flStartThrow = 0;
+
+		if( m_fExplode > 0 ) //player dies with the grenade cooked, ignores DropItem()
+			m_fExplode = 0;
 
 		CommonHolster();
 
