@@ -23,3 +23,27 @@ Update 1.2:
 *Updated Credits file
 *Viewmodels recompiled to preserve arm bones
 *Very minor update for the test map: fixed position of some items
+
+Update 1.3:
+*Added the FN F2000
+*Added the Makarov PM
+*Added the Saiga 12k
+*Added the FG-42
+*Added the Mosin Nagant
+*Added the PPSh-41
+*Added the STG-44
+*Added the Colt Python
+*Added the Dragunov SVD
+*Added Python's and Saiga's ammo model as a "mags.mdl" bodygroup (Changing already existing models require server restart if it's on)
+*Added SPEED variable for GLs in ARs
+*Changed the 9x18mm bullet model
+*Changed the 7.62x54mm bullet model
+*Changed the 7.62x25mm Tokarev bullet model
+*Changed the 7.92x33mm Kurz bullet model
+*Fixed AK-12 viewmodel's receiver texture and UV map, updated world models
+*Fixed two instances where you could cook the grenades and give them to other players to explode them
+*Fixed an instance where you could hold an already cooked grenade indefinitely
+*Changed Makarov folder from makarov to pm
+*Changed Saiga folder from saiga12 to saiga
+*Modified sounds from the already existing folders of the F2000 and Mosin Nagant
+*Tweaked Kukri viewmodel's animations slightly
