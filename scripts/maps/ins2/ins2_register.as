@@ -93,7 +93,7 @@ void PluginInit()
 	//INS2_M40A1::POSITION        		= 9;
 	INS2_MOSIN::POSITION        		= 10;
 	INS2_G43::POSITION          		= 11;
-	//INS2_SVD::POSITION          		= 12;
+	INS2_SVD::POSITION          		= 12;
 	//INS2_LEWIS::POSITION        		= 13;
 	INS2_RPK::POSITION          		= 14;
 	INS2_M60::POSITION          		= 15;
@@ -215,8 +215,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Gewehr 43 ZF4 Scope", INS2_G43::GetName(), 335, "primary", "rifle" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Gewehr 43 7.92x57mm Ammo", INS2_G43::GetAmmoName(), 20, "ammo", "rifle" ) );
 		//Dragunov
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "SVD Dragunov PSO-1 Scope", INS2_SVD::GetName(), 345, "primary", "rifle" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "SVD Dragunov 7.62x54mm Ammo", INS2_SVD::GetAmmoName(), 30, "ammo", "rifle" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "SVD Dragunov PSO-1 Scope", INS2_SVD::GetName(), 345, "primary", "rifle" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "SVD Dragunov 7.62x54mm Ammo", INS2_SVD::GetAmmoName(), 30, "ammo", "rifle" ) );
 
 	//Shotguns
 		//Ithaca M37
@@ -267,7 +267,7 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "C96 M1932 7.63x25mm Ammo", INS2_C96CARBINE::GetAmmoName(), 30, "ammo", "carbine" ) );
 		//MK. 18
 	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk. 18", INS2_MK18::GetName(), 225, "primary", "carbine" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk.18 5.56x45mm Ammo", INS2_MK18::GetAmmoName(), 30, "ammo", "carbine" ) );
+	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk. 18 5.56x45mm Ammo", INS2_MK18::GetAmmoName(), 30, "ammo", "carbine" ) );
 		//AKS-74U
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "AKS-74U", INS2_AKS74U::GetName(), 235, "primary", "carbine" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "AKS-74U 5.45x39mm Ammo", INS2_AKS74U::GetAmmoName(), 30, "ammo", "carbine" ) );

@@ -66,6 +66,7 @@
 //sniper rifles
 #include "srifl/weapon_ins2g43"
 #include "srifl/weapon_ins2mosin"
+#include "srifl/weapon_ins2dragunov"
 
 void RegisterAll()
 {
@@ -137,4 +138,5 @@ void RegisterAll()
 	//sniper rifles
 	INS2_G43::Register();
 	INS2_MOSIN::Register();
+	INS2_SVD::Register();
 }
