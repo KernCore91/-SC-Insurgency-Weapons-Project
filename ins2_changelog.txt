@@ -34,6 +34,8 @@ Update 1.3:
 *Added the STG-44
 *Added the Colt Python
 *Added the Dragunov SVD
+*Added the Colt M1911
+*Added the Smith & Wesson Model 29
 *Added Python's and Saiga's ammo model as a "mags.mdl" bodygroup (Changing already existing models require server restart if it's on)
 *Added SPEED variable for GLs in ARs
 *Changed the 9x18mm bullet model
@@ -45,5 +47,6 @@ Update 1.3:
 *Fixed an instance where you could hold an already cooked grenade indefinitely
 *Changed Makarov folder from makarov to pm
 *Changed Saiga folder from saiga12 to saiga
-*Modified sounds from the already existing folders of the F2000 and Mosin Nagant
+*Modified sounds from the already existing folders of the F2000, Mosin Nagant and M1911
+*Removed hit.ogg sound from the M1911
 *Tweaked Kukri viewmodel's animations slightly
