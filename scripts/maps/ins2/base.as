@@ -484,7 +484,8 @@ mixin class WeaponBase
 		m_pPlayer.ResetVModelPos();
 		SetPlayerSpeed();
 		m_pPlayer.pev.fuser4 = 0;
-		m_pPlayer.SetMaxSpeedOverride( -1 );
+		m_pPlayer.pev.maxspeed = 0;
+		//m_pPlayer.SetMaxSpeedOverride( -1 );
 		FiremodesSpr( FiremodesPos, 0, 0, 0 );
 	}
 
@@ -1325,7 +1326,8 @@ mixin class BipodWeaponBase
 			self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 			self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer2;
 			m_pPlayer.pev.fuser4 = 0;
-			m_pPlayer.SetMaxSpeedOverride( -1 );
+			m_pPlayer.pev.maxspeed = 0;
+			//m_pPlayer.SetMaxSpeedOverride( -1 );
 			return;
 		}
 
@@ -1371,7 +1373,8 @@ mixin class BipodWeaponBase
 					WeaponBipodMode = BIPOD_DEPLOYED;
 					self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 					self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer;
-					m_pPlayer.SetMaxSpeedOverride( 0 );
+					m_pPlayer.pev.maxspeed = -1;
+					//m_pPlayer.SetMaxSpeedOverride( 0 );
 					m_pPlayer.pev.fuser4 = 1;
 					return;
 				}
