@@ -18,7 +18,7 @@ void PluginInit()
 	//INS2_ETOOL::POSITION      		= 13;
 	//Second slot 	(slot 1)    		- Pistols & Revolvers
 	INS2_MAKAROV::POSITION      		= 9;
-	//INS2_M1911::POSITION        		= 10;
+	INS2_M1911::POSITION        		= 10;
 	INS2_M9BERETTA::POSITION    		= 11;
 	INS2_USP::POSITION          		= 12;
 	INS2_GLOCK17::POSITION      		= 13;
@@ -26,7 +26,7 @@ void PluginInit()
 	INS2_DEAGLE::POSITION       		= 15;
 	INS2_WEBLEY::POSITION       		= 16;
 	INS2_PYTHON::POSITION       		= 17;
-	//INS2_M29::POSITION          		= 18;
+	INS2_M29::POSITION          		= 18;
 	//INS2_CZ75B::POSITION      		= 19;
 	//Third slot 	(slot 2)    		- Submachine Guns
 	INS2_UMP45::POSITION        		= 9;
@@ -121,8 +121,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Makarov PM", INS2_MAKAROV::GetName(), 80, "secondary", "pistol" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Makarov 9x18mm Ammo", INS2_MAKAROV::GetAmmoName(), 5, "ammo", "pistol" ) );
 		//M1911
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Colt M1911A1", INS2_M1911::GetName(), 100, "secondary", "pistol" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1911A1 .45ACP Ammo", INS2_M1911::GetAmmoName(), 10, "ammo", "pistol" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Colt M1911", INS2_M1911::GetName(), 100, "secondary", "pistol" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1911 .45ACP Ammo", INS2_M1911::GetAmmoName(), 10, "ammo", "pistol" ) );
 		//Beretta
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Beretta M92F", INS2_M9BERETTA::GetName(), 115, "secondary", "pistol" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Beretta 9x19mm Ammo", INS2_M9BERETTA::GetAmmoName(), 15, "ammo", "pistol" ) );
@@ -147,8 +147,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Colt Python", INS2_PYTHON::GetName(), 185, "secondary", "revolver" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Python .357 Magnum Ammo", INS2_PYTHON::GetAmmoName(), 15, "ammo", "revolver" ) );
 		//Model M29
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "S&W Model 29", INS2_M29::GetName(), 200, "secondary", "revolver" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Model 29 .44 Magnum Ammo", INS2_M29::GetAmmoName(), 20, "ammo", "revolver" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "S&W Model 29", INS2_M29::GetName(), 200, "secondary", "revolver" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Model 29 .44 Magnum Ammo", INS2_M29::GetAmmoName(), 20, "ammo", "revolver" ) );
 
 	//Assault Rifles & Battle Rifles
 		//AS VAL

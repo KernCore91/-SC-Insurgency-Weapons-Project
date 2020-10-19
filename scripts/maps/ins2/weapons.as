@@ -20,11 +20,13 @@
 #include "handg/weapon_ins2usp"
 #include "handg/weapon_ins2beretta"
 #include "handg/weapon_ins2c96"
+#include "handg/weapon_ins2m29"
 #include "handg/weapon_ins2deagle"
+#include "handg/weapon_ins2m1911"
 #include "handg/weapon_ins2glock17"
+#include "handg/weapon_ins2makarov"
 #include "handg/weapon_ins2webley"
 #include "handg/weapon_ins2python"
-#include "handg/weapon_ins2makarov"
 //lmgs
 #include "lmg/weapon_ins2rpk"
 #include "lmg/weapon_ins2m249"
@@ -92,11 +94,13 @@ void RegisterAll()
 	INS2_USP::Register();
 	INS2_M9BERETTA::Register();
 	INS2_C96::Register();
+	INS2_M29::Register();
 	INS2_DEAGLE::Register();
+	INS2_M1911::Register();
 	INS2_GLOCK17::Register();
+	INS2_MAKAROV::Register();
 	INS2_WEBLEY::Register();
 	INS2_PYTHON::Register();
-	INS2_MAKAROV::Register();
 	//lmgs
 	INS2_RPK::Register();
 	INS2_M249::Register();
