@@ -87,7 +87,6 @@ class weapon_ins2m1911 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		"ins2/wpn/m1911/sldrel.ogg",
 		"ins2/wpn/m1911/magin.ogg",
 		"ins2/wpn/m1911/magout.ogg",
-		"ins2/wpn/m1911/magrel.ogg",
 		"ins2/wpn/m1911/safe.ogg",
 		SHOOT_S,
 		EMPTY_S
@@ -224,6 +223,8 @@ class weapon_ins2m1911 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		BaseClass.ItemPreFrame();
 	}
 
+	//private int m_iSwing = 0;
+
 	void Reload()
 	{
 		if( self.m_iClip == MAX_CLIP || m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) <= 0 )
@@ -242,6 +243,15 @@ class weapon_ins2m1911 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		{
 			if( self.m_iClip <= 0 )
 			{
+				/*switch( ( m_iSwing++ ) % 2 )
+				{
+					case 0:
+						Reload( MAX_CLIP, RELOAD_EMPTY, (105.0/35.0), GetBodygroup() );
+						break;
+					case 1:
+						Reload( MAX_CLIP, RELOAD_NULL, (112.0/35.0), GetBodygroup() );
+						break;
+				}*/
 				if( g_PlayerFuncs.SharedRandomLong( m_pPlayer.random_seed, 1, 100 ) <= 6 )
 					Reload( MAX_CLIP, RELOAD_NULL, (112.0/35.0), GetBodygroup() );
 				else
