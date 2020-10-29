@@ -42,6 +42,7 @@ Update 1.3:
 *Changed the 7.62x54mm bullet model
 *Changed the 7.62x25mm Tokarev bullet model
 *Changed the 7.92x33mm Kurz bullet model
+*Disposable Launchers start with more ammo now
 *Fixed AK-12 viewmodel's receiver texture and UV map, updated world models
 *Fixed two instances where you could cook the grenades and give them to other players to explode them
 *Fixed an instance where you could hold an already cooked grenade indefinitely
