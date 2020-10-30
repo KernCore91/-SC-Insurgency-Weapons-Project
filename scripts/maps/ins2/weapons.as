@@ -6,10 +6,13 @@
 #include "arifl/weapon_ins2l85a2"
 #include "arifl/weapon_ins2ak74"
 #include "arifl/weapon_ins2ak12"
+#include "arifl/weapon_ins2f2000"
+#include "arifl/weapon_ins2stg44"
 //battle rifles
 #include "brifl/weapon_ins2fnfal"
 #include "brifl/weapon_ins2g3a3"
 #include "brifl/weapon_ins2m14ebr"
+#include "brifl/weapon_ins2fg42"
 //rifles
 #include "rifle/weapon_ins2garand"
 #include "rifle/weapon_ins2enfield"
@@ -17,9 +20,13 @@
 #include "handg/weapon_ins2usp"
 #include "handg/weapon_ins2beretta"
 #include "handg/weapon_ins2c96"
+#include "handg/weapon_ins2m29"
 #include "handg/weapon_ins2deagle"
+#include "handg/weapon_ins2m1911"
 #include "handg/weapon_ins2glock17"
+#include "handg/weapon_ins2makarov"
 #include "handg/weapon_ins2webley"
+#include "handg/weapon_ins2python"
 //lmgs
 #include "lmg/weapon_ins2rpk"
 #include "lmg/weapon_ins2m249"
@@ -39,6 +46,7 @@
 #include "shotg/weapon_ins2m1014"
 #include "shotg/weapon_ins2coach"
 #include "shotg/weapon_ins2ithaca"
+#include "shotg/weapon_ins2saiga12"
 //smgs
 #include "smg/weapon_ins2mp5k"
 #include "smg/weapon_ins2ump45"
@@ -47,6 +55,7 @@
 #include "smg/weapon_ins2m1928"
 #include "smg/weapon_ins2mp7"
 #include "smg/weapon_ins2mp18"
+#include "smg/weapon_ins2ppsh41"
 //carbines
 #include "carbn/weapon_ins2sks"
 #include "carbn/weapon_ins2m4a1"
@@ -58,6 +67,8 @@
 #include "melee/weapon_ins2kukri"
 //sniper rifles
 #include "srifl/weapon_ins2g43"
+#include "srifl/weapon_ins2mosin"
+#include "srifl/weapon_ins2dragunov"
 
 void RegisterAll()
 {
@@ -69,10 +80,13 @@ void RegisterAll()
 	INS2_L85A2::Register();
 	INS2_AK74::Register();
 	INS2_AK12::Register();
+	INS2_F2000::Register();
+	INS2_STG44::Register();
 	//battle rifles
 	INS2_FNFAL::Register();
 	INS2_G3A3::Register();
 	INS2_M14EBR::Register();
+	INS2_FG42::Register();
 	//rifles
 	INS2_M1GARAND::Register();
 	INS2_ENFIELD::Register();
@@ -80,9 +94,13 @@ void RegisterAll()
 	INS2_USP::Register();
 	INS2_M9BERETTA::Register();
 	INS2_C96::Register();
+	INS2_M29::Register();
 	INS2_DEAGLE::Register();
+	INS2_M1911::Register();
 	INS2_GLOCK17::Register();
+	INS2_MAKAROV::Register();
 	INS2_WEBLEY::Register();
+	INS2_PYTHON::Register();
 	//lmgs
 	INS2_RPK::Register();
 	INS2_M249::Register();
@@ -102,6 +120,7 @@ void RegisterAll()
 	INS2_M1014::Register();
 	INS2_COACH::Register();
 	INS2_ITHACA::Register();
+	INS2_SAIGA12::Register();
 	//smgs
 	INS2_MP5K::Register();
 	INS2_UMP45::Register();
@@ -110,6 +129,7 @@ void RegisterAll()
 	INS2_MP7::Register();
 	INS2_M1928::Register();
 	INS2_MP18::Register();
+	INS2_PPSH41::Register();
 	//carbines
 	INS2_C96CARBINE::Register();
 	INS2_SKS::Register();
@@ -121,4 +141,6 @@ void RegisterAll()
 	INS2_KUKRI::Register();
 	//sniper rifles
 	INS2_G43::Register();
+	INS2_MOSIN::Register();
+	INS2_SVD::Register();
 }

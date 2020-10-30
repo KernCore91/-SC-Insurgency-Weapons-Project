@@ -75,6 +75,7 @@ int WEIGHT      	= 35;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 27;
 uint DAMAGE_GL  	= 130;
+float SPEED     	= 1325;
 uint SLOT       	= 5;
 uint POSITION   	= 19;
 float RPM_AIR   	= 600; //Rounds per minute in air
@@ -221,7 +222,7 @@ class weapon_ins2akm : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 				vecStart = (m_pPlayer.pev.button & IN_DUCK == 0) ? m_pPlayer.GetGunPosition() + g_Engine.v_forward * 16 + g_Engine.v_right * 2 + g_Engine.v_up * 2 : 
 					m_pPlayer.GetGunPosition() + g_Engine.v_forward * 16 + g_Engine.v_right * 2 + g_Engine.v_up * 2 + m_pPlayer.pev.view_ofs * 0.01;
 
-			Vector vecVeloc = g_Engine.v_forward * 1300 + g_Engine.v_up * 8;
+			Vector vecVeloc = g_Engine.v_forward * SPEED + g_Engine.v_up * 8;
 			g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_WEAPON, SHOOTGL, Math.RandomFloat( 0.95, 1.0 ), 0.7, 0, 95 + Math.RandomLong( 0, 0x9 ) );
 			INS2GLPROJECTILE::CIns2GL@ pGL = INS2GLPROJECTILE::ShootGrenade( m_pPlayer.pev, vecStart, vecVeloc, DAMAGE_GL, G_MODEL, false, PROJ_NAME );
 

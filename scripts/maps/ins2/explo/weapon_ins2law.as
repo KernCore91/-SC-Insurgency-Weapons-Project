@@ -46,7 +46,7 @@ string SHOOT_S = "ins2/wpn/law/shoot.ogg";
 // Information
 int MAX_CARRY   	= 1000;
 int MAX_CLIP    	= 1;
-int DEFAULT_GIVE 	= MAX_CLIP * 2;
+int DEFAULT_GIVE 	= MAX_CLIP * 3;
 int WEIGHT      	= 50;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_LIMITINWORLD | ITEM_FLAG_EXHAUSTIBLE | ITEM_FLAG_ESSENTIAL;
 uint DAMAGE     	= 215;
