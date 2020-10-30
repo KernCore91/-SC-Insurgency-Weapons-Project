@@ -17,7 +17,12 @@ This project is brought to you by the following super dedicated team members: No
 * C96 Carbine (weapon_ins2c96carb)
 * C96 Pistol (weapon_ins2c96)
 * Coach gun (IZH-43) (weapon_ins2coach)
+* Colt M1911 (weapon_ins2m1911)
+* Colt Python (weapon_ins2python)
 * Desert Eagle (weapon_ins2deagle)
+* Dragunov SVD (weapon_ins2dragunov)
+* FG-42 (weapon_ins2fg42)
+* FN F2000 (weapon_ins2f2000)
 * FN FAL (weapon_ins2fnfal)
 * FN M249 (weapon_ins2m249)
 * Galil ARM (weapon_ins2galil)
@@ -42,17 +47,23 @@ This project is brought to you by the following super dedicated team members: No
 * M60 (weapon_ins2m60)
 * M72 LAW (weapon_ins2law)
 * M79 (weapon_ins2m79)
+* Makarov PM (weapon_ins2makarov)
 * MG-42 (weapon_ins2mg42)
 * MK2 Grenade (weapon_ins2mk2)
+* Mosin Nagant M91/30 (weapon_ins2mosin)
 * Mossberg 590 (weapon_ins2m590)
 * MP-18 (weapon_ins2mp18)
 * MP-40 (weapon_ins2mp40)
 * Panzerfaust (weapon_ins2pzfaust)
 * Panzerschreck (weapon_ins2pzschreck)
+* PPSh-41 (weapon_ins2ppsh41)
 * RPG-7 (weapon_ins2rpg7)
 * RPK (weapon_ins2rpk)
+* Saiga 12k (weapon_ins2saiga12)
 * SKS-D (weapon_ins2sks)
+* Smith & Wesson Model 29 (weapon_ins2m29)
 * Sterling L2A3 (weapon_ins2l2a3)
+* StG-44 (weapon_ins2stg44)
 * Thompson M1928 (weapon_ins2m1928)
 * Webley Mk.VI (weapon_ins2webley)
 
@@ -174,6 +185,35 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 
 ## Updates
 
+### Update 1.3:
+* Added the FN F2000
+* Added the Makarov PM
+* Added the Saiga 12k
+* Added the FG-42
+* Added the Mosin Nagant
+* Added the PPSh-41
+* Added the STG-44
+* Added the Colt Python
+* Added the Dragunov SVD
+* Added the Colt M1911
+* Added the Smith & Wesson Model 29
+* Added a map script for the following series: Restriction
+* Added Python's and Saiga's ammo model as a "mags.mdl" bodygroup (Changing already existing models require server restart if it's on)
+* Added SPEED variable for GLs in ARs
+* Changed the 9x18mm bullet model
+* Changed the 7.62x54mm bullet model
+* Changed the 7.62x25mm Tokarev bullet model
+* Changed the 7.92x33mm Kurz bullet model
+* Disposable Launchers start with more ammo now
+* Fixed AK-12 viewmodel's receiver texture and UV map, updated world models
+* Fixed two instances where you could cook the grenades and give them to other players to explode them
+* Fixed an instance where you could hold an already cooked grenade indefinitely
+* Changed Makarov folder from makarov to pm
+* Changed Saiga folder from saiga12 to saiga
+* Modified sounds from the already existing folders of the F2000, Mosin Nagant and M1911
+* Removed hit.ogg and magrel.ogg sounds from the M1911
+* Tweaked Kukri viewmodel's animations slightly
+
 ### Update 1.2:
 * Added the AS VAL
 * Added the M14 EBR
@@ -202,10 +242,10 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 
 ## Download Links
 
-Total Size Compressed: 67.66 MB
+Total Size Compressed: 77.1 MB
 
-(.7z) [Dropbox](https://www.dropbox.com/s/pffedw6m3yt7099/Insurgency%20First%20Release1_2.7z?dl=0)  
-(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_2.7z)  
-(.7z) [Mega](https://mega.nz/#!W81lQaoR!E_BtJoJWXm9sfwL4O1uQja6impghi7DP-n5JOy-vEsE)  
-(.7z) [Boderman.net](http://www.boderman.net/svencoop/Insurgency_First_Release1_2.7z)  
-(.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.2/Insurgency.First.Release1_2.7z)
+(.7z) [Dropbox](https://www.dropbox.com/s/2xtlnae2rmzjapz/insurgency%20first%20release1_3.7z?dl=0)  
+(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_3.7z)  
+(.7z) [Mega](https://mega.nz/file/7g1nDYYb#LJWxU5IBRcLQJWScpwUs3h1tK6prOwlZjR7gMYyMHUc)  
+<!--(.7z) [Boderman.net](http://www.boderman.net/svencoop/Insurgency_First_Release1_2.7z)  
+(.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.2/Insurgency.First.Release1_2.7z)-->
