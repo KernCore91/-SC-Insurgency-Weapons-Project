@@ -70,7 +70,7 @@ This project is brought to you by the following super dedicated team members: No
 ## Gameplay Video
 
 Video:
-[![](http://i3.ytimg.com/vi/LyThjfNqwWs/maxresdefault.jpg)](https://www.youtube.com/watch?v=LyThjfNqwWs)
+[![](https://i9.ytimg.com/vi/LyThjfNqwWs/mq2.jpg?sqp=COze-_wF&rs=AOn4CLAyIuhDRxbCUKfr49cjIcLS5SZoIA)](https://www.youtube.com/watch?v=LyThjfNqwWs)
 *by SV BOY.*
 
 ## Screenshots
