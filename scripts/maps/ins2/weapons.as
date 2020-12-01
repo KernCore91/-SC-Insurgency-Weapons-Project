@@ -28,6 +28,7 @@
 #include "handg/weapon_ins2webley"
 #include "handg/weapon_ins2python"
 //lmgs
+#include "lmg/weapon_ins2lewis"
 #include "lmg/weapon_ins2rpk"
 #include "lmg/weapon_ins2m249"
 #include "lmg/weapon_ins2mg42"
@@ -102,6 +103,7 @@ void RegisterAll()
 	INS2_WEBLEY::Register();
 	INS2_PYTHON::Register();
 	//lmgs
+	INS2_LEWIS::Register();
 	INS2_RPK::Register();
 	INS2_M249::Register();
 	INS2_MG42::Register();

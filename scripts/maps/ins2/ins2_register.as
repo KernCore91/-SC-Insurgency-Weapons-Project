@@ -94,7 +94,7 @@ void PluginInit()
 	INS2_MOSIN::POSITION        		= 10;
 	INS2_G43::POSITION          		= 11;
 	INS2_SVD::POSITION          		= 12;
-	//INS2_LEWIS::POSITION        		= 13;
+	INS2_LEWIS::POSITION        		= 13;
 	INS2_RPK::POSITION          		= 14;
 	INS2_M60::POSITION          		= 15;
 	INS2_M249::POSITION         		= 16;
@@ -304,8 +304,8 @@ void MapInit()
 
 	//Light Machine Guns
 		//Lewis
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Lewis Model 1915 MK.I + Bipod", INS2_LEWIS::GetName(), 345, "primary", "lmg" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Lewis .303 Ammo", INS2_LEWIS::GetAmmoName(), 55, "ammo", "lmg" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Lewis Model 1915 MK.I + Bipod", INS2_LEWIS::GetName(), 360, "primary", "lmg" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Lewis .303 Ammo", INS2_LEWIS::GetAmmoName(), 55, "ammo", "lmg" ) );
 		//RPK
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "RPK + Bipod", INS2_RPK::GetName(), 400, "primary", "lmg" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "RPK 7.62x39mm Ammo", INS2_RPK::GetAmmoName(), 75, "ammo", "lmg" ) );
