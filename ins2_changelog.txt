@@ -52,3 +52,10 @@ Update 1.3:
 *Modified sounds from the already existing folders of the F2000, Mosin Nagant and M1911
 *Removed hit.ogg and magrel.ogg sounds from the M1911
 *Tweaked Kukri viewmodel's animations slightly
+
+Update 1.4:
+*Applied minor tweaks to the AK-74 and AKS-74u viewmodel reload animations
+*Applied minor tweaks to the Galil viewmodel reload_empty and draw_first animations
+*Tweaked AKM viewmodel's animations slightly
+*Tweaked SKS viewmodel's animations slightly
+*Added the Lewis Model 1915 MK.I
