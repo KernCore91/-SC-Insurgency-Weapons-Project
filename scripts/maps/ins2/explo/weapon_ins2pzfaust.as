@@ -143,9 +143,12 @@ class weapon_ins2pzfaust : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, I
 		return true;
 	}
 
+	private int m_iAmmoSave;
 	bool Deploy()
 	{
 		PlayDeploySound( 3 );
+		m_iAmmoSave = 0; // Zero out the ammo save 
+
 		if( m_WasDrawn == false )
 		{
 			m_WasDrawn = true;
@@ -155,12 +158,36 @@ class weapon_ins2pzfaust : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, I
 			return Deploy( V_MODEL, P_MODEL, (self.m_iClip > 0) ? DRAW : DRAW_EMPTY, "rpg", GetBodygroup(), (29.0/30.0) );
 	}
 
+	private CBasePlayerItem@ DropItem()
+	{
+		m_fDropped = true;
+		m_iAmmoSave = m_pPlayer.AmmoInventory( self.m_iPrimaryAmmoType ); //Save the player's ammo pool in case it has any in DropItem
+
+		//Remove the weapon here too
+		if( m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) <= 0 && self.m_iClip <= 0 )
+		{
+			EjectClipThink();
+			SetThink( ThinkFunction( DestroyThink ) );
+			self.pev.nextthink = g_Engine.time + 0.1;
+			return null;
+		}
+
+		return self;
+	}
+
 	void Holster( int skipLocal = 0 )
 	{
 		CommonHolster();
 
-		if( m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) == 0 && self.m_iClip == 0 && !m_fDropped )
+		if( m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) > 0 ) //Save the player's ammo pool in case it has any in Holster
 		{
+			m_iAmmoSave = m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType );
+		}
+
+		//Remove the weapon here
+		if( m_iAmmoSave <= 0 && self.m_iClip <= 0 && !m_fDropped )
+		{
+			m_fDropped = true; //Prevent this block from being called twice on Holster()
 			EjectClipThink();
 			SetThink( ThinkFunction( DestroyThink ) );
 			self.pev.nextthink = g_Engine.time + 0.1;
