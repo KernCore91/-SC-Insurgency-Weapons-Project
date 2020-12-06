@@ -63,6 +63,7 @@ const int DF_MAX_CARRY_ARGR	= 10;
 const string DF_AMMO_SPOR	= "sporeclip";
 const int DF_MAX_CARRY_SPOR	= 30;
 
+
 const string EMPTY_SHOOT_S = "ins2/wpn/empty.ogg"; //Default Empty shoot sound, if your weapons doesn't have any empty sound, it will use this
 const string AMMO_PICKUP_S = "ins2/wpn/ammo.ogg"; //Default ammo pickup sound
 const string FIREMODE_SPRT = "ins2/firemodes.spr"; //Default firemodes sprite for weapons that support it
@@ -453,6 +454,8 @@ mixin class WeaponBase
 	{
 		SetThink( null );
 		self.DestroyItem();
+
+		//m_pPlayer.RemovePlayerItem( self );
 		//g_Game.AlertMessage( at_console, "Item Destroyed.\n" );
 	}
 
@@ -484,8 +487,7 @@ mixin class WeaponBase
 		m_pPlayer.ResetVModelPos();
 		SetPlayerSpeed();
 		m_pPlayer.pev.fuser4 = 0;
-		m_pPlayer.pev.maxspeed = 0;
-		//m_pPlayer.SetMaxSpeedOverride( -1 );
+		m_pPlayer.SetMaxSpeedOverride( -1 ); //m_pPlayer.pev.maxspeed = 0;
 		FiremodesSpr( FiremodesPos, 0, 0, 0 );
 	}
 
@@ -1058,7 +1060,7 @@ mixin class MeleeWeaponBase
 			CBaseEntity@ pEntity = g_EntityFuncs.Instance( tr.pHit );
 
 			// player "shoot" animation
-			m_pPlayer.SetAnimation( PLAYER_ATTACK1 ); 
+			m_pPlayer.SetAnimation( PLAYER_ATTACK1 );
 
 			// AdamR: Custom damage option
 			if( self.m_flCustomDmg > 0 )
@@ -1068,15 +1070,10 @@ mixin class MeleeWeaponBase
 			g_WeaponFuncs.ClearMultiDamage();
 
 			if( self.m_flNextPrimaryAttack + flAttSpd < g_Engine.time )
-			{
-				// first swing does full damage
-				pEntity.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, dmgBits );  
-			}
+				pEntity.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, dmgBits ); // first swing does full damage
 			else
-			{
-				// subsequent swings do 75% (Changed -Sniper)
-				pEntity.TraceAttack( m_pPlayer.pev, flDamage * 0.75, g_Engine.v_forward, tr, dmgBits | DMG_NEVERGIB );  
-			}
+				pEntity.TraceAttack( m_pPlayer.pev, flDamage * 0.75, g_Engine.v_forward, tr, dmgBits | DMG_NEVERGIB ); // subsequent swings do 75% (Changed -Sniper)
+
 			g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
 
 			// play thwack, smack, or dong sound
@@ -1326,8 +1323,7 @@ mixin class BipodWeaponBase
 			self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 			self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer2;
 			m_pPlayer.pev.fuser4 = 0;
-			m_pPlayer.pev.maxspeed = 0;
-			//m_pPlayer.SetMaxSpeedOverride( -1 );
+			m_pPlayer.SetMaxSpeedOverride( -1 ); //m_pPlayer.pev.maxspeed = 0;
 			return;
 		}
 
@@ -1373,8 +1369,7 @@ mixin class BipodWeaponBase
 					WeaponBipodMode = BIPOD_DEPLOYED;
 					self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 					self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer;
-					m_pPlayer.pev.maxspeed = -1;
-					//m_pPlayer.SetMaxSpeedOverride( 0 );
+					m_pPlayer.SetMaxSpeedOverride( 0 ); //m_pPlayer.pev.maxspeed = -1;
 					m_pPlayer.pev.fuser4 = 1;
 					return;
 				}
