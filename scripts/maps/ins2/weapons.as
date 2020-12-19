@@ -62,6 +62,7 @@
 #include "carbn/weapon_ins2m4a1"
 #include "carbn/weapon_ins2aks74u"
 #include "carbn/weapon_ins2c96carb"
+#include "carbn/weapon_ins2mk18"
 //melees
 #include "melee/weapon_ins2kabar"
 #include "melee/weapon_ins2knuckles"
@@ -137,6 +138,7 @@ void RegisterAll()
 	INS2_SKS::Register();
 	INS2_M4A1::Register();
 	INS2_AKS74U::Register();
+	INS2_MK18::Register();
 	//melees
 	INS2_KABAR::Register();
 	INS2_KNUCKLES::Register();

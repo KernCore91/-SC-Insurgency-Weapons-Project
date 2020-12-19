@@ -42,7 +42,7 @@ void PluginInit()
 	//INS2_MP5SD::POSITION      		= 19;
 	//Fourth slot 	(slot 3)    		- Carbines & Shotguns
 	INS2_C96CARBINE::POSITION   		= 9;
-	//INS2_MK18::POSITION         		= 10;
+	INS2_MK18::POSITION         		= 10;
 	INS2_AKS74U::POSITION       		= 11;
 	INS2_M4A1::POSITION         		= 12;
 	//INS2_M1A1PARA::POSITION     		= 13;
@@ -266,8 +266,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "C96 M1932 Schnellfeuer", INS2_C96CARBINE::GetName(), 215, "primary", "carbine" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "C96 M1932 7.63x25mm Ammo", INS2_C96CARBINE::GetAmmoName(), 30, "ammo", "carbine" ) );
 		//MK. 18
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk. 18", INS2_MK18::GetName(), 225, "primary", "carbine" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk. 18 5.56x45mm Ammo", INS2_MK18::GetAmmoName(), 30, "ammo", "carbine" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk. 18 MOD 1", INS2_MK18::GetName(), 225, "primary", "carbine" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mk. 18 5.56x45mm Ammo", INS2_MK18::GetAmmoName(), 30, "ammo", "carbine" ) );
 		//AKS-74U
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "AKS-74U", INS2_AKS74U::GetName(), 235, "primary", "carbine" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "AKS-74U 5.45x39mm Ammo", INS2_AKS74U::GetAmmoName(), 30, "ammo", "carbine" ) );
