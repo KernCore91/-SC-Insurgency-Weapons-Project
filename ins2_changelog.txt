@@ -59,3 +59,5 @@ Update 1.4:
 *Tweaked AKM viewmodel's animations slightly
 *Tweaked SKS viewmodel's animations slightly
 *Added the Lewis Model 1915 MK.I
+*Fixed issue that prevented disposable launchers from being dropped once the player respawned
+*Changed main 1024x1024 sprite to support the updated MK. 18 model
