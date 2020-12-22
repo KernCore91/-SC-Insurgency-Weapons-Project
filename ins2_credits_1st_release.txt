@@ -361,7 +361,7 @@ Textures: Rad (Forgotten Hope 2), Norman The Loli Pirate (Edits)
 Animations: New World Interactive 
 Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
 Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
-Misc: KernCore (UV Chop), D.N.I.O. 071 (Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile), KernCore (World Model UVs)
 ----------------------------------------------------------------------------
 >M1 Garand
 https://gamebanana.com/skins/126761
@@ -526,15 +526,14 @@ Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
 Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
 Misc: KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile), Norman The Loli Pirate (World Model)
 ----------------------------------------------------------------------------
->MK18
-https://gamebanana.com/skins/55705
+>MK. 18 Mod 1
 
-Model: Twinke Masta, Soul_Slayer, Sporkeh, sHiBaN
-Textures: Twinke Masta, Kimono, El Maestro de Graffiti
-Animations: New World Interactive
+Model: Twinke Masta (Body, Stock, Rail Cover), TheLama (EOTech), Milo (Folding Iron Sights), B0T (PMag), Norman The Loli Pirate
+Textures: Millenia (Body, Stock), Thanez (Rail Cover), Flamshmizer (EOTech), End of Days (Folding Iron Sights), Thanez (PMag), Norman The Loli Pirate
+Animations: New World Interactive, D.N.I.O. 071 (Edits)
 Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
 Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
-Misc: D.N.I.O. 071 (UV Chop, Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile)
 ----------------------------------------------------------------------------
 >Mosin Nagant
 
