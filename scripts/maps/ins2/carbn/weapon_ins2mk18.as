@@ -5,7 +5,7 @@
 / Animations: New World Interactive, D.N.I.O. 071 (Edits)
 / Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
 / Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
-/ Misc: D.N.I.O. 071 (Compile)
+/ Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile)
 / Script: KernCore
 */
 
