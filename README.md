@@ -194,7 +194,7 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 * Fixed issue that prevented disposable launchers from being dropped once the player respawned
 * Tweaked AKM viewmodel's animations slightly
 * Tweaked SKS viewmodel's animations slightly
-* Fix player's speed not being affected when using bipods.
+* Fix player's speed not being affected when using bipods
 * Model `mags.mdl` has been modified to support low poly versions of the Lewis and MK. 18
 
 ### Update 1.3:
@@ -256,8 +256,8 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 
 Total Size Compressed: 82.02 MB
 
-(.7z) [Dropbox](https://www.dropbox.com/s/bmwos1vivks2xdo/Insurgency%20First%20Release1_4.7z?dl=0)  
+(.7z) [Dropbox](https://www.dropbox.com/s/siyogg6m57072sp/Insurgency%20First%20Release1_4.7z?dl=0)  
 (.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_4.7z)  
-(.7z) [Mega](https://mega.nz/file/rwlyUCjS#OC1iOrNqEoZlILB70jglVUWTMOa092cTzBPcpNthAdA)  
+(.7z) [Mega](https://mega.nz/file/Xg9yCYoB#eFWzSMNW5XQDyKqo6vLZWYYJjPfUFeyCTTyUjE4NW1I)  
 <!--(.7z) [Boderman.net](http://www.boderman.net/svencoop/Insurgency_First_Release1_3.7z)  
 (.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.3/Insurgency.First.Release1_3.7z)-->
