@@ -54,11 +54,13 @@ Update 1.3:
 *Tweaked Kukri viewmodel's animations slightly
 
 Update 1.4:
-*Applied minor tweaks to the AK-74 and AKS-74u viewmodel reload animations
-*Applied minor tweaks to the Galil viewmodel reload_empty and draw_first animations
-*Tweaked AKM viewmodel's animations slightly
-*Tweaked SKS viewmodel's animations slightly
 *Added the Lewis Model 1915 MK.I
 *Added the MK. 18 Mod 1
-*Fixed issue that prevented disposable launchers from being dropped once the player respawned
+*Applied minor tweaks to the AK-74 and AKS-74u viewmodel reload animations
+*Applied minor tweaks to the Galil viewmodel reload_empty and draw_first animations
 *Changed main 1024x1024 sprite to support the updated MK. 18 model
+*Fixed issue that prevented disposable launchers from being dropped once the player respawned
+*Tweaked AKM viewmodel's animations slightly
+*Tweaked SKS viewmodel's animations slightly
+*Fix player's speed not being affected when using bipods.
+*Model mags.mdl has been modified to support low poly versions of the Lewis and MK. 18
