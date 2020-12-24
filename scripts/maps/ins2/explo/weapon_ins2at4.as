@@ -148,7 +148,7 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			return Deploy( V_MODEL, P_MODEL, DRAW_FIRST, "rpg", GetBodygroup(), (104.0/31.0) );
 		}
 		else
-			return Deploy( V_MODEL, P_MODEL, (self.m_iClip > 0) ? DRAW : DRAW_EMPTY, "rpg", GetBodygroup(), (29.0/30.0) );
+			return Deploy( V_MODEL, P_MODEL, DRAW, "rpg", GetBodygroup(), (29.0/30.0) );
 	}
 
 	private CBasePlayerItem@ DropItem()
