@@ -150,9 +150,7 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 	void Detonate()
 	{
 		TraceResult tr;
-		Vector vecSpot;
-		vecSpot = self.GetOrigin() + Vector( 0, 0, 8 );
-		g_Utility.TraceLine( vecSpot, vecSpot + Vector( 0, 0, -40 ), ignore_monsters, self.pev.pContainingEntity, tr );
+		g_Utility.TraceLine( self.GetOrigin(), self.GetOrigin() + Vector( 0, 0, -32 ), ignore_monsters, self.pev.pContainingEntity, tr );
 		self.pev.flags &= ~EF_NOINTERP;
 		Explode( tr );
 	}
@@ -200,7 +198,7 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 			self.pev.framerate = 1;
 		}
 
-		if( m_bImpactGrenade != true )
+		if( !m_bImpactGrenade )
 		{
 			if( self.pev.dmgtime <= g_Engine.time )
 			{
@@ -229,8 +227,6 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 			@pevOwner = self.pev;
 
 		g_PlayerFuncs.ScreenShake( self.pev.origin, 15.0, 50.0, 1.0, self.pev.dmg * 2.5 );
-
-		//MsgTraceTexResult( self.GetOrigin() );
 
 		// Pull out of the wall a bit
 		if( pTrace.flFraction != 1.0 )
@@ -278,6 +274,11 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 		}
 
 		g_EntityFuncs.Remove( self );
+	}
+
+	void Killed( entvars_t@ pevAttacker, int iGib )
+	{
+		Detonate();
 	}
 }
 
