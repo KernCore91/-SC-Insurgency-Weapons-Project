@@ -58,7 +58,7 @@ int MAX_CARRY   	= 1000;
 int MAX_CLIP    	= 6;
 int DEFAULT_GIVE 	= MAX_CLIP * 4;
 int WEIGHT      	= 20;
-int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
+int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY | ITEM_FLAG_SELECTONEMPTY;
 uint DAMAGE     	= 10;
 uint DAMAGE_MELEE 	= 20;
 uint SLOT       	= 3;
@@ -142,6 +142,11 @@ class weapon_ins2ithaca : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, IN
 	bool PlayEmptySound()
 	{
 		return CommonPlayEmptySound( EMPTY_S );
+	}
+
+	bool CanDeploy()
+	{
+		return true;
 	}
 
 	bool Deploy()
