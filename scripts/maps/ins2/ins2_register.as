@@ -14,8 +14,11 @@ void PluginInit()
 	INS2_KNUCKLES::POSITION     		= 9;
 	INS2_KABAR::POSITION        		= 10;
 	INS2_KUKRI::POSITION        		= 11;
-	//INS2_GRAVKNIFE::POSITION  		= 12;
-	//INS2_ETOOL::POSITION      		= 13;
+	/*
+	Gravity knife             12
+	Hatchet                   13
+	British Entrenching Tool  14
+	*/
 	//Second slot 	(slot 1)    		- Pistols & Revolvers
 	INS2_MAKAROV::POSITION      		= 9;
 	INS2_M1911::POSITION        		= 10;
@@ -27,7 +30,13 @@ void PluginInit()
 	INS2_WEBLEY::POSITION       		= 16;
 	INS2_PYTHON::POSITION       		= 17;
 	INS2_M29::POSITION          		= 18;
-	//INS2_CZ75B::POSITION      		= 19;
+	/*
+	H&K VP70             19
+	Stechkin APS         20
+	Luger P08            21
+	Mateba Model 6 Unica 22
+	Akimbo P320          23
+	*/
 	//Third slot 	(slot 2)    		- Submachine Guns
 	INS2_UMP45::POSITION        		= 9;
 	INS2_MP5K::POSITION         		= 10;
@@ -37,9 +46,15 @@ void PluginInit()
 	INS2_PPSH41::POSITION       		= 14;
 	INS2_M1928::POSITION        		= 15;
 	INS2_MP7::POSITION          		= 16;
-	//INS2_VECTOR::POSITION     		= 17;
-	//INS2_UZI::POSITION        		= 18;
-	//INS2_MP5SD::POSITION      		= 19;
+	/*
+	M3 Greasegun             17
+	Mac10                    18
+	Uzi                      19
+	FMG-9                    20
+	PP-Bizon                 21
+	Kriss Vector             22
+	Sten Mk. IIS             23
+	*/
 	//Fourth slot 	(slot 3)    		- Carbines & Shotguns
 	INS2_C96CARBINE::POSITION   		= 9;
 	INS2_MK18::POSITION         		= 10;
@@ -52,7 +67,13 @@ void PluginInit()
 	INS2_COACH::POSITION        		= 17;
 	INS2_M1014::POSITION        		= 18;
 	INS2_SAIGA12::POSITION      		= 19;
-	//INS2_G36C::POSITION         		= 20;*
+	/*
+	G36C                     20
+	Winchester M1897         21
+	Winchester M1887         22
+	MTs-255 Revolver Shotgun 23
+	AA-12                    24
+	*/
 	//Fifth slot 	(slot 4)    		- Explosives & Launchers
 	INS2_M24GRENADE::POSITION   		= 9;
 	INS2_MK2GRENADE::POSITION   		= 10;
@@ -62,9 +83,16 @@ void PluginInit()
 	INS2_AT4::POSITION          		= 14;
 	INS2_RPG7::POSITION         		= 15;
 	INS2_PZSCHRECK::POSITION    		= 16;
-	//INS2_M2FLAMETHROWER::POSITION		= 17;
-	//INS2_ANM14INC::POSITION   		= 18;
-	//INS2_BINOCULARS::POSITION 		= 19;
+	/*
+	C4 Explosive Device      17
+	China Lake               18
+	No. 69 Grenade           19
+	RGO Grenade              20
+	TNT Charge               21
+	PIAT                     22
+	M1A1 Bazooka             23
+	9K32M Strela-2           24
+	*/
 	//Sixth slot 	(slot 5)    		- Assault Rifles
 	INS2_ASVAL::POSITION        		= 9;
 	INS2_STG44::POSITION        		= 10;
@@ -75,20 +103,31 @@ void PluginInit()
 	INS2_M16A4::POSITION        		= 15;
 	INS2_L85A2::POSITION        		= 16;
 	INS2_AKM::POSITION          		= 17;
-	//INS2_M16A1::POSITION      		= 18;
-	//INS2_AUG::POSITION        		= 19;
+	/*
+	Steyr AUG A1             18
+	FAMAS F1                 19
+	AN-94                    20
+	OTs-14 Groza 4           21
+	Vz. 58                   22
+	M16A1                    23
+	H&K G11                  24
+	*/
 	//Seventh slot 	(slot 6)    		- Rifles & Battle Rifles
 	//INS2_K98K::POSITION         		= 9;
 	INS2_M1GARAND::POSITION     		= 10;
-	//INS2_SVT40::POSITION        		= 11;
-	INS2_ENFIELD::POSITION      		= 12;
-	INS2_FNFAL::POSITION        		= 13;
-	INS2_G3A3::POSITION         		= 14;
-	//INS2_SG751::POSITION        		= 15;
-	INS2_M14EBR::POSITION       		= 16;
-	//INS2_SCARH::POSITION        		= 17;
-	INS2_FG42::POSITION         		= 18;
-	//INS2_BAR::POSITION          		= 19;
+	INS2_ENFIELD::POSITION      		= 11;
+	INS2_FNFAL::POSITION        		= 12;
+	INS2_G3A3::POSITION         		= 13;
+	INS2_M14EBR::POSITION       		= 14;
+	INS2_FG42::POSITION         		= 15;
+	/*
+	M1918 BAR  16
+	SCAR-H     17
+	SIG SG-751 18
+	SVU-AS     19
+	SVT-40     20
+	Gewehr 98  21
+	*/
 	//Eight slot 	(slot 7)    		- LMGs & Sniper Rifles
 	//INS2_M40A1::POSITION        		= 9;
 	INS2_MOSIN::POSITION        		= 10;
@@ -99,9 +138,19 @@ void PluginInit()
 	INS2_M60::POSITION          		= 15;
 	INS2_M249::POSITION         		= 16;
 	INS2_MG42::POSITION         		= 17;
-	//INS2_BREN::POSITION       		= 18;
-	//INS2_M21::POSITION        		= 19;
-	//INS2_SVT40::POSITION      		= 20;*
+	/*
+	WA2000     18
+	M21        19
+	AWSM       20
+	Bren MK. 2 21
+	MG-34      22
+	PKM        23
+	*/
+	//Ninth slot 	(slot 8)    		- Special Purpose Weapons
+	INS2_M2FLAMETHROWER::POSITION   	= 9;
+	/*
+	Barret M82A1 10
+	*/
 	BuyMenu::RegisterBuyMenuCCVars();
 }
 
@@ -299,8 +348,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Panzerschreck", INS2_PZSCHRECK::GetName(), 750, "primary", "launcher" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Panzerschreck Rocket Ammo", INS2_PZSCHRECK::GetAmmoName(), 125, "ammo", "launcher" ) );
 		//M2 Flamethrower
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M2 Flamethrower", INS2_M2FLAMETHROWER::GetName(), 750, "primary", "launcher" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M2 Napalm Ammo", INS2_M2FLAMETHROWER::GetAmmoName(), 60, "ammo", "launcher" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M2 Flamethrower", INS2_M2FLAMETHROWER::GetName(), 800, "primary", "launcher" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M2 Napalm Ammo", INS2_M2FLAMETHROWER::GetAmmoName(), 60, "ammo", "launcher" ) );
 
 	//Light Machine Guns
 		//Lewis

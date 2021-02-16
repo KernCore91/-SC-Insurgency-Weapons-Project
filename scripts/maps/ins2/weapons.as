@@ -37,6 +37,7 @@
 #include "explo/weapon_ins2mk2"
 #include "explo/weapon_ins2rpg7"
 #include "explo/weapon_ins2law"
+#include "explo/weapon_ins2m2"
 #include "explo/weapon_ins2stick"
 #include "explo/weapon_ins2pzfaust"
 #include "explo/weapon_ins2m79"
@@ -118,6 +119,7 @@ void RegisterAll()
 	INS2_M79::Register();
 	INS2_PZSCHRECK::Register();
 	INS2_AT4::Register();
+	INS2_M2FLAMETHROWER::Register();
 	//shotguns
 	INS2_M590::Register();
 	INS2_M1014::Register();
