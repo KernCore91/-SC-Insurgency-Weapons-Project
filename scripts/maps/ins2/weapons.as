@@ -72,6 +72,7 @@
 #include "srifl/weapon_ins2g43"
 #include "srifl/weapon_ins2mosin"
 #include "srifl/weapon_ins2dragunov"
+#include "srifl/weapon_ins2m40a1"
 
 void RegisterAll()
 {
@@ -149,4 +150,5 @@ void RegisterAll()
 	INS2_G43::Register();
 	INS2_MOSIN::Register();
 	INS2_SVD::Register();
+	INS2_M40A1::Register();
 }

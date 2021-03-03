@@ -129,7 +129,7 @@ void PluginInit()
 	Gewehr 98  21
 	*/
 	//Eight slot 	(slot 7)    		- LMGs & Sniper Rifles
-	//INS2_M40A1::POSITION        		= 9;
+	INS2_M40A1::POSITION        		= 9;
 	INS2_MOSIN::POSITION        		= 10;
 	INS2_G43::POSITION          		= 11;
 	INS2_SVD::POSITION          		= 12;
@@ -255,8 +255,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M14 EBR Red Dot Sight", INS2_M14EBR::GetName(), 320, "primary", "rifle" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M14 EBR 7.62x51mm Ammo", INS2_M14EBR::GetAmmoName(), 30, "ammo", "rifle" ) );
 		//M40A1
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M40A1 Unertl Scope", INS2_M40A1::GetName(), 305, "primary", "rifle" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M40A1 7.62x51mm Ammo", INS2_M40A1::GetAmmoName(), 15, "ammo", "rifle" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M40A1 Leupold Scope", INS2_M40A1::GetName(), 305, "primary", "rifle" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M40A1 7.62x51mm Ammo", INS2_M40A1::GetAmmoName(), 10, "ammo", "rifle" ) );
 		//Mosin Nagant
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mosin Nagant M91/30 PU Scope", INS2_MOSIN::GetName(), 320, "primary", "rifle" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Mosin Nagant 7.62x54mm Ammo", INS2_MOSIN::GetAmmoName(), 15, "ammo", "rifle" ) );
