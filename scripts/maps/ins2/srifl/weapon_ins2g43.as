@@ -177,7 +177,7 @@ class weapon_ins2g43 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? WeaponTimeBase() + RPM_WTR : WeaponTimeBase() + RPM_AIR;
 		self.m_flTimeWeaponIdle = WeaponTimeBase() + 1.0f;
 
-		ShootWeapon( SHOOT_S, 1, VecModAcc( VECTOR_CONE_1DEGREES, 1.3f, 0.3f, 1.3f ), (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? 1024 : 16384, DAMAGE, true, DMG_SNIPER | DMG_NEVERGIB );
+		ShootWeapon( SHOOT_S, 1, VecModAcc( VECTOR_CONE_1DEGREES, 1.3f, 0.3f, 1.3f ), (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? 1024 : 16384, DAMAGE, true, DMG_SNIPER );
 
 		m_pPlayer.m_iWeaponVolume = NORMAL_GUN_VOLUME;
 		m_pPlayer.m_iWeaponFlash = BRIGHT_GUN_FLASH;

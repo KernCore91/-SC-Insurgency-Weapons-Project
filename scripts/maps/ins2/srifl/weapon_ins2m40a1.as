@@ -68,7 +68,7 @@ int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 100;
 uint SLOT       	= 7;
 uint POSITION   	= 4;
-float RPM       	= 1.52f; //Rounds per minute in air
+float RPM       	= 1.50f; //Rounds per minute in air
 string AMMO_TYPE 	= "ins2_7.62x51mm";
 
 class weapon_ins2m40a1 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -214,7 +214,7 @@ class weapon_ins2m40a1 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		if( m_pPlayer.m_afButtonPressed & IN_ATTACK == 0 )
 			return;
 
-		ShootWeapon( SHOOT_S, 1, VecModAcc( VECTOR_CONE_1DEGREES, 1.15f, 0.15f, 1.15f ), (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? 1024 : 16384, DAMAGE, true, DMG_SNIPER | DMG_NEVERGIB );
+		ShootWeapon( SHOOT_S, 1, VecModAcc( VECTOR_CONE_1DEGREES, 1.15f, 0.15f, 1.15f ), (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? 1024 : 16384, DAMAGE, true, DMG_SNIPER );
 
 		self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = (self.m_iClip == 0) ? WeaponTimeBase() + 0.27 : WeaponTimeBase() + RPM;
 		self.m_flTimeWeaponIdle = WeaponTimeBase() + 2.0f;
