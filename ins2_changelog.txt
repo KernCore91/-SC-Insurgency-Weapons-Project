@@ -64,3 +64,15 @@ Update 1.4:
 *Tweaked SKS viewmodel's animations slightly
 *Fix player's speed not being affected when using bipods.
 *Model mags.mdl has been modified to support low poly versions of the Lewis and MK. 18
+
+Update 1.5:
+*Added the M2A1-2 Flamethrower
+*Added the M40A1 Sniper Rifle
+*Applied minor tweaks to the Ithaca viewmodel reload_start_empty and reload_insert animations
+*Enfield's staged reload will now always put 1 bullet when empty
+*Fix Potential Crash with schedulers on the Enfield
+*Increased damage output on the Mosin Nagant
+*Ithaca can now be deployed when fully empty
+*Minor clean up to the C96 Carbine code
+*Removed DMG_NEVERGIB bit from the sniper rifles
+*Tweaked animations on the Glock 17 viewmodel
