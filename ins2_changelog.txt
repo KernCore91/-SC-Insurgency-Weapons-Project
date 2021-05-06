@@ -68,6 +68,7 @@ Update 1.4:
 Update 1.5:
 *Added the M2A1-2 Flamethrower
 *Added the M40A1 Sniper Rifle
+*Added the Karabiner 98K Rifle with the Schiessbecher Grenade Launcher
 *Applied minor tweaks to the Ithaca viewmodel reload_start_empty and reload_insert animations
 *Enfield's staged reload will now always put 1 bullet when empty
 *Fix Potential Crash with schedulers on the Enfield

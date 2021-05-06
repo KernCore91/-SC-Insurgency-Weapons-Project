@@ -7,7 +7,7 @@
 
 void PluginInit()
 {
-	g_Module.ScriptInfo.SetAuthor( "D.N.I.O. 071/Norman The Loli Pirate/R4to0/KernCore" );
+	g_Module.ScriptInfo.SetAuthor( "D.N.I.O. 071/Norman The Loli Pirate/R4to0/D.G.F./KernCore" );
 	g_Module.ScriptInfo.SetContactInfo( "https://discord.gg/0wtJ6aAd7XOGI6vI" );
 
 	//First slot 	(slot 0)    		- Melees & Utility
@@ -113,7 +113,7 @@ void PluginInit()
 	H&K G11                  24
 	*/
 	//Seventh slot 	(slot 6)    		- Rifles & Battle Rifles
-	//INS2_K98K::POSITION         		= 9;
+	INS2_K98K::POSITION         		= 9;
 	INS2_M1GARAND::POSITION     		= 10;
 	INS2_ENFIELD::POSITION      		= 11;
 	INS2_FNFAL::POSITION        		= 12;
@@ -242,9 +242,9 @@ void MapInit()
 
 	//Rifles & Sniper Rifles
 		//Kar98K
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Karabiner 98K + Schiessbecher", INS2_K98K::GetName(), 220, "primary", "rifle" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Karabiner 98K 7.92x57mm Ammo", INS2_K98K::GetAmmoName(), 10, "ammo", "rifle" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Schiessbecher Ammo", INS2_K98K::GetGLName(), 30, "ammo", "launcher" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Karabiner 98K + Schiessbecher", INS2_K98K::GetName(), 220, "primary", "rifle" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Karabiner 98K 7.92x57mm Ammo", INS2_K98K::GetAmmoName(), 10, "ammo", "rifle" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Schiessbecher Ammo", INS2_K98K::GetGLName(), 30, "ammo", "launcher" ) );
 		//Garand
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1 Garand + Bayonet", INS2_M1GARAND::GetName(), 235, "primary", "rifle" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1 Garand 7.62x63mm Ammo", INS2_M1GARAND::GetAmmoName(), 15, "ammo", "rifle" ) );

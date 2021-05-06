@@ -16,6 +16,7 @@
 //rifles
 #include "rifle/weapon_ins2garand"
 #include "rifle/weapon_ins2enfield"
+#include "rifle/weapon_ins2kar98k"
 //handguns
 #include "handg/weapon_ins2usp"
 #include "handg/weapon_ins2beretta"
@@ -94,6 +95,7 @@ void RegisterAll()
 	//rifles
 	INS2_M1GARAND::Register();
 	INS2_ENFIELD::Register();
+	INS2_K98K::Register();
 	//handguns
 	INS2_USP::Register();
 	INS2_M9BERETTA::Register();
