@@ -676,7 +676,7 @@ Misc: KernCore (UV Chop), D.N.I.O. 071 (Compile, World Model)
 ----------------------------------------------------------------------------
 >SVD Dragunov
 
-Model: Firearms Source Team, Norman The Loli Pirate
+Model: Firearms Source Team (Original mesh, UV maps), Norman The Loli Pirate (Heavy edits, Scope, Scope ViewModel)
 Textures: Firearms Source Team, Norman The Loli Pirate
 Animations: New World Interactive, MyZombieKillerz, D.N.I.O. 071
 Sounds: Firearms Source team, Navaro, BF2: Heat of Battle, D.N.I.O. 071 (Conversion to .ogg format)
