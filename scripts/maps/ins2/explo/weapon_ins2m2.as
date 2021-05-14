@@ -3,7 +3,7 @@
 / Model: Norman The Loli Pirate, New World Interactive
 / Textures: Norman The Loli Pirate, New World Interactive
 / Animations: New World Interactive, D.N.I.O. 071
-/ Sounds: New World Interactive, nettimato, D.I.C.E. (Battlefield 5), Tripwire Interactive (Killing Floor 1), D.N.I.O. 071 (Conversion to .ogg format)
+/ Sounds: New World Interactive, nettimato, D.I.C.E. (Battlefield 5), Tripwire Interactive (Killing Floor 1), Norman The Loli Pirate (Edits), D.N.I.O. 071 (Conversion to .ogg format)
 / Sprites: Half-Life Base Defence (Flames), New World Interactive (Fire Balls), D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
 / Misc: Norman The Loli Pirate (World Model, World Model UVs), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
 / Script: KernCore

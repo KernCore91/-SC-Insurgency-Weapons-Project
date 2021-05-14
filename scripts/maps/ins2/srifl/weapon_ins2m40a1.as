@@ -1,6 +1,6 @@
 // Insurgency's M40A1
 /* Model Credits
-/ Model: New World Interactive (Stock), Norman The Loli Pirate (Scope), Firearms Source team (Receiver)
+/ Model: New World Interactive (Stock), Norman The Loli Pirate (Scope, Scope View Model), Firearms Source team (Receiver)
 / Textures: Norman The Loli Pirate
 / Animations: MyZombieKillerz, D.N.I.O. 071 (Edits)
 / Sounds: New World Interactive, Navaro, D.N.I.O. 071 (Conversion to .ogg format)

@@ -1,6 +1,6 @@
 // Insurgency's SVD Dragunov
 /* Model Credits
-/ Model: Firearms Source Team, Norman The Loli Pirate
+/ Model: Firearms Source Team (Original mesh), Norman The Loli Pirate (Heavy edits, Scope, Scope ViewModel)
 / Textures: Firearms Source Team, Norman The Loli Pirate
 / Animations: New World Interactive, MyZombieKillerz, D.N.I.O. 071
 / Sounds: Firearms Source team, Navaro, BF2: Heat of Battle, D.N.I.O. 071 (Conversion to .ogg format)
