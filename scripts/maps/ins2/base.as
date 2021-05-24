@@ -503,7 +503,7 @@ mixin class WeaponBase
 	// Dynamic light effects
 	void DynamicLight( Vector& in vecPos, int& in radius, Vector& in RGB, int8& in life, int& in decay ) 
 	{
-		NetworkMessage DLight( MSG_BROADCAST, NetworkMessages::SVC_TEMPENTITY );
+		NetworkMessage DLight( MSG_PVS, NetworkMessages::SVC_TEMPENTITY, vecPos );
 			DLight.WriteByte( TE_DLIGHT );
 			DLight.WriteCoord( vecPos.x );
 			DLight.WriteCoord( vecPos.y );
@@ -537,8 +537,6 @@ mixin class WeaponBase
 	// GeckoN: Movement speed modifier
 	void SetPlayerSpeed()
 	{
-		const int iType = WeaponADSMode;
-
 		// Do we even need to change the speed?
 		if( WeaponADSMode == m_iSpeedType )
 			return;
@@ -546,36 +544,34 @@ mixin class WeaponBase
 		// Remove previous speed reduction we applied
 		m_pPlayer.m_flEffectSpeed += m_flSpeedModifier;
 
-		if( WeaponBipodMode == BIPOD_UNDEPLOYED )
+		if( WeaponADSMode == IRON_IN )
+			m_flSpeedModifier = 0.35f; // Scoped, 35% speed reduction
+		else if( WeaponADSMode == IRON_OUT )
+			m_flSpeedModifier = 0.0f; // Not holding or dropping weapon
+		else
+			m_flSpeedModifier = 0.0f; // Not holding or dropping weapon
+
+		m_pPlayer.m_flEffectSpeed -= m_flSpeedModifier;
+
+		//Do not let the player lose these effects when applying the speed modifier - KernCore
+		m_pPlayer.m_iEffectInvulnerable = (m_pPlayer.pev.flags & FL_GODMODE != 0) ? 1 : 0;
+		m_pPlayer.m_iEffectNonSolid = (m_pPlayer.pev.solid == SOLID_NOT) ? 1 : 0;
+
+		if( m_pPlayer.pev.flags & FL_NOTARGET != 0 ) // Has notarget on
 		{
-			if( WeaponADSMode == IRON_IN )
-				m_flSpeedModifier = 0.35f; // Scoped, 35% speed reduction
-			else if( WeaponADSMode == IRON_OUT )
-				m_flSpeedModifier = 0.0f; // Not holding or dropping weapon
-			else
-				m_flSpeedModifier = 0.0f; // Not holding or dropping weapon
-
-			m_pPlayer.m_flEffectSpeed -= m_flSpeedModifier;
-
-			//Do not let the player lose these effects when applying the speed modifier - KernCore
-			m_pPlayer.m_iEffectInvulnerable = (m_pPlayer.pev.flags & FL_GODMODE != 0) ? 1 : 0;
-			m_pPlayer.m_iEffectNonSolid = (m_pPlayer.pev.solid == SOLID_NOT) ? 1 : 0;
-
-			if( m_pPlayer.pev.flags & FL_NOTARGET != 0 ) // Has notarget on
-			{
-				int rendermode = m_pPlayer.pev.rendermode;
-				float renderamt = m_pPlayer.pev.renderamt;
-				m_pPlayer.ApplyEffects();
-				m_pPlayer.pev.flags |= FL_NOTARGET;
-				m_pPlayer.pev.rendermode = rendermode;
-				m_pPlayer.pev.renderamt = renderamt;
-			}
-			else
-			{
-				m_pPlayer.ApplyEffects();
-			}
-			//KernCore end
+			int rendermode = m_pPlayer.pev.rendermode;
+			float renderamt = m_pPlayer.pev.renderamt;
+			m_pPlayer.ApplyEffects();
+			m_pPlayer.pev.flags |= FL_NOTARGET;
+			m_pPlayer.pev.rendermode = rendermode;
+			m_pPlayer.pev.renderamt = renderamt;
 		}
+		else
+		{
+			m_pPlayer.ApplyEffects();
+		}
+		//KernCore end
+		//g_Game.AlertMessage( at_console, "Player Effect Speed: " + m_pPlayer.m_flEffectSpeed + "\n" );
 		m_iSpeedType = WeaponADSMode;
 	}
 
@@ -1322,8 +1318,12 @@ mixin class BipodWeaponBase
 			WeaponBipodMode = BIPOD_UNDEPLOYED;
 			self.m_flNextTertiaryAttack = self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + flTimer;
 			self.m_flTimeWeaponIdle = WeaponTimeBase() + flTimer2;
+
 			m_pPlayer.pev.fuser4 = 0;
 			m_pPlayer.SetMaxSpeedOverride( -1 ); //m_pPlayer.pev.maxspeed = 0;
+
+			SetPlayerSpeed();
+			//g_Game.AlertMessage( at_console, "Player Effect Speed: " + m_pPlayer.m_flEffectSpeed + "\n" );
 			return;
 		}
 
@@ -1630,7 +1630,7 @@ mixin class ExplosiveBase
 
 	void SmokeMsg( const Vector& in origin, float scale, int framerate, string spr_path = "sprites/steam1.spr" )
 	{
-		NetworkMessage smk_msg( MSG_BROADCAST, NetworkMessages::SVC_TEMPENTITY, null );
+		NetworkMessage smk_msg( MSG_PVS, NetworkMessages::SVC_TEMPENTITY, origin, null );
 			smk_msg.WriteByte( TE_SMOKE ); //MSG type enum
 			smk_msg.WriteCoord( origin.x ); //pos
 			smk_msg.WriteCoord( origin.y ); //pos
