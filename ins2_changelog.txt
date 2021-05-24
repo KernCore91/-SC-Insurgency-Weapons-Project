@@ -72,8 +72,10 @@ Update 1.5:
 *Applied minor tweaks to the Ithaca viewmodel reload_start_empty and reload_insert animations
 *Enfield's staged reload will now always put 1 bullet when empty
 *Fix Potential Crash with schedulers on the Enfield
+*Fixed a bug that allowed players to run at full speed while using Iron Sights after Undeploying bipods
 *Increased damage output on the Mosin Nagant
 *Ithaca can now be deployed when fully empty
 *Minor clean up to the C96 Carbine code
 *Removed DMG_NEVERGIB bit from the sniper rifles
 *Tweaked animations on the Glock 17 viewmodel
+*Revised credits for the SVD Dragunov
