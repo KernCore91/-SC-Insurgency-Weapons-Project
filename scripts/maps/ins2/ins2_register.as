@@ -15,9 +15,9 @@ void PluginInit()
 	INS2_KABAR::POSITION        		= 10;
 	INS2_KUKRI::POSITION        		= 11;
 	/*
-	Gravity knife             12
-	Hatchet                   13
-	British Entrenching Tool  14
+	Gravity knife            12
+	Hatchet                  13
+	British Entrenching Tool 14
 	*/
 	//Second slot 	(slot 1)    		- Pistols & Revolvers
 	INS2_MAKAROV::POSITION      		= 9;
@@ -31,11 +31,12 @@ void PluginInit()
 	INS2_PYTHON::POSITION       		= 17;
 	INS2_M29::POSITION          		= 18;
 	/*
-	H&K VP70             19
-	Stechkin APS         20
-	Luger P08            21
-	Mateba Model 6 Unica 22
-	Akimbo P320          23
+	H&K VP70                 19
+	Stechkin APS             20
+	Luger P08                21
+	Mateba Model 6 Unica     22
+	Akimbo P320              23
+	Skorpion vz.61           24
 	*/
 	//Third slot 	(slot 2)    		- Submachine Guns
 	INS2_UMP45::POSITION        		= 9;
@@ -54,13 +55,14 @@ void PluginInit()
 	PP-Bizon                 21
 	Kriss Vector             22
 	Sten Mk. IIS             23
+	MP5SD                    24
 	*/
 	//Fourth slot 	(slot 3)    		- Carbines & Shotguns
 	INS2_C96CARBINE::POSITION   		= 9;
 	INS2_MK18::POSITION         		= 10;
 	INS2_AKS74U::POSITION       		= 11;
 	INS2_M4A1::POSITION         		= 12;
-	//INS2_M1A1PARA::POSITION     		= 13;
+	INS2_M1A1PARA::POSITION     		= 13;
 	INS2_SKS::POSITION          		= 14;
 	INS2_ITHACA::POSITION       		= 15;
 	INS2_M590::POSITION         		= 16;
@@ -121,12 +123,12 @@ void PluginInit()
 	INS2_M14EBR::POSITION       		= 14;
 	INS2_FG42::POSITION         		= 15;
 	/*
-	M1918 BAR  16
-	SCAR-H     17
-	SIG SG-751 18
-	SVU-AS     19
-	SVT-40     20
-	Gewehr 98  21
+	M1918 BAR                16
+	SCAR-H                   17
+	SIG SG-751               18
+	SVU-AS                   19
+	SVT-40                   20
+	Gewehr 98                21
 	*/
 	//Eight slot 	(slot 7)    		- LMGs & Sniper Rifles
 	INS2_M40A1::POSITION        		= 9;
@@ -139,17 +141,18 @@ void PluginInit()
 	INS2_M249::POSITION         		= 16;
 	INS2_MG42::POSITION         		= 17;
 	/*
-	WA2000     18
-	M21        19
-	AWSM       20
-	Bren MK. 2 21
-	MG-34      22
-	PKM        23
+	WA2000                   18
+	M21                      19
+	AWSM                     20
+	VSSK                     21
+	Bren MK. 2               22
+	MG-34                    23
+	PKM                      24
 	*/
 	//Ninth slot 	(slot 8)    		- Special Purpose Weapons
 	INS2_M2FLAMETHROWER::POSITION   	= 9;
 	/*
-	Barret M82A1 10
+	Barret M82A1             10
 	*/
 	BuyMenu::RegisterBuyMenuCCVars();
 }
@@ -324,8 +327,8 @@ void MapInit()
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "Colt M4A1", INS2_M4A1::GetName(), 245, "primary", "carbine" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M4A1 5.56x45mm Ammo", INS2_M4A1::GetAmmoName(), 30, "ammo", "carbine" ) );
 		//M1A1 Paratrooper
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1A1 Paratrooper", INS2_M1A1PARA::GetName(), 260, "primary", "carbine" ) );
-	//g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1A1 Paratrooper 7.62x33mm Ammo", INS2_M1A1PARA::GetAmmoName(), 20, "ammo", "carbine" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1A1 Paratrooper", INS2_M1A1PARA::GetName(), 260, "primary", "carbine" ) );
+	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "M1A1 Paratrooper 7.62x33mm Ammo", INS2_M1A1PARA::GetAmmoName(), 20, "ammo", "carbine" ) );
 		//SKS
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "SKS Simonov", INS2_SKS::GetName(), 275, "primary", "carbine" ) );
 	g_Ins2Menu.AddItem( BuyMenu::BuyableItem( "SKS 7.62x39mm Ammo", INS2_SKS::GetAmmoName(), 25, "ammo", "carbine" ) );
