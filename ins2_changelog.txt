@@ -69,6 +69,8 @@ Update 1.5:
 *Added the M2A1-2 Flamethrower
 *Added the M40A1 Sniper Rifle
 *Added the Karabiner 98K Rifle with the Schiessbecher Grenade Launcher
+*Added the M1A1 Paratrooper Carbine
+*Changed the 7.62x33mm bullet model (.30 Carbine)
 *Applied minor tweaks to the Ithaca viewmodel reload_start_empty and reload_insert animations
 *Enfield's staged reload will now always put 1 bullet when empty
 *Fix Potential Crash with schedulers on the Enfield
@@ -79,3 +81,4 @@ Update 1.5:
 *Removed DMG_NEVERGIB bit from the sniper rifles
 *Tweaked animations on the Glock 17 viewmodel
 *Revised credits for the SVD Dragunov
+*Model mags.mdl has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
