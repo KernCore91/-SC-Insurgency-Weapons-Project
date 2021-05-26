@@ -76,6 +76,7 @@ Update 1.5:
 *Enfield's staged reload will now always put 1 bullet when empty
 *Fix Potential Crash with schedulers on the Enfield
 *Fixed a bug that allowed players to run at full speed while using Iron Sights after Undeploying bipods
+*Included first version of .FGD file containing entities for the main 66 weapons
 *Increased damage output on the Mosin Nagant
 *Ithaca can now be deployed when fully empty
 *Minor clean up to the C96 Carbine code
@@ -83,3 +84,4 @@ Update 1.5:
 *Tweaked animations on the Glock 17 viewmodel
 *Revised credits for the SVD Dragunov
 *Model mags.mdl has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
+*Very minor update for the test map: fixed position of some items and tweaked clip brushes at the top
