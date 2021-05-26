@@ -1,11 +1,11 @@
 // Insurgency's M1A1 Paratrooper Carbine
 /* Model Credits
 / Model: Seth Soldier (Forgotten Hope 2, M1A1), Z3RO! (Bayonet), Norman The Loli Pirate (Bayonet Lug)
-/ Textures: Seth Soldier (Forgotten Hope 2, M1A1), Sargent Bash (Bayonet), Norman The Loli Pirate (Bayonet Lug)
+/ Textures: Seth Soldier (Forgotten Hope 2, M1A1), Sargent Bash (Bayonet), Norman The Loli Pirate (Heavy Edits, Bayonet Lug)
 / Animations: New World Interactive
 / Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
 / Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
-/ Misc: Z3RO! (Bayonet UVs), KernCore (UV Chop), D.N.I.O. 071 (Compile)
+/ Misc: Z3RO! (Bayonet UVs), Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile)
 / Script: KernCore
 */
 
