@@ -215,7 +215,7 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 * Removed DMG_NEVERGIB bit from the sniper rifles
 * Tweaked animations on the Glock 17 viewmodel
 * Revised credits for the SVD Dragunov
-* Model mags.mdl has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
+* Model `mags.mdl`  has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
 * Very minor update for the test map: fixed position of some items and tweaked clip brushes at the top
 
 ### Update 1.4:
