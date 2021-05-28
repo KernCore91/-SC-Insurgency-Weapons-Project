@@ -162,7 +162,7 @@ If you want to know how to add these scripts, take a look at their scripts in th
 
 ## Notes
 
-This pack a *.fgd* file in case you would like to use the weapons in your map.
+This pack includes a *.fgd* file in case you would like to use the weapons in your map.
 
 This pack also includes a test map called: *sc_insurgency*. Use it to try the new weapons out.
 
