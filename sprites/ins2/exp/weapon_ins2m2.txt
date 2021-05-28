@@ -1,0 +1,5 @@
+4
+weapon				640		ins2/wpn1024	340	180	170	45
+weapon_s			640		ins2/wpn1024	510	180	170	45
+ammo				640		ins2/exp/ammo_m2ft		0	0	24	24
+crosshair			640		crosshairs	72	48	24	24

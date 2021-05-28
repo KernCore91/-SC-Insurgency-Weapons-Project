@@ -64,3 +64,25 @@ Update 1.4:
 *Tweaked SKS viewmodel's animations slightly
 *Fix player's speed not being affected when using bipods.
 *Model mags.mdl has been modified to support low poly versions of the Lewis and MK. 18
+
+Update 1.5:
+*Added the M2A1-2 Flamethrower
+*Added the M40A1 Sniper Rifle
+*Added the Karabiner 98K Rifle with the Schiessbecher Grenade Launcher
+*Added the M1A1 Paratrooper Carbine
+*Added a map script for the following series: AfrikaKorps
+*Changed the 7.62x33mm bullet model (.30 Carbine)
+*Changed the M14 EBR viewmodel's aimpoint texture, now it uses a simple red dot sight
+*Applied minor tweaks to the Ithaca viewmodel reload_start_empty and reload_insert animations
+*Enfield's staged reload will now always put 1 bullet when empty
+*Fix Potential Crash with schedulers on the Enfield
+*Fixed a bug that allowed players to run at full speed while using Iron Sights after Undeploying bipods
+*Included first version of .FGD file containing entities for the main 66 weapons
+*Increased damage output on the Mosin Nagant
+*Ithaca can now be deployed when fully empty
+*Minor clean up to the C96 Carbine code
+*Removed DMG_NEVERGIB bit from the sniper rifles
+*Tweaked animations on the Glock 17 viewmodel
+*Revised credits for the SVD Dragunov
+*Model mags.mdl has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
+*Very minor update for the test map: fixed position of some items and tweaked clip brushes at the top

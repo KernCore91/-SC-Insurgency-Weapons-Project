@@ -70,7 +70,7 @@ uint SLOT       	= 3;
 uint POSITION   	= 4;
 float RPM_AIR   	= 1000; //Rounds per minute in air
 float RPM_WTR   	= 700; //Rounds per minute in water
-string AMMO_TYPE 	= (INS2BASE::ShouldUseCustomAmmo) ? "ins2_7.63x25mm" : "9mm";
+string AMMO_TYPE 	= "ins2_7.63x25mm";
 
 class weapon_ins2c96carb : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 {

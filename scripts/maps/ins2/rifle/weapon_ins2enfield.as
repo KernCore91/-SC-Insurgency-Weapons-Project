@@ -185,7 +185,7 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 				SetThink( ThinkFunction( this.BoltBackThink ) );
 				self.pev.nextthink = g_Engine.time + (22.0/31.0);
 			}
-			return Deploy( V_MODEL, P_MODEL, (self.m_iClip <= 0 || m_bCanBolt) ? DRAW_EMPTY : DRAW , "sniper", GetBodygroup(), (23.0/31.0) );
+			return Deploy( V_MODEL, P_MODEL, (self.m_iClip <= 0 || m_bCanBolt) ? DRAW_EMPTY : DRAW, "sniper", GetBodygroup(), (23.0/31.0) );
 		}
 	}
 
@@ -210,6 +210,12 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		m_pPlayer.m_szAnimExtension = "sniper";
 		m_fRifleReload = false;
 		CommonHolster();
+
+		if( CSRemoveBullet !is null )
+		{
+			g_Scheduler.RemoveTimer( CSRemoveBullet );
+			@CSRemoveBullet = @null;
+		}
 
 		BaseClass.Holster( skipLocal );
 	}
@@ -298,7 +304,14 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		{
 			if( (CheckButton() || (self.m_iClip >= MAX_CLIP && m_pPlayer.pev.button & IN_RELOAD != 0)) && m_flNextReload <= g_Engine.time )
 			{
-				self.SendWeaponAnim( RELOAD_END, 0, GetBodygroup() );
+				if( self.m_iClip == 0 )
+				{
+					self.Reload(); // Continue reloading until there's 1 bullet in the cylinder
+					BaseClass.ItemPostFrame();
+					return;
+				}
+				else
+					self.SendWeaponAnim( RELOAD_END, 0, GetBodygroup() );
 
 				self.m_flTimeWeaponIdle = g_Engine.time + (48.0/38.50);
 				self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + (48.0/38.50);
@@ -311,8 +324,11 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 
 	void RemovePrimAmmo()
 	{
-		g_Scheduler.RemoveTimer( CSRemoveBullet );
-		@CSRemoveBullet = @null;
+		if( CSRemoveBullet !is null )
+		{
+			g_Scheduler.RemoveTimer( CSRemoveBullet );
+			@CSRemoveBullet = @null;
+		}
 
 		if( self.m_iClip > 0 )
 		{
