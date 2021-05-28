@@ -2,7 +2,8 @@
 ![](https://i.imgur.com/u0h7FjO.png)
 > Custom weapons project for Sven Co-op
 
-This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it was released on the Sven Co-op Forums (2020/01/19), with more content to come in the future.
+This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it was released on the Sven Co-op Forums (2020/01/19), with more content to come in the future.  
+The First part with 66 weapons is now finished. Stay tuned for the Second Release with more weapons.
 
 ## The Weapons
 
@@ -35,6 +36,7 @@ This project is brought to you by the following super dedicated team members: No
 * H&K USP (weapon_ins2usp)
 * Ithaca M37 (weapon_ins2ithaca)
 * KA-BAR (weapon_ins2kabar)
+* Karabiner 98 Kurz + Schießbecher (weapon_ins2kar98k)
 * Kukri (weapon_ins2kukri)
 * L85A2 + L123A2 (weapon_ins2l85a2)
 * Lee-Enfield No.IV Mk.I (weapon_ins2enfield)
@@ -43,7 +45,10 @@ This project is brought to you by the following super dedicated team members: No
 * M136 AT4 (weapon_ins2at4)
 * M14 EBR (weapon_ins2m14ebr)
 * M16A4 + M203 (weapon_ins2m16a4)
+* M1A1 Carbine (weapon_ins2m1a1para)
 * M24 Stielhandgranate (weapon_ins2stick)
+* M2A1-2 Flamethrower (weapon_ins2m2)
+* M40A1 (weapon_ins2m40a1)
 * M4A1 (weapon_ins2m4a1)
 * M60 (weapon_ins2m60)
 * M72 LAW (weapon_ins2law)
@@ -153,7 +158,7 @@ If you want to know how to add these scripts, take a look at their scripts in th
 
 ## Notes
 
-This pack will not include a *.res* file or a *.fgd* file until we are fully finished with it.
+This pack a *.fgd* file in case you would like to use the weapons in your map.
 
 This pack also includes a test map called: *sc_insurgency*. Use it to try the new weapons out.
 
@@ -186,6 +191,28 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 * Upload it somewhere else without credits.
 
 ## Updates
+
+### Update 1.5:
+* Added the M2A1-2 Flamethrower
+* Added the M40A1 Sniper Rifle
+* Added the Karabiner 98K Rifle with the Schiessbecher Grenade Launcher
+* Added the M1A1 Paratrooper Carbine
+* Added a map script for the following series: AfrikaKorps
+* Changed the 7.62x33mm bullet model (.30 Carbine)
+* Changed the M14 EBR viewmodel's aimpoint texture, now it uses a simple red dot sight
+* Applied minor tweaks to the Ithaca viewmodel reload_start_empty and reload_insert animations
+* Enfield's staged reload will now always put 1 bullet when empty
+* Fix Potential Crash with schedulers on the Enfield
+* Fixed a bug that allowed players to run at full speed while using Iron Sights after Undeploying bipods
+* Included first version of .FGD file containing entities for the main 66 weapons
+* Increased damage output on the Mosin Nagant
+* Ithaca can now be deployed when fully empty
+* Minor clean up to the C96 Carbine code
+* Removed DMG_NEVERGIB bit from the sniper rifles
+* Tweaked animations on the Glock 17 viewmodel
+* Revised credits for the SVD Dragunov
+* Model mags.mdl has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
+* Very minor update for the test map: fixed position of some items and tweaked clip brushes at the top
 
 ### Update 1.4:
 * Added the Lewis Model 1915 MK.I
@@ -258,8 +285,8 @@ There's a very long list of people/teams in the file: *ins2_credits.txt*, this f
 
 Total Size Compressed: 82.02 MB
 
-(.7z) [Dropbox](https://www.dropbox.com/s/ucyz0ntw3w8yaw3/Insurgency%20First%20Release1_4.7z?dl=0)  
-(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_4.7z)  
-(.7z) [Mega](https://mega.nz/file/qld2hJ4T#DmksAjNCVbsUt59oGy-5QOgIlsCYwBNGgQsjDraNcCA)  
-(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_4.7z)  
+(.7z) [Dropbox](https://www.dropbox.com/s/odd01ofui0ysskw/insurgency%20first%20release1_5.7z?dl=0)  
+(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_5.7z)  
+(.7z) [Mega](https://www.dropbox.com/s/odd01ofui0ysskw/insurgency%20first%20release1_5.7z?dl=0)  
+(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_5.7z)  
 (.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.4/Insurgency.First.Release1_4.7z)
