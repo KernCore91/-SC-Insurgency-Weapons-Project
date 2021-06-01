@@ -77,7 +77,7 @@ The First part with 66 weapons is now finished. Stay tuned for the Second Releas
 ## Gameplay Video
 
 Video:
-[![](http://i3.ytimg.com/vi/Ol0GCCzupE0/maxresdefault.jpg)](https://www.youtube.com/watch?v=Ol0GCCzupE0)
+[![](https://i.imgur.com/uGGqNa6.png)](https://www.youtube.com/watch?v=Ol0GCCzupE0)
 *by SV BOY.*
 
 Video:
