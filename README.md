@@ -156,7 +156,14 @@ as_command ins2.bm_startmoney <value>
 ```
 
 It also includes specific replacement map scripts, which when added to the maps supported, will allow you to replace the default weapons and ammo that are spawned by the map with the Insurgency Weapons included in this release.
-The maps that currently support this optional feature are: auspices, sc_toysoldiers, sc_egypt2, sc_persia and suspension.
+The maps that currently support this optional feature are: 
+* auspices
+* sc_toysoldiers
+* sc_egypt2
+* sc_persia
+* suspension
+* Restriction Series
+* Afrikakorps Series
 
 If you want to know how to add these scripts, take a look at their scripts in the folder: **scripts/maps/ins2/maps** and add their specific map_script command in there.
 
