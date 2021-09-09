@@ -7,72 +7,117 @@ The First part with 66 weapons is now finished. Stay tuned for the Second Releas
 
 ## The Weapons
 
+### PRIMARY
+
+#### Assault Rifles
+
 * AK-12 (weapon_ins2ak12)
 * AK-74M (weapon_ins2ak74)
-* AKM + GP-25 (weapon_ins2akm)
-* AKS-74u (weapon_ins2aks74u)
 * AS VAL (weapon_ins2asval)
-* Benelli M1014 (weapon_ins2m1014)
-* Beretta M9 (weapon_ins2beretta)
-* Brass knuckles (weapon_ins2knuckles)
-* C96 Carbine (weapon_ins2c96carb)
-* C96 Pistol (weapon_ins2c96)
-* Coach gun (IZH-43) (weapon_ins2coach)
-* Colt M1911 (weapon_ins2m1911)
-* Colt Python (weapon_ins2python)
-* Desert Eagle (weapon_ins2deagle)
-* Dragunov SVD (weapon_ins2dragunov)
-* FG-42 (weapon_ins2fg42)
 * FN F2000 (weapon_ins2f2000)
-* FN FAL (weapon_ins2fnfal)
-* FN M249 (weapon_ins2m249)
 * Galil ARM (weapon_ins2galil)
-* Gewehr 43 (weapon_ins2g43)
-* Glock 17 (weapon_ins2glock17)
+* StG-44 (weapon_ins2stg44)
+* AKM + GP-25 (weapon_ins2akm)
+* L85A2 + L123A2 (weapon_ins2l85a2)
+* M16A4 + M203 (weapon_ins2m16a4)
+
+#### Battle Rifles
+
+* FG-42 (weapon_ins2fg42)
+* FN FAL (weapon_ins2fnfal)
 * H&K G3A3 (weapon_ins2g3a3)
+* M14 EBR (weapon_ins2m14ebr)
+
+#### Carbines
+
+* AKS-74u (weapon_ins2aks74u)
+* C96 Carbine (weapon_ins2c96carb)
+* M1A1 Carbine (weapon_ins2m1a1para)
+* M4A1 (weapon_ins2m4a1)
+* MK. 18 MOD 1 (weapon_ins2mk18)
+* SKS-D (weapon_ins2sks)
+
+#### Rifles
+
+* Karabiner 98 Kurz + Schießbecher (weapon_ins2kar98k)
+* Lee-Enfield No.IV Mk.I (weapon_ins2enfield)
+* M1 Garand (weapon_ins2garand)
+
+#### Shotguns
+
+* Benelli M1014 (weapon_ins2m1014)
+* Coach gun (IZH-43) (weapon_ins2coach)
+* Ithaca M37 (weapon_ins2ithaca)
+* Mossberg 590 (weapon_ins2m590)
+* Saiga 12k (weapon_ins2saiga12)
+
+#### Sniper Rifles
+
+* Dragunov SVD + PSO-1 Scope (weapon_ins2dragunov)
+* Gewehr 43 + ZF4 Scope (weapon_ins2g43)
+* M40A1 + Leupold Scope (weapon_ins2m40a1)
+* Mosin Nagant M91/30 + PU Scope (weapon_ins2mosin)
+
+#### Machine Guns
+
+* FN M249 (weapon_ins2m249)
+* Lewis Model 1915 MK.I (weapon_ins2lewis)
+* M60 (weapon_ins2m60)
+* MG-42 (weapon_ins2mg42)
+* RPK (weapon_ins2rpk)
+
+#### Sub Machine Guns
+
 * H&K MP5k (weapon_ins2mp5k)
 * H&K MP7 (weapon_ins2mp7)
 * H&K UMP-45 (weapon_ins2ump45)
-* H&K USP (weapon_ins2usp)
-* Ithaca M37 (weapon_ins2ithaca)
-* KA-BAR (weapon_ins2kabar)
-* Karabiner 98 Kurz + Schießbecher (weapon_ins2kar98k)
-* Kukri (weapon_ins2kukri)
-* L85A2 + L123A2 (weapon_ins2l85a2)
-* Lee-Enfield No.IV Mk.I (weapon_ins2enfield)
-* Lewis Model 1915 MK.I (weapon_ins2lewis)
-* M1 Garand (weapon_ins2garand)
+* Bergmann MP-18,I (weapon_ins2mp18)
+* MP-40 (weapon_ins2mp40)
+* PPSh-41 (weapon_ins2ppsh41)
+* Sterling L2A3 (weapon_ins2l2a3)
+* Thompson M1928 (weapon_ins2m1928)
+
+#### Launchers
+
 * M136 AT4 (weapon_ins2at4)
-* M14 EBR (weapon_ins2m14ebr)
-* M16A4 + M203 (weapon_ins2m16a4)
-* M1A1 Carbine (weapon_ins2m1a1para)
-* M24 Stielhandgranate (weapon_ins2stick)
-* M2A1-2 Flamethrower (weapon_ins2m2)
-* M40A1 (weapon_ins2m40a1)
-* M4A1 (weapon_ins2m4a1)
-* M60 (weapon_ins2m60)
 * M72 LAW (weapon_ins2law)
 * M79 (weapon_ins2m79)
-* Makarov PM (weapon_ins2makarov)
-* MG-42 (weapon_ins2mg42)
-* MK. 18 MOD 1 (weapon_ins2mk18)
-* MK2 Grenade (weapon_ins2mk2)
-* Mosin Nagant M91/30 (weapon_ins2mosin)
-* Mossberg 590 (weapon_ins2m590)
-* MP-18 (weapon_ins2mp18)
-* MP-40 (weapon_ins2mp40)
 * Panzerfaust (weapon_ins2pzfaust)
 * Panzerschreck (weapon_ins2pzschreck)
-* PPSh-41 (weapon_ins2ppsh41)
 * RPG-7 (weapon_ins2rpg7)
-* RPK (weapon_ins2rpk)
-* Saiga 12k (weapon_ins2saiga12)
-* SKS-D (weapon_ins2sks)
+
+#### Special Purpose
+
+* M2A1-2 Flamethrower (weapon_ins2m2)
+
+### SECONDARY
+
+#### Melees
+
+* Brass knuckles (weapon_ins2knuckles)
+* KA-BAR (weapon_ins2kabar)
+* Kukri (weapon_ins2kukri)
+
+#### Pistols
+
+* Beretta M9 (weapon_ins2beretta)
+* C96 Pistol (weapon_ins2c96)
+* Colt M1911 (weapon_ins2m1911)
+* Desert Eagle (weapon_ins2deagle)
+* Glock 17 (weapon_ins2glock17)
+* H&K USP Match (weapon_ins2usp)
+* Makarov PM (weapon_ins2makarov)
+
+#### Revolvers
+
+* Colt Python (weapon_ins2python)
 * Smith & Wesson Model 29 (weapon_ins2m29)
-* Sterling L2A3 (weapon_ins2l2a3)
-* StG-44 (weapon_ins2stg44)
-* Thompson M1928 (weapon_ins2m1928)
 * Webley Mk.VI (weapon_ins2webley)
+
+### EQUIPMENT
+
+* M24 Stielhandgranate (weapon_ins2stick)
+* MK2 Grenade (weapon_ins2mk2)
 
 ## Gameplay Video
 
