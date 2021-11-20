@@ -167,30 +167,34 @@ Video:
 
 ## Additional Content
 
-This pack includes a heavily modified Buymenu made specifically for it.
-Here are the following commands that can be used in the Buymenu:
+#### Buy Menu
+
+This project includes a heavily modified Buy Menu originally made by Solokiller in 2016, and heavily modified specifically for this project.
+Here are the following commands that can be used in the Buy Menu:
 
 ```
 // Opening the Buy menu in the chat:
-buy
-/buy
-!buy
-.buy
-\buy
-#buy
+	buy
+	/buy
+	!buy
+	.buy
+	\buy
+	#buy
 
 // Opening the Buy menu in the console:
-.buy
+	.buy
 
 // Buying a specific weapon/ammo (without the weapon_ins2 prefix) without the menu:
 <menu opening command here> <entity identifier here> <weapon name here> ie:
-!buy w l2a3 (will directly buy a Sterling for you) or 
-/buy a l2a3 (will directly buy ammo for the Sterling for you)
+	!buy w l2a3 (will directly buy a Sterling for you)
+or
+	/buy a l2a3 (will directly buy ammo for the Sterling for you)
 
 // Buying ammo for the current equipped weapon:
 <menu opening command here> ammo ie:
-!buy ammo or
-/buy ammo
+	!buy ammo
+or
+	/buy ammo
 ```
 
 Server commands (in case you registered the weapons as a plugin):
@@ -200,7 +204,9 @@ as_command ins2.bm_moneyperscore <value>
 as_command ins2.bm_startmoney <value>
 ```
 
-It also includes specific replacement map scripts, which when added to the maps supported, will allow you to replace the default weapons and ammo that are spawned by the map with the Insurgency Weapons included in this release.
+#### Replacement Map Scripts
+
+This project also includes replacement map scripts made for specific maps and map series, which will allow you to replace the default weapons and ammo that are spawned by the map with the Insurgency Weapons included in this release.
 The maps that currently support this optional feature are: 
 * auspices
 * sc_toysoldiers
@@ -210,13 +216,19 @@ The maps that currently support this optional feature are:
 * Restriction Series
 * Afrikakorps Series
 
-If you want to know how to add these scripts, take a look at their scripts in the folder: **scripts/maps/ins2/maps** and add their specific map_script command in there.
+If you want to know how to add these scripts, take a look at their scripts in the folder: **scripts/maps/ins2/maps** and add their specific map_script command in the map's *.cfg* file.
 
-## Notes
+#### Optimized World Models
 
-This pack includes a *.fgd* file in case you would like to use the weapons in your map.
+The world models offered in this project are heavily optimized to help increase player performance, both polygon-wise and texture-wise while also keeping visual fidelity with the View Models.  
+
+#### Extras
+
+This pack includes a *.fgd* file in case you would like to use the weapons in your map. Check out [this guide](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/wiki/Creating-your-own-Register-File) on how to prepare your map script and resources for servers and players.
 
 This pack also includes a test map called: *sc_insurgency*. Use it to try the new weapons out.
+
+## Notes
 
 Some weapons include a mode to change the firerate on them, you'll notice a sprite appear on your screen telling you the weapon's fire mode (Semi auto, Burst Fire, Full Auto), use ***E + R*** (or whatever key your *+use* and *+reload* is bound to) to change them;
 
@@ -230,7 +242,7 @@ Usage of this pack without more than 2 GB RAM, outside of servers, is likely to 
 ## Credits
 
 You are authorized to use any assets in this pack as you see fit, as long as you credit us and whoever contributed to the making of this pack.
-There's a very long list of people/teams in the file: *ins2_credits.txt*, this file specifies the authors of every single asset that is being used in the making of this project.
+There's a very long list of people/teams in the file: [*ins2_credits.txt*](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/blob/master/ins2_credits_1st_release.txt), this file specifies the authors of every single asset that is being used in the making of this project.
 
 ### You are authorized to use any assets in this pack as you see fit, as long as:
 * The content you're making doesn't break any of the EULAs listed below:
