@@ -69,7 +69,7 @@ const string AMMO_PICKUP_S = "ins2/wpn/ammo.ogg"; //Default ammo pickup sound
 const string FIREMODE_SPRT = "ins2/firemodes.spr"; //Default firemodes sprite for weapons that support it
 const string BIPODMOD_SPRT = "ins2/bipod.spr";
 const string WEAP_SPRT_S01 = "ins2/wpn1024.spr"; //Sprite file that the weapon will precache
-//const string WEAP_SPRT_S02 = "ins2/wpn05.spr"; //Sprite file that the weapon will precache
+const string WEAP_SPRT_S02 = "ins2/wpn06.spr"; //Sprite file that the weapon will precache
 
 //Bullet types
 //Pistols
@@ -246,7 +246,7 @@ mixin class WeaponBase
 		g_Game.PrecacheModel( "sprites/" + FIREMODE_SPRT );
 		g_Game.PrecacheModel( "sprites/" + BIPODMOD_SPRT );
 		g_Game.PrecacheModel( "sprites/" + WEAP_SPRT_S01 );
-		//g_Game.PrecacheModel( "sprites/" + WEAP_SPRT_S02 );
+		g_Game.PrecacheModel( "sprites/" + WEAP_SPRT_S02 );
 
 		// Strings
 		g_SoundSystem.PrecacheSound( EMPTY_SHOOT_S );

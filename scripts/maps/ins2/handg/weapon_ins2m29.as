@@ -83,10 +83,11 @@ int WEIGHT      	= 20;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 55;
 uint SLOT       	= 1;
-uint POSITION   	= 15;
+uint POSITION   	= 14;
 float RPM_AIR   	= 1.0f; //Rounds per minute in air
 float SHOOT_DELAY 	= 0.028; //Shooting delay
 float EMPTY_DELAY 	= 0.1; //Shooting delay for dryfire
+uint AIM_FOV    	= 49; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_44magnum";
 
 class weapon_ins2m29 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -290,7 +291,7 @@ class weapon_ins2m29 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 49 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

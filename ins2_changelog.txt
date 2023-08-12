@@ -86,3 +86,37 @@ Update 1.5:
 *Revised credits for the SVD Dragunov
 *Model mags.mdl has been updated to add the M1A1 Carbine magazine bodygroup (model will receive no further updates from now on)
 *Very minor update for the test map: fixed position of some items and tweaked clip brushes at the top
+
+Update 1.6:
+*New Weapons Added:
+ *H&K VP-70M
+ *H&K MP5SD2
+ *H&K G36C
+ *XM21
+ *PKM
+ *MG-34
+ *FN SCAR-H
+ *SVT-40
+ *M3 Grease Gun
+ *RGO Grenade
+ *M16A1 + M203 GL
+ *OTs-14 Groza 4 + GP-30 GL
+ *AN-94
+*Added a map script for the following series: Under the Black Moon, Royals
+*Changed weapon names and prices in the Buy Menu
+*Disposable Launchers now have their own category in the Equipment Menu
+*Fixed the BuyMenu taking away your money after attempting to buy a weapon you dropped
+*Fixed macro abuse on the M16A4 (Thanks SV BOY)
+*Added category for the Equipment Menu:
+ *Time-Fused Grenades
+ *Impact Grenades
+ *Disposable Launchers
+ *High Explosives
+*Removed 'gp25.mdl' in favor of the new grenade model 'vog25.mdl'
+*Updated AKM viewmodel to support new grenade model
+*Updated FGD file:
+ *Displays the new AKM grenade model
+ *Rearranged the list of weapons per category, much like the buy menu
+ *New weapons and their ammo entities are listed separately, for easier identification
+*Test map updated with a sligthly new layout (the weapon room will tank your FPS, sorry in advance!)
+*Removed unused skybox files and its lines inside the map's .res file

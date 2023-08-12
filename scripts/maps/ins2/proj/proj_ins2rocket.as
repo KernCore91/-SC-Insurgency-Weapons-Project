@@ -11,8 +11,6 @@ const string ROCKET_LOOP = "ins2/wpn/rckt/loop.ogg";
 class CIns2Rocket : ScriptBaseEntity, INS2BASE::ExplosiveBase
 {
 	private Vector vecSize( 0.2, 0.2, 0.2 );
-	private string m_szSprSmoke = "sprites/smoke.spr";
-	private string m_szSprBlackSmoke3 = "sprites/black_smoke3.spr";
 
 	void Spawn()
 	{
@@ -27,13 +25,13 @@ class CIns2Rocket : ScriptBaseEntity, INS2BASE::ExplosiveBase
 
 	void Precache()
 	{
-		g_Game.PrecacheModel( m_szSprSmoke );
+		g_Game.PrecacheModel( "sprites/smoke.spr" );
 		g_Game.PrecacheModel( "sprites/zerogxplode.spr" );
 		g_Game.PrecacheModel( SPR_EXPLOSION );
 		g_Game.PrecacheModel( "sprites/WXplo1.spr" );
 		g_Game.PrecacheModel( "sprites/steam1.spr" );
-		g_Game.PrecacheModel( m_szSprBlackSmoke3 );
-		//g_Game.PrecacheModel( "sprites/laserbeam.spr" );
+		g_Game.PrecacheModel( "sprites/laserbeam.spr" );
+		g_Game.PrecacheModel( "sprites/black_smoke3.spr" );
 
 		g_SoundSystem.PrecacheSound( ROCKET_LOOP );
 		g_Game.PrecacheGeneric( "sound/" + ROCKET_LOOP );
@@ -46,14 +44,11 @@ class CIns2Rocket : ScriptBaseEntity, INS2BASE::ExplosiveBase
 		BaseClass.Precache();
 	}
 
-	Vector saveVelocity;
-
 	void EntThink()
 	{
 		self.pev.nextthink = g_Engine.time + 0.1;
 
 		self.pev.angles = Math.VecToAngles( self.pev.velocity );
-
 		int iContents = g_EngineFuncs.PointContents( self.GetOrigin() );
 		if( iContents == CONTENTS_WATER || iContents == CONTENTS_SLIME || iContents == CONTENTS_LAVA )
 		{
@@ -66,7 +61,7 @@ class CIns2Rocket : ScriptBaseEntity, INS2BASE::ExplosiveBase
 				smk_msg.WriteCoord( self.pev.origin.x ); //pos
 				smk_msg.WriteCoord( self.pev.origin.y ); //pos
 				smk_msg.WriteCoord( self.pev.origin.z - 24 ); //pos
-				smk_msg.WriteShort( g_Game.PrecacheModel( m_szSprBlackSmoke3 ) );
+				smk_msg.WriteShort( g_Game.PrecacheModel( "sprites/black_smoke3.spr" ) );
 				smk_msg.WriteByte( Math.RandomLong( 23, 29 ) ); //scale
 				smk_msg.WriteByte( Math.RandomLong( 19, 21 ) ); //framerate
 			smk_msg.End();
@@ -211,7 +206,7 @@ class CIns2Rocket : ScriptBaseEntity, INS2BASE::ExplosiveBase
 		NetworkMessage trail_msg( MSG_BROADCAST, NetworkMessages::SVC_TEMPENTITY, null );
 			trail_msg.WriteByte( TE_BEAMFOLLOW );
 			trail_msg.WriteShort( self.entindex() ); //entity
-			trail_msg.WriteShort( g_Game.PrecacheModel( m_szSprSmoke ) ); //model
+			trail_msg.WriteShort( g_Game.PrecacheModel( "sprites/smoke.spr" ) ); //model
 			trail_msg.WriteByte( 5 ); //life
 			trail_msg.WriteByte( 4 ); //width
 			trail_msg.WriteByte( 224 ); //r

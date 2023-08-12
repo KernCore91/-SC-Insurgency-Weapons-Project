@@ -87,9 +87,10 @@ int WEIGHT      	= 40;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY | ITEM_FLAG_ESSENTIAL;
 uint DAMAGE     	= 28;
 uint SLOT       	= 7;
-uint POSITION   	= 10;
+uint POSITION   	= 9;
 float RPM_AIR   	= 600; //Rounds per minute in air
 float RPM_WTR   	= 500; //Rounds per minute in water
+uint AIM_FOV    	= 40; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_303brit";
 
 class weapon_ins2lewis : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2BASE::BipodWeaponBase
@@ -277,7 +278,7 @@ class weapon_ins2lewis : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS
 				else
 					self.SendWeaponAnim( (self.m_iClip > 0) ? BIPOD_IRON_TO : BIPOD_IRON_TO_EMPTY, GetBodygroup() );
 
-				EffectsFOVON( 40 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

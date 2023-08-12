@@ -63,11 +63,12 @@ int WEIGHT      	= 20;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 45;
 uint SLOT       	= 1;
-uint POSITION   	= 14;
+uint POSITION   	= 13;
 float RPM_AIR   	= 0.15f; //Rounds per minute in air
 float RPM_WTR   	= 0.22f; //Rounds per minute in water
 float SHOOT_DELAY 	= 0.1; //Shooting delay
 float EMPTY_DELAY 	= 0.13; //Shooting delay for dryfire
+uint AIM_FOV    	= 49; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_357magnum";
 
 class weapon_ins2python : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -250,7 +251,7 @@ class weapon_ins2python : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 49 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

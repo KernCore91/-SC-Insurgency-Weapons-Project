@@ -54,9 +54,9 @@ enum INS2_AKM_Animations
 string W_MODEL = "models/ins2/wpn/akm/w_akm.mdl";
 string V_MODEL = "models/ins2/wpn/akm/v_akm.mdl";
 string P_MODEL = "models/ins2/wpn/akm/p_akm.mdl";
+string G_MODEL = "models/ins2/wpn/akm/vog25.mdl";
 string A_MODEL = "models/ins2/ammo/mags.mdl";
 int MAG_BDYGRP = 0;
-string G_MODEL = "models/ins2/wpn/akm/gp25.mdl";
 // Sprites
 string SPR_CAT = "ins2/arf/"; //Weapon category used to get the sprite's location
 // Sounds
@@ -77,9 +77,10 @@ uint DAMAGE     	= 27;
 uint DAMAGE_GL  	= 130;
 float SPEED     	= 1325;
 uint SLOT       	= 5;
-uint POSITION   	= 19;
+uint POSITION   	= 15;
 float RPM_AIR   	= 600; //Rounds per minute in air
 float RPM_WTR   	= 400; //Rounds per minute in water
+uint AIM_FOV    	= 40; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.62x39mm";
 string AMMO_TYPE2	= "ins2_40x53mm";
 string PROJ_NAME 	= "proj_ins2akm";
@@ -291,7 +292,7 @@ class weapon_ins2akm : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (WeaponGLMode == INS2BASE::GL_AIMED) ? GL_IRON_TO : IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 40 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

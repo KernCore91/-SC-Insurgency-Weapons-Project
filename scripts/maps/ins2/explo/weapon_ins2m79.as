@@ -82,6 +82,7 @@ uint DAMAGE     	= 175;
 uint DAMAGE_BS  	= 10;
 uint SLOT       	= 4;
 uint POSITION   	= 7;
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_40x46mm";
 string AMMO_TYPE2 	= "ins2_40x46mmBS";
 uint PELLETCOUNT 	= 27; //Yup
@@ -287,7 +288,7 @@ class weapon_ins2m79 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (m_iAmmoMode == HIGH_EXPLOSIVE) ? IRON_TO : IRON_TO_BUCK, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

@@ -56,6 +56,7 @@ uint SLOT       	= 3;
 uint POSITION   	= 9;
 float RPM_AIR   	= 0.12f; //Rounds per minute in air
 float RPM_WTR   	= 0.22f; //Rounds per minute in water
+uint AIM_FOV    	= 40; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.62x33mm";
 
 class weapon_ins2m1a1para : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2BASE::MeleeWeaponBase
@@ -200,7 +201,7 @@ class weapon_ins2m1a1para : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, 
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 40 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

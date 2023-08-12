@@ -80,9 +80,10 @@ uint DAMAGE     	= 24;
 uint DAMAGE_GL  	= 145;
 float SPEED     	= 1450;
 uint SLOT       	= 5;
-uint POSITION   	= 18;
+uint POSITION   	= 14;
 float RPM_AIR   	= 652;
 float RPM_WTR   	= 525;
+uint AIM_FOV    	= 30; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_5.56x45mm";
 string AMMO_TYPE2	= "ins2_40x46mm";
 string PROJ_NAME 	= "proj_ins2l85a2";
@@ -297,7 +298,7 @@ class weapon_ins2l85a2 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (WeaponGLMode == INS2BASE::GL_AIMED) ? GL_IRON_TO : IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 30 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

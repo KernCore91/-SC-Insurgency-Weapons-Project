@@ -1,0 +1,7 @@
+6
+weapon			640 ins2/wpn06	0	630	170	45
+weapon_s		640 ins2/wpn06	170	630	170	45
+ammo			640 hunger/weapons/weapon_greasegun	61	104	24	24
+crosshair		640 ofch1	0	48	24	24
+autoaim			640 crosshairs	0	72	24	24
+zoom			640 crosshairs	0	0	1	1

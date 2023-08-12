@@ -62,6 +62,7 @@ uint DAMAGE     	= 10;
 uint SLOT       	= 3;
 uint POSITION   	= 12;
 float RPM_AIR   	= 0.77f; //Rounds per minute in air
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_12x70buckshot";
 uint PELLETCOUNT 	= 8;
 Vector VECTOR_CONE( 0.04362, 0.04362, 0.0 ); //5 DEGREES
@@ -238,7 +239,7 @@ class weapon_ins2m590 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

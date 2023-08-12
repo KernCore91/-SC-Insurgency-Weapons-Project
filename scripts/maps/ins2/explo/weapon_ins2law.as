@@ -52,7 +52,8 @@ int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_LIMITINWORLD | ITEM_FLAG_E
 uint DAMAGE     	= 215;
 float SPEED     	= 2200;
 uint SLOT       	= 4;
-uint POSITION   	= 10;
+uint POSITION   	= 9;
+uint AIM_FOV    	= 35; // Below 50 hides crosshair
 string AMMO_TYPE 	= GetName();
 string PROJ_NAME 	= "proj_ins2law";
 
@@ -247,7 +248,7 @@ class weapon_ins2law : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 35 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:
@@ -258,16 +259,6 @@ class weapon_ins2law : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			}
 		}
 	}
-
-	/*void InactiveItemPreFrame()
-	{
-		if( m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) == 0 && self.m_iClip == 0 )
-		{
-			
-		}
-
-		BaseClass.InactiveItemPreFrame();
-	}*/
 
 	void ItemPreFrame()
 	{
@@ -295,7 +286,7 @@ class weapon_ins2law : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 		{
 			Reload( MAX_CLIP, RELOAD, (153.0/35.0), GetBodygroup() );
 			SetThink( ThinkFunction( this.EjectClipThink ) );
-			self.pev.nextthink = g_Engine.time + (27.0/35.0);
+			self.pev.nextthink = g_Engine.time + (26.0/35.0);
 			canReload = false;
 		}
 

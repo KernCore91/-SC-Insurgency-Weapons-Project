@@ -64,6 +64,7 @@ uint DAMAGE_MELEE 	= 20;
 uint SLOT       	= 3;
 uint POSITION   	= 11;
 float RPM_AIR   	= 0.745f; //Rounds per minute in air
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_12x70buckshot";
 uint PELLETCOUNT 	= 8;
 Vector VECTOR_CONE( 0.04062, 0.04062, 0.0 ); //4 DEGREES?

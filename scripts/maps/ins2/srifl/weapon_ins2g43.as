@@ -61,6 +61,7 @@ uint SLOT       	= 7;
 uint POSITION   	= 6;
 float RPM_AIR   	= 0.22f; //Rounds per minute in air
 float RPM_WTR   	= 0.4f; //Rounds per minute in water
+uint AIM_FOV    	= 20; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.92x57mm";
 
 class weapon_ins2g43 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -194,7 +195,7 @@ class weapon_ins2g43 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 
 	void SightThink()
 	{
-		ToggleZoom( 20 );
+		ToggleZoom( AIM_FOV );
 		WeaponADSMode = INS2BASE::IRON_IN;
 		SetPlayerSpeed();
 		m_pPlayer.m_szAnimExtension = "sniperscope";
@@ -215,7 +216,7 @@ class weapon_ins2g43 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			{
 				self.SendWeaponAnim( SCOPE_TO, 0, GetBodygroup() );
 				g_PlayerFuncs.ScreenFade( m_pPlayer, Vector( 0, 0, 0 ), 0.47, 0, 255, FFADE_OUT );
-				SetThink( ThinkFunction( SightThink ) );
+				SetThink( ThinkFunction( this.SightThink ) );
 				self.pev.nextthink = WeaponTimeBase() + 0.46;
 				break;
 			}

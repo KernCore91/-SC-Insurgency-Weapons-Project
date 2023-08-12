@@ -60,7 +60,8 @@ int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 285;
 float SPEED     	= 1550;
 uint SLOT       	= 4;
-uint POSITION   	= 15;
+uint POSITION   	= 12;
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_88mm_rocket";
 string PROJ_NAME 	= "proj_ins2pzschreck";
 
@@ -208,7 +209,7 @@ class weapon_ins2pzschreck : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase,
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

@@ -62,9 +62,10 @@ int WEIGHT      	= 20;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 65;
 uint SLOT       	= 7;
-uint POSITION   	= 7;
+uint POSITION   	= 8;
 float RPM_AIR   	= 0.215f; //Rounds per minute in air
 float RPM_WTR   	= 0.375f; //Rounds per minute in water
+uint AIM_FOV    	= 16; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.62x54mm";
 
 class weapon_ins2dragunov : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -201,7 +202,7 @@ class weapon_ins2dragunov : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 
 	void SightThink()
 	{
-		ToggleZoom( 16 );
+		ToggleZoom( AIM_FOV );
 		WeaponADSMode = INS2BASE::IRON_IN;
 		SetPlayerSpeed();
 		m_pPlayer.m_szAnimExtension = "sniperscope";
@@ -223,7 +224,7 @@ class weapon_ins2dragunov : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 				self.SendWeaponAnim( (self.m_iClip == 0) ? SCOPE_TO_EMPTY : SCOPE_TO, 0, GetBodygroup() );
 				g_PlayerFuncs.ScreenFade( m_pPlayer, Vector( 0, 0, 0 ), 0.47, 0, 255, FFADE_OUT );
 				
-				SetThink( ThinkFunction( SightThink ) );
+				SetThink( ThinkFunction( this.SightThink ) );
 				self.pev.nextthink = WeaponTimeBase() + 0.46;
 				break;
 			}

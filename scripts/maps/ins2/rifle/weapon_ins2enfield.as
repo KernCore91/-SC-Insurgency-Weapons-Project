@@ -74,6 +74,7 @@ uint DAMAGE     	= 55;
 uint SLOT       	= 6;
 uint POSITION   	= 7;
 float RPM_AIR   	= 1.26f; //Rounds per minute in air
+uint AIM_FOV    	= 37; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_303brit";
 
 class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -185,7 +186,7 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 				SetThink( ThinkFunction( this.BoltBackThink ) );
 				self.pev.nextthink = g_Engine.time + (22.0/31.0);
 			}
-			return Deploy( V_MODEL, P_MODEL, (self.m_iClip <= 0 || m_bCanBolt) ? DRAW_EMPTY : DRAW, "sniper", GetBodygroup(), (23.0/31.0) );
+			return Deploy( V_MODEL, P_MODEL, (self.m_iClip <= 0 || m_bCanBolt) ? DRAW_EMPTY : DRAW , "sniper", GetBodygroup(), (23.0/31.0) );
 		}
 	}
 
@@ -210,12 +211,6 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		m_pPlayer.m_szAnimExtension = "sniper";
 		m_fRifleReload = false;
 		CommonHolster();
-
-		if( CSRemoveBullet !is null )
-		{
-			g_Scheduler.RemoveTimer( CSRemoveBullet );
-			@CSRemoveBullet = @null;
-		}
 
 		BaseClass.Holster( skipLocal );
 	}
@@ -275,7 +270,7 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 37 );
+				EffectsFOVON( AIM_FOV );
 				m_pPlayer.m_szAnimExtension = "sniperscope";
 				break;
 			}
@@ -304,14 +299,7 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		{
 			if( (CheckButton() || (self.m_iClip >= MAX_CLIP && m_pPlayer.pev.button & IN_RELOAD != 0)) && m_flNextReload <= g_Engine.time )
 			{
-				if( self.m_iClip == 0 )
-				{
-					self.Reload(); // Continue reloading until there's 1 bullet in the cylinder
-					BaseClass.ItemPostFrame();
-					return;
-				}
-				else
-					self.SendWeaponAnim( RELOAD_END, 0, GetBodygroup() );
+				self.SendWeaponAnim( RELOAD_END, 0, GetBodygroup() );
 
 				self.m_flTimeWeaponIdle = g_Engine.time + (48.0/38.50);
 				self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + (48.0/38.50);
@@ -324,11 +312,8 @@ class weapon_ins2enfield : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 
 	void RemovePrimAmmo()
 	{
-		if( CSRemoveBullet !is null )
-		{
-			g_Scheduler.RemoveTimer( CSRemoveBullet );
-			@CSRemoveBullet = @null;
-		}
+		g_Scheduler.RemoveTimer( CSRemoveBullet );
+		@CSRemoveBullet = @null;
 
 		if( self.m_iClip > 0 )
 		{

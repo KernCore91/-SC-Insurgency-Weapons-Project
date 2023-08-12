@@ -52,9 +52,10 @@ int WEIGHT      	= 20;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 18;
 uint SLOT       	= 2;
-uint POSITION   	= 7;
+uint POSITION   	= 6;
 float RPM_AIR   	= 900; //Rounds per minute in air
 float RPM_WTR   	= 700; //Rounds per minute in water
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_9x19mm";
 
 class weapon_ins2mp5k : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -209,7 +210,7 @@ class weapon_ins2mp5k : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

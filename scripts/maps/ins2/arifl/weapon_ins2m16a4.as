@@ -77,9 +77,10 @@ uint DAMAGE     	= 23;
 uint DAMAGE_GL  	= 145;
 float SPEED     	= 1400;
 uint SLOT       	= 5;
-uint POSITION   	= 17;
+uint POSITION   	= 13;
 float RPM_AIR   	= 950;
 float RPM_WTR   	= 700;
+uint AIM_FOV    	= 40; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_5.56x45mm";
 string AMMO_TYPE2	= "ins2_40x46mm";
 string PROJ_NAME 	= "proj_ins2m16a4";
@@ -282,6 +283,8 @@ class weapon_ins2m16a4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS
 				return;
 			}
 
+			self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + 0.1;
+
 			if( WeaponSelectFireMode == INS2BASE::SELECTFIRE_SEMI && m_pPlayer.m_afButtonPressed & IN_ATTACK == 0 )
 				return;
 			else if( WeaponSelectFireMode == INS2BASE::SELECTFIRE_3XBURST )
@@ -309,7 +312,7 @@ class weapon_ins2m16a4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (WeaponGLMode == INS2BASE::GL_AIMED) ? GL_IRON_TO : IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 40 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

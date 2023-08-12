@@ -10,6 +10,7 @@
 */
 
 #include "../base"
+#include "../proj/proj_ins2prop"
 
 namespace INS2_M1GARAND
 {
@@ -78,6 +79,7 @@ uint SLOT       	= 6;
 uint POSITION   	= 5;
 float RPM_AIR   	= 0.2f; //Rounds per minute in air
 float RPM_WTR   	= 0.35f; //Rounds per minute in water
+uint AIM_FOV    	= 37; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.62x63mm";
 
 class weapon_ins2garand : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2BASE::MeleeWeaponBase
@@ -132,32 +134,21 @@ class weapon_ins2garand : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, IN
 		"ins2/wpn/garand/magin.ogg", //5
 		"ins2/wpn/garand/magout.ogg", //6
 		"ins2/wpn/garand/magrel.ogg", //7
-		"ins2/wpn/garand/ping1.ogg", //8
-		"ins2/wpn/garand/ping2.ogg", //9
-		"ins2/wpn/garand/ping3.ogg", //10
-		"ins2/wpn/garand/ping4.ogg", //11
-		"ins2/wpn/garand/ping5.ogg", //12
 		SHOOT_S,
 		EMPTY_S
 	};
-	private string PingSounds()
-	{
-		string Snd;
-		switch( Math.RandomLong( 0, 4 ) )
-		{
-			case 0: Snd = Sounds[8];
-				break;
-			case 1: Snd = Sounds[9];
-				break;
-			case 2: Snd = Sounds[10];
-				break;
-			case 3: Snd = Sounds[11];
-				break;
-			case 4: Snd = Sounds[12];
-				break;
-		}
-		return Snd;
-	}
+	private array<string> PingSounds = {
+		"ins2/wpn/garand/ping1.ogg", //0
+		"ins2/wpn/garand/ping2.ogg", //1
+		"ins2/wpn/garand/ping3.ogg", //2
+		"ins2/wpn/garand/ping4.ogg", //3
+		"ins2/wpn/garand/ping5.ogg"  //4
+	};
+	private array<string> BounceSounds = {
+		"ins2/wpn/phys/gclip1.ogg",
+		"ins2/wpn/phys/gclip2.ogg",
+		"ins2/wpn/phys/gclip3.ogg"
+	};
 
 	void Spawn()
 	{
@@ -177,8 +168,11 @@ class weapon_ins2garand : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, IN
 		m_iMagDrop = g_Game.PrecacheModel( T_MODEL );
 
 		g_Game.PrecacheOther( GetAmmoName() );
+		g_Game.PrecacheOther( "proj_ins2prop" );
 
 		INS2BASE::PrecacheSound( Sounds );
+		INS2BASE::PrecacheSound( PingSounds );
+		INS2BASE::PrecacheSound( BounceSounds );
 		INS2BASE::PrecacheSound( INS2BASE::DeployFirearmSounds );
 		INS2BASE::PrecacheSound( BayoHitFlesh );
 		INS2BASE::PrecacheSound( BayoHitWorld );
@@ -260,7 +254,7 @@ class weapon_ins2garand : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, IN
 		{
 			SetThink( ThinkFunction( EjectClipThink ) );
 			self.pev.nextthink = g_Engine.time + 0.2;
-			g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_AUTO, PingSounds(), 1.0, ATTN_NORM, 0, PITCH_NORM );
+			g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_STREAM, PingSounds[ Math.RandomLong( 0, PingSounds.length() - 1 ) ], 1.0, ATTN_NORM, 0, PITCH_NORM );
 		}
 
 		m_pPlayer.m_iWeaponVolume = NORMAL_GUN_VOLUME;
@@ -286,7 +280,7 @@ class weapon_ins2garand : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, IN
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 37 );
+				EffectsFOVON( AIM_FOV );
 				m_pPlayer.m_szAnimExtension = "sniperscope";
 				break;
 			}
@@ -302,7 +296,13 @@ class weapon_ins2garand : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, IN
 
 	void EjectClipThink()
 	{
-		ClipCasting( m_pPlayer.pev.origin, m_pPlayer.pev.view_ofs + (g_Engine.v_right*42) + (g_Engine.v_up*16) + (g_Engine.v_forward*8), m_iMagDrop, false, 0 );
+		Vector vecAngles   = m_pPlayer.pev.v_angle + m_pPlayer.pev.punchangle;
+		Math.MakeVectors( vecAngles );
+
+		Vector vecVelocity = m_pPlayer.pev.view_ofs + (g_Engine.v_forward * 8) + (g_Engine.v_up * 16) + (g_Engine.v_right * 42);
+		Vector vecOrigin   = m_pPlayer.pev.origin + g_Engine.v_right * 2 + g_Engine.v_up * 12;
+
+		auto pProp = INS2PROP::ShootProp( m_pPlayer.pev, vecOrigin, vecVelocity, Vector( 0, vecAngles.y, 0 ), Vector( 0, -10, 200 ), T_MODEL, BounceSounds, 0.5f, 0.2f );
 	}
 
 	void ItemPreFrame()
@@ -434,6 +434,7 @@ string GetName()
 
 void Register()
 {
+	INS2PROP::Register();
 	g_CustomEntityFuncs.RegisterCustomEntity( "INS2_M1GARAND::weapon_ins2garand", GetName() ); // Register the weapon entity
 	g_CustomEntityFuncs.RegisterCustomEntity( "INS2_M1GARAND::GARAND_CLIP", GetAmmoName() ); // Register the ammo entity
 	g_ItemRegistry.RegisterWeapon( GetName(), SPR_CAT, (INS2BASE::ShouldUseCustomAmmo) ? AMMO_TYPE : INS2BASE::DF_AMMO_357, "", GetAmmoName() ); // Register the weapon

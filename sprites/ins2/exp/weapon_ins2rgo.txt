@@ -1,0 +1,4 @@
+3
+weapon			640 ins2/wpn06	340	45	170	45
+weapon_s		640 ins2/wpn06	510	45	170	45
+ammo			640 ins2/exp/ammo_rgo	0	0	24	24

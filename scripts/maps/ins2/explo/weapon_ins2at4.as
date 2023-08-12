@@ -52,7 +52,8 @@ int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_LIMITINWORLD | ITEM_FLAG_E
 uint DAMAGE     	= 230;
 float SPEED     	= 2000;
 uint SLOT       	= 4;
-uint POSITION   	= 11;
+uint POSITION   	= 10;
+uint AIM_FOV    	= 35; // Below 50 hides crosshair
 string AMMO_TYPE 	= GetName();
 string PROJ_NAME 	= "proj_ins2at4";
 
@@ -145,7 +146,7 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 		if( m_WasDrawn == false )
 		{
 			m_WasDrawn = true;
-			return Deploy( V_MODEL, P_MODEL, DRAW_FIRST, "rpg", GetBodygroup(), (104.0/31.0) );
+			return Deploy( V_MODEL, P_MODEL, DRAW_FIRST, "rpg", GetBodygroup(), (105.0/31.0) );
 		}
 		else
 			return Deploy( V_MODEL, P_MODEL, DRAW, "rpg", GetBodygroup(), (29.0/30.0) );
@@ -205,7 +206,7 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 		m_pPlayer.m_iWeaponVolume = NORMAL_GUN_VOLUME;
 		m_pPlayer.m_iWeaponFlash = BRIGHT_GUN_FLASH;
 
-		INS2ROCKETPROJECTILE::CIns2Rocket@ pRocket = INS2ROCKETPROJECTILE::ShootRocket( m_pPlayer.pev, vecStart, vecVeloc, R_MODEL, DAMAGE, PROJ_NAME );
+		auto pRocket = INS2ROCKETPROJECTILE::ShootRocket( m_pPlayer.pev, vecStart, vecVeloc, R_MODEL, DAMAGE, PROJ_NAME );
 		Math.MakeVectors( m_pPlayer.pev.v_angle );
 		pRocket.pev.angles = ang_Aim;
 
@@ -219,14 +220,14 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 		{
 			self.PlayEmptySound();
 			self.SendWeaponAnim( (WeaponADSMode == INS2BASE::IRON_IN) ? IRON_DRYFIRE : DRYFIRE, 0, GetBodygroup() );
-			self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.7f;
+			self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.7f;			
 			return;
 		}
 
 		self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + (30.0/30.0);
 		self.m_flTimeWeaponIdle = WeaponTimeBase() + 1.0f;
 
-		SetThink( ThinkFunction( ShootThink ) );
+		SetThink( ThinkFunction( this.ShootThink ) );
 		self.pev.nextthink = g_Engine.time + 0.25;
 
 		if( WeaponADSMode == INS2BASE::IRON_IN )
@@ -245,7 +246,7 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 35 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:
@@ -256,16 +257,6 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			}
 		}
 	}
-
-	/*void InactiveItemPreFrame()
-	{
-		if( m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) == 0 && self.m_iClip == 0 )
-		{
-			
-		}
-
-		BaseClass.InactiveItemPreFrame();
-	}*/
 
 	void ItemPreFrame()
 	{
@@ -292,7 +283,7 @@ class weapon_ins2at4 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 		if( m_reloadTimer < g_Engine.time )
 		{
 			Reload( MAX_CLIP, RELOAD, (146.0/30.0), GetBodygroup() );
-			SetThink( ThinkFunction( EjectClipThink ) );
+			SetThink( ThinkFunction( this.EjectClipThink ) );
 			self.pev.nextthink = g_Engine.time + (40.0/30.0);
 			canReload = false;
 		}

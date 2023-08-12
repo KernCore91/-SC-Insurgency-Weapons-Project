@@ -63,9 +63,10 @@ int WEIGHT      	= 20;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 40;
 uint SLOT       	= 6;
-uint POSITION   	= 11;
+uint POSITION   	= 12;
 float RPM_AIR   	= 710; //Rounds per minute in air
 float RPM_WTR   	= 550; //Rounds per minute in water
+uint AIM_FOV    	= 30; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.62x51mm";
 
 class weapon_ins2m14ebr : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -221,7 +222,7 @@ class weapon_ins2m14ebr : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			{
 				m_pPlayer.m_szAnimExtension = "sniperscope";
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 30 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

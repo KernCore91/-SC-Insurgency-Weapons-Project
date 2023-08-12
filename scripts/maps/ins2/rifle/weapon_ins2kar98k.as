@@ -103,6 +103,7 @@ uint DAMAGE_GL  	= 155;
 uint SLOT       	= 6;
 uint POSITION   	= 4;
 float RPM_AIR   	= 1.3; //Rounds per minute in air
+uint AIM_FOV    	= 37; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.92x57mm";
 string AMMO_TYPE2	= "ins2_30x250mm";
 string PROJ_NAME 	= "proj_ins2kar98k";
@@ -380,7 +381,7 @@ class weapon_ins2kar98k : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 					self.SendWeaponAnim( (WeaponGLMode == INS2BASE::GL_AIMED) ? GL_IRON_TO_EMPTY : IRON_TO_EMPTY, 0, GetBodygroup() );
 
 				m_pPlayer.m_szAnimExtension = "sniperscope";
-				EffectsFOVON( 37 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

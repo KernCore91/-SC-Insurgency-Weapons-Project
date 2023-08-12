@@ -56,7 +56,8 @@ int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 250;
 float SPEED     	= 1700;
 uint SLOT       	= 4;
-uint POSITION   	= 13;
+uint POSITION   	= 11;
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_40mm_rocket";
 string PROJ_NAME 	= "proj_ins2rpg7";
 
@@ -209,7 +210,7 @@ class weapon_ins2rpg7 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

@@ -58,17 +58,17 @@ class CIns2Flame : ScriptBaseEntity, INS2BASE::ExplosiveBase
 
 	void FlameTouch( CBaseEntity@ pOther )
 	{
-		// don't hit the guy that launched this flame or itself
-		if( @pOther.edict() == @self.pev.owner )
-			return;
+		TraceResult tr = g_Utility.GetGlobalTrace();
 
-		if( pOther.pev.ClassNameIs( self.pev.classname ) || @pOther.edict() == @self.edict()  )
+		// OP4's Pit worm hack so it doesn't hit itself 
+		if( pOther.pev.modelindex == self.pev.modelindex && tr.pHit !is null && self.pev.modelindex != tr.pHit.vars.modelindex )
 		{
-			g_EntityFuncs.SetSize( self.pev, g_vecZero, g_vecZero );
 			return;
 		}
 
-		SetTouch( null );
+		// don't hit the guy that launched this flame
+		if( pOther.edict() is self.pev.owner )
+			return;
 
 		entvars_t@ pevOwner;
 		if( self.pev.owner !is null )
@@ -76,7 +76,6 @@ class CIns2Flame : ScriptBaseEntity, INS2BASE::ExplosiveBase
 		else
 			@pevOwner = self.pev;
 
-		TraceResult tr = g_Utility.GetGlobalTrace();
 		if( pOther.pev.takedamage != DAMAGE_NO && pOther.IsAlive() )
 		{
 			g_WeaponFuncs.ClearMultiDamage();
@@ -100,6 +99,8 @@ class CIns2Flame : ScriptBaseEntity, INS2BASE::ExplosiveBase
 
 		if( pOther is null || pOther.IsBSPModel() )
 			g_Utility.DecalTrace( tr, DECAL_SMALLSCORCH1 + Math.RandomLong( 1, 2 ) );
+
+		SetTouch( null );
 
 		self.pev.solid = SOLID_NOT;
 		self.pev.movetype = MOVETYPE_NONE;

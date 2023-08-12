@@ -58,7 +58,8 @@ int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_LIMITINWORLD | ITEM_FLAG_E
 uint DAMAGE     	= 200;
 float SPEED     	= 1700;
 uint SLOT       	= 4;
-uint POSITION   	= 9;
+uint POSITION   	= 8;
+uint AIM_FOV    	= 35; // Below 50 hides crosshair
 string AMMO_TYPE 	= GetName();
 string PROJ_NAME 	= "proj_ins2pzfaust";
 
@@ -247,7 +248,7 @@ class weapon_ins2pzfaust : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, I
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (self.m_iClip > 0) ? IRON_TO : IRON_TO_EMPTY, 0, GetBodygroup() );
-				EffectsFOVON( 35 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:
@@ -284,8 +285,8 @@ class weapon_ins2pzfaust : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, I
 		if( m_reloadTimer < g_Engine.time )
 		{
 			Reload( MAX_CLIP, RELOAD, (130.0/35.0), GetBodygroup() );
-			SetThink( ThinkFunction( EjectClipThink ) );
-			self.pev.nextthink = g_Engine.time + 0.571;
+			SetThink( ThinkFunction( this.EjectClipThink ) );
+			self.pev.nextthink = g_Engine.time + (20.0/35.0);
 			canReload = false;
 		}
 

@@ -73,9 +73,10 @@ int WEIGHT      	= 50;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY | ITEM_FLAG_ESSENTIAL;
 uint DAMAGE     	= 26;
 uint SLOT       	= 7;
-uint POSITION   	= 12;
+uint POSITION   	= 11;
 float RPM_AIR   	= 600; //Rounds per minute in air
 float RPM_WTR   	= 450; //Rounds per minute in water
+uint AIM_FOV    	= 40; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_7.62x39mm";
 
 class weapon_ins2rpk : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2BASE::BipodWeaponBase
@@ -262,7 +263,7 @@ class weapon_ins2rpk : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase, INS2B
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( (WeaponBipodMode == INS2BASE::BIPOD_UNDEPLOYED) ? IRON_TO : BIPOD_IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 40 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

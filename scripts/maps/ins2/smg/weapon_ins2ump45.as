@@ -58,6 +58,7 @@ float RPM_AIR   	= 600; //Rounds per minute in air
 float RPM_WTR   	= 500; //Rounds per minute in water
 float RPM_BURST_AIR	= 850; //Burst fire rate in air
 float RPM_BURST_WTR	= 600; //Burst fire rate in water
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_45acp";
 
 class weapon_ins2ump45 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
@@ -234,7 +235,7 @@ class weapon_ins2ump45 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

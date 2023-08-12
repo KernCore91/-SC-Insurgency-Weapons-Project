@@ -53,9 +53,10 @@ int WEIGHT      	= 100;
 int FLAGS       	= ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 uint DAMAGE     	= 9;
 uint SLOT       	= 3;
-uint POSITION   	= 17;
+uint POSITION   	= 15;
 float RPM_AIR   	= 350; //Rounds per minute in air
 float RPM_WTR   	= 250; //Rounds per minute in water
+uint AIM_FOV    	= 45; // Below 50 hides crosshair
 string AMMO_TYPE 	= "ins2_12x70buckshot";
 uint PELLETCOUNT 	= 8;
 Vector VECTOR_CONE( 0.06105, 0.06105, 0.0 ); //7 DEGREES
@@ -198,7 +199,7 @@ class weapon_ins2saiga12 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 			case INS2BASE::IRON_OUT:
 			{
 				self.SendWeaponAnim( IRON_TO, 0, GetBodygroup() );
-				EffectsFOVON( 45 );
+				EffectsFOVON( AIM_FOV );
 				break;
 			}
 			case INS2BASE::IRON_IN:

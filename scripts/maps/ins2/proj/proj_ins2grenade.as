@@ -13,6 +13,7 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 	private Vector m_vecPrev;
 	private bool m_bRegisteredSound;
 	bool m_bImpactGrenade;
+	float m_flImpactFuseTime = 0;
 
 	void Spawn()
 	{
@@ -26,9 +27,6 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 		m_vecPrev = g_vecZero;
 		m_bRegisteredSound = false;
 
-		SetThink( ThinkFunction( this.TumbleThink ) );
-		self.pev.nextthink = g_Engine.time + 0.1;
-
 		g_EntityFuncs.SetSize( self.pev, Vector( -0.2, -0.2, -0.2 ), Vector( 0.2, 0.2, 0.2 ) );
 	}
 
@@ -38,12 +36,81 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 		g_Game.PrecacheModel( "sprites/zerogxplode.spr" );
 		g_Game.PrecacheModel( SPR_EXPLOSION );
 		g_Game.PrecacheModel( "sprites/WXplo1.spr" );
+		//g_Game.PrecacheModel( "sprites/ins2/napalm.spr" );
 		g_Game.PrecacheModel( "sprites/steam1.spr" );
 		//g_Game.PrecacheModel( "models/concrete_gibs.mdl" );
 		INS2BASE::PrecacheSound( GrenadeExplode );
 		INS2BASE::PrecacheSound( GrenadeWaterExplode );
 		INS2BASE::PrecacheSound( GrenadeBounce );
 		BaseClass.Precache();
+	}
+
+	void TimedImpactTouch( CBaseEntity@ pOther )
+	{
+		// don't hit the guy that launched this grenade
+		if( @pOther.edict() == @self.pev.owner )
+			return;
+
+		// Only do damage if we're moving fairly fast
+		if( m_flNextAttack < g_Engine.time && self.pev.velocity.Length() > 100 )
+		{
+			entvars_t@ pevOwner = @self.pev.owner.vars;
+			if( pevOwner !is null )
+			{
+				TraceResult tr = g_Utility.GetGlobalTrace();
+				g_WeaponFuncs.ClearMultiDamage();
+				pOther.TraceAttack( pevOwner, 1, g_Engine.v_forward, tr, DMG_CLUB );
+				g_WeaponFuncs.ApplyMultiDamage( self.pev, pevOwner );
+			}
+			m_flNextAttack = g_Engine.time + 1.0; // debounce
+		}
+
+		if( m_flImpactFuseTime > g_Engine.time && m_bImpactGrenade )
+		{
+			//g_Game.AlertMessage( at_console, "Impact Fuse Time: " + (m_flImpactFuseTime - g_Engine.time) + "\n" );
+			m_bImpactGrenade = false; //Deactivate the impact detonation
+		}
+		else if( m_flImpactFuseTime < g_Engine.time && m_bImpactGrenade )
+		{
+			//g_Game.AlertMessage( at_console, "Impact Fuse Time: " + (m_flImpactFuseTime - g_Engine.time) + "\n" );
+			SetThink( ThinkFunction( this.Detonate ) );
+			self.pev.nextthink = g_Engine.time;
+		}
+
+		Vector vecTestVelocity;
+		// this is my heuristic for modulating the grenade velocity because grenades dropped purely vertical
+		// or thrown very far tend to slow down too quickly for me to always catch just by testing velocity.
+		// trimming the Z velocity a bit seems to help quite a bit.
+		vecTestVelocity = self.pev.velocity;
+		vecTestVelocity.z *= 0.45;
+
+		if( m_bRegisteredSound == false && vecTestVelocity.Length() <= 33 )
+		{
+			// grenade is moving really slow. It's probably very close to where it will ultimately stop moving.
+			// go ahead and emit the danger sound.
+			// register a radius louder than the explosion, so we make sure everyone gets out of the way
+			GetSoundEntInstance().InsertSound( bits_SOUND_DANGER, self.pev.origin, int(self.pev.dmg / 0.5), 0.3, self );
+			//CSoundEnt::InsertSound ( bits_SOUND_DANGER, pev->origin, pev->dmg / 0.5, 0.3, this );
+			m_bRegisteredSound = true;
+		}
+
+		if( pOther.IsBSPModel() )
+			self.pev.flags |= FL_ONGROUND;
+
+		if( self.pev.flags & FL_ONGROUND != 0 && m_flNextSlideUpdate <= g_Engine.time )
+		{
+			// add a bit of static friction
+			self.pev.velocity = self.pev.velocity * 0.9;
+			self.pev.sequence = 1;
+			m_flNextSlideUpdate = g_Engine.time + 0.1;
+		}
+
+		BounceSounds();
+
+		self.pev.flags |= EF_NOINTERP;
+		float flVelocity = (self.pev.origin - m_vecPrev).Length();
+		self.pev.framerate = Math.min( 16.0, Math.max( 0.0, flVelocity * 8 ) );
+		m_vecPrev = self.pev.origin;
 	}
 
 	void ImpactTouch( CBaseEntity@ pOther )
@@ -198,17 +265,28 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 			self.pev.framerate = 1;
 		}
 
+		if( self.pev.waterlevel != WATERLEVEL_DRY )
+		{
+			self.pev.velocity = self.pev.velocity * 0.5;
+			self.pev.framerate = 0.2;
+		}
+
 		if( !m_bImpactGrenade )
 		{
 			if( self.pev.dmgtime <= g_Engine.time )
 			{
 				SetThink( ThinkFunction( this.Detonate ) );
 			}
-
-			if( self.pev.waterlevel != WATERLEVEL_DRY )
+		}
+		else if( m_bImpactGrenade && m_flImpactFuseTime != 0 )
+		{
+			if( self.pev.flags & FL_ONGROUND != 0 && m_flImpactFuseTime <= g_Engine.time )
 			{
-				self.pev.velocity = self.pev.velocity * 0.5;
-				self.pev.framerate = 0.2;
+				SetThink( ThinkFunction( this.Detonate ) );
+			}
+			else if( m_flImpactFuseTime <= g_Engine.time && self.pev.dmgtime <= g_Engine.time )
+			{
+				SetThink( ThinkFunction( this.Detonate ) );
 			}
 		}
 	}
@@ -227,6 +305,7 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 			@pevOwner = self.pev;
 
 		g_PlayerFuncs.ScreenShake( self.pev.origin, 15.0, 50.0, 1.0, self.pev.dmg * 2.5 );
+		//MsgTraceTexResult( self.GetOrigin() );
 
 		// Pull out of the wall a bit
 		if( pTrace.flFraction != 1.0 )
@@ -282,7 +361,7 @@ class CIns2Grenade : ScriptBaseMonsterEntity, INS2BASE::ExplosiveBase
 	}
 }
 
-CIns2Grenade@ TossGrenade( entvars_t@ pevOwner, Vector vecStart, Vector vecVelocity, float flTime, float flDmg, string sModel, const string& in szName = "proj_ins2grenade", bool bIsImpactGrenade = false )
+CIns2Grenade@ TossGrenade( entvars_t@ pevOwner, Vector vecStart, Vector vecVelocity, float flTime, float flDmg, string sModel, const string& in szName = "proj_ins2grenade" )
 {
 	CBaseEntity@ cbeIns2Grenade = g_EntityFuncs.CreateEntity( szName );
 	CIns2Grenade@ ins2Grenade = cast<CIns2Grenade@>( CastToScriptClass( cbeIns2Grenade ) );
@@ -299,23 +378,91 @@ CIns2Grenade@ TossGrenade( entvars_t@ pevOwner, Vector vecStart, Vector vecVeloc
 	ins2Grenade.pev.gravity = 0.7;
 	ins2Grenade.pev.friction = 0.65;
 	ins2Grenade.pev.dmg = flDmg;
-	ins2Grenade.m_bImpactGrenade = bIsImpactGrenade;
 
-	if( ins2Grenade.m_bImpactGrenade != true )
-	{
-		ins2Grenade.SetTouch( TouchFunction( ins2Grenade.BounceTouch ) );
+	ins2Grenade.SetTouch( TouchFunction( ins2Grenade.BounceTouch ) );
 
-		if( flTime < 0.1 )
-		{
-			ins2Grenade.pev.nextthink = g_Engine.time;
-			ins2Grenade.pev.velocity = g_vecZero;
-		}
-		ins2Grenade.pev.dmgtime = g_Engine.time + flTime;
-	}
-	else
+	ins2Grenade.SetThink( ThinkFunction( ins2Grenade.TumbleThink ) );
+	ins2Grenade.pev.nextthink = g_Engine.time + 0.1;
+
+	if( flTime < 0.1 )
 	{
-		ins2Grenade.SetTouch( TouchFunction( ins2Grenade.ImpactTouch ) );
+		ins2Grenade.pev.nextthink = g_Engine.time;
+		ins2Grenade.pev.velocity = g_vecZero;
 	}
+	ins2Grenade.pev.dmgtime = g_Engine.time + flTime;
+
+	// any traces will go straight through the grenade, so this doesn't work
+	/*ins2Grenade.pev.takedamage = DAMAGE_YES;
+	ins2Grenade.self.m_bloodColor = DONT_BLEED;
+	ins2Grenade.pev.health = 1;
+	Vector vecMin, vecMax;
+	ins2Grenade.self.ExtractBbox( ins2Grenade.pev.sequence, vecMin, vecMax );
+	g_EntityFuncs.SetSize( ins2Grenade.pev, vecMin, vecMax );
+	ins2Grenade.pev.size = vecMax - vecMin;*/
+
+	return ins2Grenade;
+}
+
+CIns2Grenade@ TossImpactGrenade( entvars_t@ pevOwner, Vector vecStart, Vector vecVelocity, float flDmg, string sModel, const string& in szName = "proj_ins2grenade" )
+{
+	CBaseEntity@ cbeIns2Grenade = g_EntityFuncs.CreateEntity( szName );
+	CIns2Grenade@ ins2Grenade = cast<CIns2Grenade@>( CastToScriptClass( cbeIns2Grenade ) );
+
+	//g_Game.AlertMessage( at_console, "Projectile Name: " + ins2Grenade.pev.classname + "\n" );
+
+	g_EntityFuncs.SetOrigin( ins2Grenade.self, vecStart );
+	g_EntityFuncs.SetModel( ins2Grenade.self, sModel );
+	g_EntityFuncs.DispatchSpawn( ins2Grenade.self.edict() );
+
+	ins2Grenade.pev.velocity = vecVelocity;
+	ins2Grenade.pev.angles = Math.VecToAngles( ins2Grenade.pev.velocity );
+	@ins2Grenade.pev.owner = INS2BASE::ENT( pevOwner );
+	ins2Grenade.pev.gravity = 0.7;
+	ins2Grenade.pev.friction = 0.65;
+	ins2Grenade.pev.dmg = flDmg;
+
+	ins2Grenade.SetThink( ThinkFunction( ins2Grenade.TumbleThink ) );
+	ins2Grenade.pev.nextthink = g_Engine.time + 0.1;
+
+	ins2Grenade.m_bImpactGrenade = true;
+	ins2Grenade.SetTouch( TouchFunction( ins2Grenade.ImpactTouch ) );
+
+	return ins2Grenade;
+}
+
+CIns2Grenade@ TossTimedImpactGrenade( entvars_t@ pevOwner, Vector vecStart, Vector vecVelocity, float flTime, float flImpactTime, float flDmg, string sModel, 
+	const string& in szName = "proj_ins2grenade" )
+{
+	CBaseEntity@ cbeIns2Grenade = g_EntityFuncs.CreateEntity( szName );
+	CIns2Grenade@ ins2Grenade = cast<CIns2Grenade@>( CastToScriptClass( cbeIns2Grenade ) );
+
+	//g_Game.AlertMessage( at_console, "Projectile Name: " + ins2Grenade.pev.classname + "\n" );
+
+	g_EntityFuncs.SetOrigin( ins2Grenade.self, vecStart );
+	g_EntityFuncs.SetModel( ins2Grenade.self, sModel );
+	g_EntityFuncs.DispatchSpawn( ins2Grenade.self.edict() );
+
+	ins2Grenade.pev.velocity = vecVelocity;
+	ins2Grenade.pev.angles = Math.VecToAngles( ins2Grenade.pev.velocity );
+	@ins2Grenade.pev.owner = INS2BASE::ENT( pevOwner );
+	ins2Grenade.pev.gravity = 0.7;
+	ins2Grenade.pev.friction = 0.65;
+	ins2Grenade.pev.dmg = flDmg;
+
+	ins2Grenade.m_bImpactGrenade = true;
+	ins2Grenade.SetTouch( TouchFunction( ins2Grenade.TimedImpactTouch ) );
+
+	ins2Grenade.SetThink( ThinkFunction( ins2Grenade.TumbleThink ) );
+	ins2Grenade.pev.nextthink = g_Engine.time + 0.1;
+
+	if( flTime < 0.1 )
+	{
+		ins2Grenade.pev.nextthink = g_Engine.time;
+		ins2Grenade.pev.velocity = g_vecZero;
+	}
+	ins2Grenade.pev.dmgtime = g_Engine.time + flTime;
+
+	ins2Grenade.m_flImpactFuseTime = (flImpactTime < 0.1) ? g_Engine.time : g_Engine.time + flImpactTime;
 
 	return ins2Grenade;
 }
