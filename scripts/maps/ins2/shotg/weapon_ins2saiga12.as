@@ -80,7 +80,7 @@ class weapon_ins2saiga12 : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		"ins2/wpn/saiga/hit.ogg",
 		"ins2/wpn/saiga/magin.ogg",
 		"ins2/wpn/saiga/magout.ogg",
-		"ins2/wpn/galil/rof.ogg",
+		"ins2/wpn/saiga/rof.ogg",
 		"ins2/wpn/galil/magrel.ogg",
 		EMPTY_S,
 		SHOOT_S
