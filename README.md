@@ -13,8 +13,8 @@ Total Size Compressed: 102 MB
 (.7z) [Dropbox](https://www.dropbox.com/scl/fi/ggyzxhrlp6gsv1u71de3i/Insurgency_Release_1_6.7z)  
 (.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency_Release_1_6.7z)  
 (.7z) [Mega](https://mega.nz/file/Sl8BzYaS#HlmgYEsTOYiwTLRONxGT5iU4f9ajiIdndLJQqeSVgR8)  
-~~(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_5.7z)~~  
-(.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.5/Insurgency.First.Release1_5.7z)
+<!--(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_5.7z)-->  
+(.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.6/Insurgency_Release_1_6.7z)
 
 ## The Weapons
 
