@@ -292,7 +292,7 @@ There's a very long list of people/teams in the file: [*ins2_credits.txt*](https
 * Added the H&K VP-70M
 * Added the H&K MP5SD2
 * Added the H&K G36C
-* Added the XM21
+* Added the M21
 * Added the PKM
 * Added the MG-34
 * Added the FN SCAR-H
