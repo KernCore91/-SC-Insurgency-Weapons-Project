@@ -704,6 +704,122 @@ Sounds: New World Interactive, Magmacow, Navaro, D.N.I.O. 071 (Conversion to .og
 Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
 Misc: D.N.I.O. 071 (World Model UVs, Compile), Norman The Loli Pirate (World Model), KernCore (World Model UVs)
 ----------------------------------------------------------------------------
+>AN-94N
+Model: Contract Wars, Norman The Loli Pirate (Heavy Edits, PK-AS Side Rail Mount)
+Textures: Contract Wars, Norman The Loli Pirate (Edits, PK-AS Side Rail Mount edits)
+Animations: D.N.I.O. 071
+Sounds: New World Interactive, Infinity Ward (COD Modern Warfare 2019, ported by Viper)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile), KernCore (World Model UVs)
+----------------------------------------------------------------------------
+>OTs-14-4A-04 9/40 Groza
+
+Model: 1ns1debeast, Norman The Loli Pirate
+Textures: 1ns1debeast, Norman The Loli Pirate
+Animations: D.N.I.O. 071
+Sounds: New World Interactive, Navaro, Magmacow, S.T.A.L.K.E.R. Anomaly Team
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile), KernCore (World Model UVs)
+----------------------------------------------------------------------------
+>M16A1
+
+Model: Hav0c (M16A1), Twinke Masta (Heatshield/M203), Norman The Loli Pirate
+Textures: Millenia, Norman The Loli Pirate
+Animations: MyZombieKillerz, D.N.I.O. 071 (Heavy Edits)
+Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile), KernCore (World Model UVs)
+----------------------------------------------------------------------------
+>FN SCAR-H
+
+Model: End of Days, ImBrokeRu (Magazine), Norman The Loli Pirate (Edits)
+Textures: Racer445, Bull5hit (Magazine), Norman The Loli Pirate (Edits)
+Animations: Mr. Brightside, D.N.I.O. 071 (Heavy Edits)
+Sounds: KernCore (Mix of Navaro, Tripwire Interactive, D.I.C.E.), D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
+>H&K G36C
+
+Model: TheLama, Norman The Loli Pirate
+Textures: Thanez, Norman The Loli Pirate
+Animations: New World Interactive, MyZombieKillerz, D.N.I.O. 071 (Heavy Edits)
+Sounds: New World Interactive, Magmacow, KernCore, D.N.I.O. 071
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
+>RGO Grenade
+
+Model: SAM61
+Textures: Norman The Loli Pirate
+Animations: New World Interactive, D.N.I.O. 071 (Heavy Edits)
+Sounds: New World Interactive
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (Compile)
+----------------------------------------------------------------------------
+>H&K VP-70M
+
+Model: fallschirmjager, the_tub
+Textures: the_tub
+Animations: D.N.I.O. 071
+Sounds: Magmacow, Navaro, D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render, Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile), KernCore (World Model UVs)
+----------------------------------------------------------------------------
+>MG-34
+
+Model: Master Minder (Forgotten Hope 2), Norman The Loli Pirate
+Textures: Subbo (Forgotten Hope 2), Razor (Forgotten Hope 2), Norman The Loli Pirate
+Animations: New World Interactive
+Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
+>PKM
+
+Model: Sasha, Ohnomelon, Chuc, Pharoahe Zephyrus, Norman The Loli Pirate (Edits, Belt, Bullets)
+Textures: Sasha, Ohnomelon, Chuc, Pharoahe Zephyrus, Norman The Loli Pirate (Edits)
+Animations: New World Interactive, D.N.I.O. 071 (Major Edits)
+Sounds: New World Interactive
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (Compile)
+----------------------------------------------------------------------------
+>Tokarev SVT-40
+
+Model: Seth Soldier (Forgotten Hope 2), Norman The Loli Pirate (Edits)
+Textures: Seth Soldier (Forgotten Hope 2), Norman The Loli Pirate (Edits)
+Animations: MyZombieKillerz, D.N.I.O. 071 (Edits)
+Sounds: Solarint, Falcre, Navaro
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
+>M3 Grease Gun
+
+Model: Seth Soldier (Forgotten Hope 2), Norman The Loli Pirate (Edits, interior)
+Textures: Seth Soldier (Forgotten Hope 2), Norman The Loli Pirate (Edits, interior)
+Animations: New World Interactive
+Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
+>H&K MP5SD3
+
+Model: Twinke Masta, New World Interactive (Magazine), D.N.I.O. 071 (Edits)
+Textures: Geno, Norman The Loli Pirate (Magazine heavy edits), D.N.I.O. 071 (Edits)
+Animations: D.N.I.O. 071
+Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc:  Norman The Loli Pirate (World Model), KernCore (World Model UVs), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
+>M21 + Redfield ART 1
+
+Model: Spezz (Base M14), Norman The Loli Pirate (XM21 parts, Scope)
+Textures: Thanez (base M14), Norman The Loli Pirate (XM21 parts, Scope, Stock)
+Animations: New World Interactive, MyZombieKillerz, D.N.I.O. 071 (Edits)
+Sounds: New World Interactive, Magmacow, Solarint, D.N.I.O. 071 (Conversion to .ogg format)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model), D.N.I.O. 071 (World Model UVs, Compile)
+----------------------------------------------------------------------------
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 Hands:
 >Bare hands model
