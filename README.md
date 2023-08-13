@@ -151,7 +151,7 @@ Video:
 
 Video:
 [![](http://i3.ytimg.com/vi/tMmC0-DIgCQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=tMmC0-DIgCQ)
-*by AlphaLeader772.*
+*by AlphaLeader772. (Outdated)*
 
 ## Screenshots
 [![](https://i.imgur.com/XRJbALTm.png)](https://i.imgur.com/XRJbALT.png)
