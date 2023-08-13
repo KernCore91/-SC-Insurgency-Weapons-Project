@@ -2,19 +2,18 @@
 ![](https://i.imgur.com/u0h7FjO.png)
 > Custom weapons project for Sven Co-op
 
-This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it was released on the Sven Co-op Forums (2020/01/19), with more content to come in the future.  
-The First part with 66 weapons is now finished. Stay tuned for the Second Release with more weapons.  
+This project is brought to you by the following super dedicated team members: Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and me (KernCore). This project started in mid November of 2017 and the first part of it was released on the Sven Co-op Forums (2020/01/19), with more content to come in the future.
 
 # **DO NOT RUN THIS PLUGIN ALONG WITH ANOTHER WEAPON PLUGIN, NO SUPPORT IS GUARANTEED BETWEEN THEM**
 
 ## Download Links
 
-Total Size Compressed: 86.02 MB
+Total Size Compressed: 102 MB
 
-(.7z) [Dropbox](https://www.dropbox.com/s/odd01ofui0ysskw/insurgency%20first%20release1_5.7z?dl=0)  
-(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency%20First%20Release1_5.7z)  
-(.7z) [Mega](https://mega.nz/file/KtlHAAqZ#iosfIx3kMRXzifCP6FPyacNtwuWWkSyhBRY_IGgIphQ)  
-(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_5.7z)  
+(.7z) [Dropbox](https://www.dropbox.com/scl/fi/ggyzxhrlp6gsv1u71de3i/Insurgency_Release_1_6.7z)  
+(.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency_Release_1_6.7z)  
+(.7z) [Mega](https://mega.nz/file/Sl8BzYaS#HlmgYEsTOYiwTLRONxGT5iU4f9ajiIdndLJQqeSVgR8)  
+~~(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_5.7z)~~  
 (.7z) [GitHub](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/releases/download/v1.5/Insurgency.First.Release1_5.7z)
 
 ## The Weapons
@@ -32,6 +31,9 @@ Total Size Compressed: 86.02 MB
 * AKM + GP-25 (weapon_ins2akm)
 * L85A2 + L123A2 (weapon_ins2l85a2)
 * M16A4 + M203 (weapon_ins2m16a4)
+* M16A1 + M203 (weapon_ins2m16a1)
+* OTs-14 Groza 4 + GP-30 (weapon_ins2groza)
+* AN-94N + PK-AS Scope (weapon_ins2an94)
 
 #### Battle Rifles
 
@@ -39,6 +41,7 @@ Total Size Compressed: 86.02 MB
 * FN FAL (weapon_ins2fnfal)
 * H&K G3A3 (weapon_ins2g3a3)
 * M14 EBR (weapon_ins2m14ebr)
+* FN SCAR-H (weapon_ins2scarh)
 
 #### Carbines
 
@@ -48,12 +51,14 @@ Total Size Compressed: 86.02 MB
 * M4A1 (weapon_ins2m4a1)
 * MK. 18 MOD 1 (weapon_ins2mk18)
 * SKS-D (weapon_ins2sks)
+* H&K G36C (weapon_ins2g36c)
 
 #### Rifles
 
 * Karabiner 98 Kurz + Schießbecher (weapon_ins2kar98k)
 * Lee-Enfield No.IV Mk.I (weapon_ins2enfield)
 * M1 Garand (weapon_ins2garand)
+* SVT-40 (weapon_ins2svt40)
 
 #### Shotguns
 
@@ -69,6 +74,7 @@ Total Size Compressed: 86.02 MB
 * Gewehr 43 + ZF4 Scope (weapon_ins2g43)
 * M40A1 + Leupold Scope (weapon_ins2m40a1)
 * Mosin Nagant M91/30 + PU Scope (weapon_ins2mosin)
+* M21 + Redfield ART 1 Scope (weapon_ins2m21)
 
 #### Machine Guns
 
@@ -77,6 +83,8 @@ Total Size Compressed: 86.02 MB
 * M60 (weapon_ins2m60)
 * MG-42 (weapon_ins2mg42)
 * RPK (weapon_ins2rpk)
+* PKM (weapon_ins2pkm)
+* MG-34 (weapon_ins2mg34)
 
 #### Sub Machine Guns
 
@@ -88,6 +96,8 @@ Total Size Compressed: 86.02 MB
 * PPSh-41 (weapon_ins2ppsh41)
 * Sterling L2A3 (weapon_ins2l2a3)
 * Thompson M1928 (weapon_ins2m1928)
+* H&K MP5SD2 (weapon_ins2mp5sd)
+* M3 Grease Gun (weapon_ins2greasegun)
 
 #### Launchers
 
@@ -119,6 +129,7 @@ Total Size Compressed: 86.02 MB
 * Glock 17 (weapon_ins2glock17)
 * H&K USP Match (weapon_ins2usp)
 * Makarov PM (weapon_ins2makarov)
+* H&K VP-70M (weapon_ins2vp70)
 
 #### Revolvers
 
@@ -130,6 +141,7 @@ Total Size Compressed: 86.02 MB
 
 * M24 Stielhandgranate (weapon_ins2stick)
 * MK2 Grenade (weapon_ins2mk2)
+* RGO Grenade (weapon_ins2rgo)
 
 ## Gameplay Video
 
@@ -227,6 +239,8 @@ The maps that currently support this optional feature are:
 * suspension
 * Restriction Series
 * Afrikakorps Series
+* Under the Black Moon Series
+* Royals Series
 
 If you want to know how to add these scripts, take a look at their scripts in the folder: **scripts/maps/ins2/maps** and add their specific map_script command in the map's *.cfg* file.
 
@@ -251,6 +265,8 @@ Many models feature textures above 512x512 resolution, including the weapon spri
 
 Usage of this pack without more than 2 GB RAM, outside of servers, is likely to crash you.
 
+The RGO Grenade has an internal impact timer of 1.5 seconds, which means that if it has impacted on any surface during that time, it will not explode.
+
 ## Credits
 
 You are authorized to use any assets in this pack as you see fit, as long as you credit us and whoever contributed to the making of this pack.
@@ -271,6 +287,38 @@ There's a very long list of people/teams in the file: [*ins2_credits.txt*](https
 * Upload it somewhere else without credits.
 
 ## Updates
+
+### Update 1.6:
+* Added the H&K VP-70M
+* Added the H&K MP5SD2
+* Added the H&K G36C
+* Added the XM21
+* Added the PKM
+* Added the MG-34
+* Added the FN SCAR-H
+* Added the SVT-40
+* Added the M3 Grease Gun
+* Added the RGO Grenade
+* Added the M16A1 + M203
+* Added the OTs-14 Groza 4 + GP-30
+* Added the AN-94
+* Added a map script for the following series: Under the Black Moon, Royals
+* Changed weapon names and prices in the Buy Menu
+* Disposable Launchers now have their own category in the Equipment Menu
+* Fixed the BuyMenu taking away your money after attempting to buy a weapon you dropped
+* Fixed macro abuse on the M16A4 (Thanks SV BOY)
+* Added category for the Equipment Menu:
+ * Time-Fused Grenades
+ * Impact Grenades
+ * Disposable Launchers
+* Removed 'gp25.mdl' in favor of the new grenade model 'vog25.mdl'
+* Updated AKM viewmodel to support new grenade model
+* Updated FGD file:
+ * Displays the new AKM grenade model
+ * Rearranged the list of weapons per category, much like the buy menu
+ * New weapons and their ammo entities are listed separately, for easier identification
+* Test map updated with a sligthly new layout (the weapon room will tank your FPS, sorry in advance!)
+* Removed unused skybox files and its lines inside the map's .res file
 
 ### Update 1.5:
 * Added the M2A1-2 Flamethrower
