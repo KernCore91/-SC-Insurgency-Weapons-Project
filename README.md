@@ -308,9 +308,9 @@ There's a very long list of people/teams in the file: [*ins2_credits.txt*](https
 * Fixed the BuyMenu taking away your money after attempting to buy a weapon you dropped
 * Fixed macro abuse on the M16A4 (Thanks SV BOY)
 * Added category for the Equipment Menu:
- * Time-Fused Grenades
- * Impact Grenades
- * Disposable Launchers
+  * Time-Fused Grenades
+  * Impact Grenades
+  * Disposable Launchers
 * Removed 'gp25.mdl' in favor of the new grenade model 'vog25.mdl'
 * Updated AKM viewmodel to support new grenade model
 * Updated FGD file:
