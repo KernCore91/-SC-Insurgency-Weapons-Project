@@ -314,9 +314,9 @@ There's a very long list of people/teams in the file: [*ins2_credits.txt*](https
 * Removed 'gp25.mdl' in favor of the new grenade model 'vog25.mdl'
 * Updated AKM viewmodel to support new grenade model
 * Updated FGD file:
- * Displays the new AKM grenade model
- * Rearranged the list of weapons per category, much like the buy menu
- * New weapons and their ammo entities are listed separately, for easier identification
+  * Displays the new AKM grenade model
+  * Rearranged the list of weapons per category, much like the buy menu
+  * New weapons and their ammo entities are listed separately, for easier identification
 * Test map updated with a sligthly new layout (the weapon room will tank your FPS, sorry in advance!)
 * Removed unused skybox files and its lines inside the map's .res file
 
