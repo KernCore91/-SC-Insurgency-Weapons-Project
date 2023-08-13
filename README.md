@@ -265,7 +265,7 @@ Many models feature textures above 512x512 resolution, including the weapon spri
 
 Usage of this pack without more than 2 GB RAM, outside of servers, is likely to crash you.
 
-The RGO Grenade has an internal impact timer of 1.5 seconds, which means that if it has impacted on any surface during that time, it will not explode.
+The RGO Grenade has an internal impact timer of 1.5 seconds, which means that if it has impacted on any surface during that time, it will not explode on impact.
 
 ## Credits
 
