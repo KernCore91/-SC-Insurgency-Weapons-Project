@@ -10,7 +10,7 @@ This project is brought to you by the following super dedicated team members: No
 
 Total Size Compressed: 102 MB
 
-(.7z) [Dropbox](https://www.dropbox.com/scl/fi/ggyzxhrlp6gsv1u71de3i/Insurgency_Release_1_6.7z)  
+(.7z) [Dropbox](https://www.dropbox.com/scl/fi/ggyzxhrlp6gsv1u71de3i/Insurgency_Release_1_6.7z?dl=0&rlkey=bfhl3stfgxeigx3afn91s41ot)  
 (.7z) [HLDM-BR.NET](https://cdn.hldm-br.net/files/sc/ins2/Insurgency_Release_1_6.7z)  
 (.7z) [Mega](https://mega.nz/file/Sl8BzYaS#HlmgYEsTOYiwTLRONxGT5iU4f9ajiIdndLJQqeSVgR8)  
 <!--(.7z) [Boderman.net](http://boderman.net/svencoop/Insurgency_First_Release1_5.7z)-->  
