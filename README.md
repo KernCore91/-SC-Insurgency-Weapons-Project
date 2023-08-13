@@ -146,7 +146,7 @@ Total Size Compressed: 102 MB
 ## Gameplay Video
 
 Video:
-[![](https://i.imgur.com/uGGqNa6.png)](https://www.youtube.com/watch?v=Ol0GCCzupE0)
+[![](https://i3.ytimg.com/vi/XQs4InKj_Is/maxresdefault.jpg)](https://www.youtube.com/watch?v=XQs4InKj_Is)
 *by SV BOY.*
 
 Video:
