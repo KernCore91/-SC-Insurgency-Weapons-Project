@@ -101,10 +101,7 @@ Total Size Compressed: 102 MB
 
 #### Launchers
 
-* M136 AT4 (weapon_ins2at4)
-* M72 LAW (weapon_ins2law)
 * M79 (weapon_ins2m79)
-* Panzerfaust (weapon_ins2pzfaust)
 * Panzerschreck (weapon_ins2pzschreck)
 * RPG-7 (weapon_ins2rpg7)
 
@@ -139,9 +136,17 @@ Total Size Compressed: 102 MB
 
 ### EQUIPMENT
 
+#### Grenades
+
 * M24 Stielhandgranate (weapon_ins2stick)
 * MK2 Grenade (weapon_ins2mk2)
 * RGO Grenade (weapon_ins2rgo)
+
+#### Disposable Launchers
+
+* Panzerfaust (weapon_ins2pzfaust)
+* M72 LAW (weapon_ins2law)
+* M136 AT4 (weapon_ins2at4)
 
 ## Gameplay Video
 
