@@ -194,6 +194,8 @@ Video:
 	4. Load up the map you chose;
 	5. Type in chat *\buy* or type in console give *name of the weapon* and enjoy.
 
+*If you're still having issues setting up the addon, this [wiki page](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project/wiki/Setting-up-the-addon-as-a-plugin) might help you set it up.* 
+
 ## Additional Content
 
 #### Buy Menu
