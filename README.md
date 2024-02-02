@@ -414,4 +414,4 @@ There's a very long list of people/teams in the file: [*ins2_credits.txt*](https
 ### Update 1.1:
 * Fixed guide rod on the Beretta M9
 * Fixed a sound not being precached in the M79
-* Added the Sterling L2A3
+* Added the Sterling L2A3  
