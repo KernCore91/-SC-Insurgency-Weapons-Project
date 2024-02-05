@@ -169,7 +169,7 @@ Video:
 ## Installation Guide
 
 1. Registering the weapons as plugins (Good for server operators, and most people):
-	1. Download the pack from one of the download links below
+	1. Download the pack from one of the [download links](https://github.com/KernCore91/-SC-Insurgency-Weapons-Project?#download-links)
 	2. Extract it's contents inside **`Steam\steamapps\common\Sven Co-op\svencoop_addon\`**
 	3. Open up *`default_plugins.txt`* located in **`Steam\steamapps\common\Sven Co-op\svencoop\`**
 	4. Add these lines to the file:
