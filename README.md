@@ -292,7 +292,7 @@ There's a very long list of people/teams in the file: [*ins2_credits.txt*](https
 * Use any assets included in this project without crediting who made them;
 * Earn money from this pack or any other assets used;
 * Upload it somewhere else without credits;
-* Convert the code to any other programming language.
+* Convert the code to any other programming/scripting language without permission.
 
 ## Updates
 
