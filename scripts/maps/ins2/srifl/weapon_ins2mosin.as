@@ -212,7 +212,7 @@ class weapon_ins2mosin : ScriptBasePlayerWeaponEntity, INS2BASE::WeaponBase
 		if( m_pPlayer.m_afButtonPressed & IN_ATTACK == 0 )
 			return;
 
-		ShootWeapon( SHOOT_S, 1, VecModAcc( VECTOR_CONE_1DEGREES, 1.25f, 0.25f, 1.25f ), (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? 1024 : 16384, DAMAGE, true, DMG_SNIPER );
+		ShootWeapon( SHOOT_S, 1, VecModAcc( VECTOR_CONE_1DEGREES * 0.75f, 1.25f, 0.2f, 1.2f ), (m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD) ? 1024 : 16384, DAMAGE, true, DMG_SNIPER );
 
 		self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = (self.m_iClip == 0) ? WeaponTimeBase() + 0.27 : WeaponTimeBase() + RPM;
 		self.m_flTimeWeaponIdle = WeaponTimeBase() + 2.0f;
