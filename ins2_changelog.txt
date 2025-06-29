@@ -120,3 +120,9 @@ Update 1.6:
  *New weapons and their ammo entities are listed separately, for easier identification
 *Test map updated with a sligthly new layout (the weapon room will tank your FPS, sorry in advance!)
 *Removed unused skybox files and its lines inside the map's .res file
+
+Update 1.6.1:
+*New shoot sound for the PKM;
+*Refactor the UpdatePlayerPoints function, it is now more eligible;
+*Rework the ShowPointsSprite function, previously, the color2 effects weren't showing up on Linux Dedicated Servers.
+*Updated the accuracy values for the Mosin Nagant/M40A1, they are a bit more accurate now.
