@@ -537,6 +537,11 @@ HookReturnCode INS2_ClientSay( SayParameters@ pParams )
 
 void ShowPointsSprite( CBasePlayer@ pPlayer )
 {
+	int iMaxMoney = (g_MaxMoney !is null) ? g_MaxMoney.GetInt() : MaxMoney;
+	int iPlayerMoney = int(BuyPoints[PlayerID( pPlayer )]);
+	int iPlayerFrags = (g_MoneyPerScore !is null) ? (iPlayerMoney / g_MoneyPerScore.GetInt()) : (iPlayerMoney / MoneyPerScore);  //int(pPlayer.pev.frags);
+	int iPlayerOldFrags = int(OldScore[PlayerID( pPlayer )]);
+
 	// Numeric Display
 	HUDNumDisplayParams NumDisplayParams;
 	NumDisplayParams.channel 	= 0;
@@ -550,23 +555,19 @@ void ShowPointsSprite( CBasePlayer@ pPlayer )
 	NumDisplayParams.top    	= 0; // Offset
 	NumDisplayParams.width  	= 16; // 0: auto; use total width of the sprite
 	NumDisplayParams.height 	= 24; // 0: auto; use total height of the sprite
-	NumDisplayParams.color1 	= (int(BuyPoints[PlayerID( pPlayer )]) <= 0) ? RGBA_RED : RGBA_SVENCOOP; // Default Sven HUD colors
+	NumDisplayParams.color1 	= (iPlayerMoney <= 0) ? RGBA( 255, 0, 0, 255 ) : RGBA( 100, 130, 200, 255 );
 
-	if( int(OldScore[PlayerID( pPlayer )]) == int(pPlayer.pev.frags) )
-		NumDisplayParams.color2 = RGBA_SVENCOOP; // Default Sven HUD colors
-	else if( int(OldScore[PlayerID( pPlayer )]) < int(pPlayer.pev.frags) )
-		NumDisplayParams.color2 = RGBA_GREEN; // Default Sven HUD colors
-	else if( int(OldScore[PlayerID( pPlayer )]) > int(pPlayer.pev.frags) )
-		NumDisplayParams.color2 = RGBA_RED; // Default Sven HUD colors
+	if( int(Math.Floor( pPlayer.pev.frags )) > iPlayerOldFrags )
+		NumDisplayParams.color2 = RGBA( 0, 255, 0, 255 );
+	else if( int(Math.Floor( pPlayer.pev.frags )) < iPlayerOldFrags )
+		NumDisplayParams.color2 = RGBA( 255, 0, 0, 255 );
+	else
+		NumDisplayParams.color2 = RGBA( 100, 130, 200, 255 );
 
 	NumDisplayParams.fxTime 	= 0.5;
-
-	if( g_MoneyPerScore is null )
-		NumDisplayParams.effect = (int(BuyPoints[PlayerID( pPlayer )]) <= 0 || int(BuyPoints[PlayerID( pPlayer )]) >= MaxMoney) ? HUD_EFFECT_NONE : HUD_EFFECT_RAMP_DOWN;
-	else
-		NumDisplayParams.effect = (int(BuyPoints[PlayerID( pPlayer )]) <= 0 || int(BuyPoints[PlayerID( pPlayer )]) >= g_MoneyPerScore.GetInt()) ? HUD_EFFECT_NONE : HUD_EFFECT_RAMP_DOWN;
-
+	NumDisplayParams.effect 	= (iPlayerFrags != iPlayerOldFrags) ? HUD_EFFECT_RAMP_DOWN : HUD_EFFECT_NONE;
 	NumDisplayParams.value  	= uint(BuyPoints[PlayerID( pPlayer )]);
+
 	g_PlayerFuncs.HudNumDisplay( pPlayer, NumDisplayParams );
 }
 
