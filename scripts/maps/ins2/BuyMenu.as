@@ -81,55 +81,30 @@ void MoneyInit()
 	//g_Game.AlertMessage( at_console, "Hooks Registered\n" );
 }
 
-void UpdatePlayerPoints( CBasePlayer@ pPlayer, int &in iOldScore, int &in iFrags )
+void UpdatePlayerPoints( CBasePlayer@ pPlayer, int iOldScore, int iFrags )
 {
-	if( iOldScore < iFrags || iOldScore > iFrags )
-	{
-		int dict = uint(BuyPoints[PlayerID( pPlayer )]);
+	if( iOldScore == iFrags )
+		return;
 
-		//Check if g_MoneyPerScore exists, if it doesn't, use constant MoneyPerScore
-		if( g_MoneyPerScore is null )
-		{
-			if( OldScore.exists( PlayerID( pPlayer ) ) && iOldScore > 0 && pPlayer.pev.frags == 0 ) //Player just reconnected, let him stay with the money
-			{
+	string szPlayerID = PlayerID( pPlayer );
 
-			}
-			else if( BuyPoints.exists( PlayerID( pPlayer ) ) && pPlayer.pev.frags != 0 )
-			{
-				BuyPoints[PlayerID( pPlayer )] = dict + (iFrags - iOldScore) * MoneyPerScore;
-			}
-		}
-		else
-		{
-			if( OldScore.exists( PlayerID( pPlayer ) ) && iOldScore > 0 && pPlayer.pev.frags == 0 ) //Player just reconnected, let him stay with the money
-			{
+	if( OldScore.exists( szPlayerID ) && iOldScore > 0 && int(Math.Floor( pPlayer.pev.frags )) == 0 )
+		return;
 
-			}
-			else if( BuyPoints.exists( PlayerID( pPlayer ) ) && pPlayer.pev.frags != 0 )
-			{
-				BuyPoints[PlayerID( pPlayer )] = dict + (iFrags - iOldScore) * g_MoneyPerScore.GetInt();
-			}
-		}
+	if( !BuyPoints.exists( szPlayerID ) || int(Math.Floor( pPlayer.pev.frags )) == 0 )
+		return;
+	
+	int iMoneyPerScore = (g_MoneyPerScore !is null) ? g_MoneyPerScore.GetInt() : MoneyPerScore;
+	int iMaxMoney = (g_MaxMoney !is null) ? g_MaxMoney.GetInt() : MaxMoney;
+	
+	int iFragDiff = iFrags - iOldScore;
+	int iNewMoney = int(BuyPoints[szPlayerID]) + (iFragDiff * iMoneyPerScore);
 
-		if( int(BuyPoints[PlayerID( pPlayer )]) <= 0 )
-		{
-			BuyPoints[PlayerID( pPlayer )] = 0;
-		}
+	iNewMoney = Math.clamp( 0, iMaxMoney, iNewMoney );
 
-		if( g_MaxMoney is null )
-		{
-			if( int(BuyPoints[PlayerID( pPlayer )]) > MaxMoney )
-				BuyPoints[PlayerID( pPlayer )] = MaxMoney;
-		}
-		else
-		{
-			if( int(BuyPoints[PlayerID( pPlayer )]) > g_MaxMoney.GetInt() )
-				BuyPoints[PlayerID( pPlayer )] = g_MaxMoney.GetInt();
-		}
-
-		ShowPointsSprite( pPlayer );
-		OldScore[PlayerID( pPlayer )] = iFrags;
-	}
+	BuyPoints[szPlayerID] = iNewMoney;
+	ShowPointsSprite( pPlayer );
+	OldScore[szPlayerID] = iFrags;
 }
 
 HookReturnCode INS2_ClientPutInServer( CBasePlayer@ pPlayer )
