@@ -534,8 +534,7 @@ mixin class WeaponBase
 		}
 	}
 
-	// GeckoN: Movement speed modifier
-	void SetPlayerSpeed()
+	void SetPlayerSpeed() // GeckoN: Movement speed modifier
 	{
 		// Do we even need to change the speed?
 		if( WeaponADSMode == m_iSpeedType )
@@ -553,24 +552,6 @@ mixin class WeaponBase
 
 		m_pPlayer.m_flEffectSpeed -= m_flSpeedModifier;
 
-		//Do not let the player lose these effects when applying the speed modifier - KernCore
-		m_pPlayer.m_iEffectInvulnerable = (m_pPlayer.pev.flags & FL_GODMODE != 0) ? 1 : 0;
-		m_pPlayer.m_iEffectNonSolid = (m_pPlayer.pev.solid == SOLID_NOT) ? 1 : 0;
-
-		if( m_pPlayer.pev.flags & FL_NOTARGET != 0 ) // Has notarget on
-		{
-			int rendermode = m_pPlayer.pev.rendermode;
-			float renderamt = m_pPlayer.pev.renderamt;
-			m_pPlayer.ApplyEffects();
-			m_pPlayer.pev.flags |= FL_NOTARGET;
-			m_pPlayer.pev.rendermode = rendermode;
-			m_pPlayer.pev.renderamt = renderamt;
-		}
-		else
-		{
-			m_pPlayer.ApplyEffects();
-		}
-		//KernCore end
 		//g_Game.AlertMessage( at_console, "Player Effect Speed: " + m_pPlayer.m_flEffectSpeed + "\n" );
 		m_iSpeedType = WeaponADSMode;
 	}
