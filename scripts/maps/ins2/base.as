@@ -544,7 +544,7 @@ mixin class WeaponBase
 		m_pPlayer.m_flEffectSpeed += m_flSpeedModifier;
 
 		if( WeaponADSMode == IRON_IN )
-			m_flSpeedModifier = 0.35f; // Scoped, 35% speed reduction
+			m_flSpeedModifier = 0.334f; // Scoped, 33.4% speed reduction
 		else if( WeaponADSMode == IRON_OUT )
 			m_flSpeedModifier = 0.0f; // Not holding or dropping weapon
 		else
