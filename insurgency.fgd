@@ -271,6 +271,35 @@
 // Light Machine Guns
 @PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/m60/w_m60.mdl") =  weapon_ins2m60 : "M60" []
 
+// ------------------------------------- ins2 2 weapons (Fifth wave: 13) -------------------------------------
+
+// Pistols
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/vp70/w_vp70.mdl") =  weapon_ins2vp70 : "H&K VP-70M" []
+
+// Assault rifles
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/groza/w_groza.mdl") =  weapon_ins2groza : "OTs-14 Groza 4" []
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/m16a1/w_m16a1.mdl") =  weapon_ins2m16a1 : "M16A1 + M203 GL" []
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/an94/w_an94.mdl") =  weapon_ins2an94 : "AN-94" []
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/scar/w_scar.mdl") =  weapon_ins2scarh : "FN SCAR-H" []
+
+// Submachine guns
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/mp5sd/w_mp5sd.mdl") =  weapon_ins2mp5sd : "H&K MP5SD2" []
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/grease/w_grease.mdl") =  weapon_ins2greasegun : "M3 Grease Gun" []
+
+// Carbines
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/g36c/w_g36c.mdl") =  weapon_ins2g36c : "H&K G36C" []
+
+// Rifles & Sniper Rifles
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/m21/w_m21.mdl") =  weapon_ins2m21 : "XM21" []
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/svt40/w_svt40.mdl") =  weapon_ins2svt40 : "SVT-40" []
+
+// Light Machine Guns
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/pkm/w_pkm.mdl") =  weapon_ins2pkm : "PKM" []
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/mg34/w_mg34.mdl") =  weapon_ins2mg34 : "MG-34" []
+
+// Equipment
+@PointClass base(Weapon, Targetx, ExclusiveHold) studio("models/ins2/wpn/rgo/w_rgo.mdl") =  weapon_ins2rgo : "RGO Grenade" []
+
 // ------------------------------------- Ammunitions -------------------------------------
 
 // Ammo entities from 1st wave
@@ -310,12 +339,12 @@
 
 // Ammo entities from 3rd wave
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2m1911 : "M1911 .45acp Ammo" [ body(integer) : "Body" : 23 ]
-@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2mg42 : "MG-42 7.92×57mm Mauser Ammo" [ body(integer) : "Body" : 24 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2mg42 : "MG-42 7.92x57mm Mauser Ammo" [ body(integer) : "Body" : 24 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2l2a3 : "Sterling L2A3 9x19mm Ammo" [ body(integer) : "Body" : 25 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2galil : "Galil ARM 5.56x45mm Ammo" [ body(integer) : "Body" : 26 ]
-@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2fg42 : "FG-42 7.92×57mm Mauser Ammo" [ body(integer) : "Body" : 27 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2fg42 : "FG-42 7.92x57mm Mauser Ammo" [ body(integer) : "Body" : 27 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2makarov : "Makarov PM 9x18mm Ammo" [ body(integer) : "Body" : 28 ]
-@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2kar98k : "Kar. 98K 7.92×57mm Mauser Ammo" [ body(integer) : "Body" : 29 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2kar98k : "Kar. 98K 7.92x57mm Mauser Ammo" [ body(integer) : "Body" : 29 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/wpn/kar98/30mm.mdl") = ammo_ins2kar98kgl : "Schiessbecher 30mm grenade Ammo" []
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2lewis : "Lewis LMG .303 British Ammo" [ body(integer) : "Body" : 30 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2m1928 : "Thompson M1928 .45acp Ammo" [ body(integer) : "Body" : 31 ]
@@ -343,3 +372,19 @@
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2python : "Python .357 Magnum Ammo" [ body(integer) : "Body" : 48 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2saiga12 : "Saiga 12K Gauge Ammo" [ body(integer) : "Body" : 49 ]
 @PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags.mdl") = ammo_ins2m1a1para : "M1A1 Paratrooper 7.62x33mm Ammo" [ body(integer) : "Body" : 50 ]
+
+// Ammo entities from 5th wave
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2groza : "OTs-14 9x39mm Ammo" [ body(integer) : "Body" : 5 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/akm/vog25.mdl") = ammo_ins2grozagl : "GP-30 40mm VOG-25 grenade Ammo" []
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2m16a1 : "M16A1 5.56x45mm Ammo" [ body(integer) : "Body" : 4 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/m16a4/m203.mdl") = ammo_ins2m16a1gl : "M16A1's M203 40mm M406 grenade Ammo" []
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2an94 : "AN-94 5.45x39mm Ammo" [ body(integer) : "Body" : 2 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2scarh : "SCAR-H 7.62x51mm Ammo" [ body(integer) : "Body" : 6 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2vp70 : "VP-70M 9x19mm Ammo" [ body(integer) : "Body" : 3 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2mp5sd : "MP5SD 9x19mm Ammo" [ body(integer) : "Body" : 10 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2greasegun : "M3 Greasegun .45ACP Ammo" [ body(integer) : "Body" : 8 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2g36c : "G36C 5.56x45mm Ammo" [ body(integer) : "Body" : 0 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2m21 : "XM21 7.62x51mm Ammo" [ body(integer) : "Body" : 9 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2mg34 : "MG-34 7.92x57mm Ammo" [ body(integer) : "Body" : 1 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2pkm : "PKM 7.62x54mmR Ammo" [ body(integer) : "Body" : 11 ]
+@PointClass base(Ammo, Targetx) studio("models/ins2/ammo/mags2.mdl") = ammo_ins2svt40 : "SVT-40 7.62x54mmR Ammo" [ body(integer) : "Body" : 7 ]
